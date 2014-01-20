@@ -13,19 +13,33 @@
     
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
     <script type="text/javascript" src="http://underscorejs.org/underscore-min.js"></script>
-    <script type="text/javascript" src="javascripts/gh3.js"></script>
-
+    <!-- <script type="text/javascript" src="javascripts/gh3.js"></script> -->
+    
+    <script type="text/template" id="repo_tmpl">
+      <% _.each(repos, function(repo){ %>
+        <li><span><%- repo.full_name %></span><span><%- repo.description %></span></li>
+      <% }); %>
+    </script>
+    
     <script type="text/javascript">
-      if(typeof console === 'undefined')
-        console = { log: function empty() {} };
-      var repoTmpl = "<li><span><%- full_name %></span><span><%- description %></span></li>"
-      var dapuck = new Gh3.User("dapuck");
-      var dapuckRepos = new Gh3.Repositories(dapuck);
-      dapuckRepos.fetch({ sort: 'updated' }, "next", function _repos(err, res) {
-        if(err) {
-          console.log(err);
-        }
-        console.log(dapuckRepos);
+      $(function ready(){
+        if(typeof console === 'undefined')
+          console = { log: function empty() {} };
+        //var repoTmpl = "<li><span><%- full_name %></span><span><%- description %></span></li>"
+        var repoTmpl = $("script#repo_tmpl").text();
+        // var dapuck = new Gh3.User("dapuck");
+        // var dapuckRepos = new Gh3.Repositories(dapuck);
+        // dapuckRepos.fetch({ page: 1, per_page: 100, sort: 'updated', client_id: "5d9803964fb2fbdaf5c9" }, "next", function _repos(err, res) {
+          // if(err) {
+            // console.log(err);
+          // }
+          // console.log(dapuckRepos);
+        // });
+        $.ajax("https://api.github.com/users/dapuck/repos").done(function _process(data){
+          console.log(data);
+          var html = _.template(repoTmpl,{repos:data});
+          $("ul#list-o-repos").html(html);
+        });
       });
     </script>
   </head>
