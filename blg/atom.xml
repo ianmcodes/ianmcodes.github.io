@@ -4,7 +4,7 @@
   <title><![CDATA[dapuck.github.io]]></title>
   <link href="http://dapuck.github.io/blg/atom.xml" rel="self"/>
   <link href="http://dapuck.github.io/blg/"/>
-  <updated>2014-01-22T14:31:24-06:00</updated>
+  <updated>2014-01-22T14:45:40-06:00</updated>
   <id>http://dapuck.github.io/blg/</id>
   <author>
     <name><![CDATA[Ian McCall]]></name>
@@ -12,5 +12,16 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[First Post]]></title>
+    <link href="http://dapuck.github.io/blg/blog/2014/01/22/first-post/"/>
+    <updated>2014-01-22T14:33:48-06:00</updated>
+    <id>http://dapuck.github.io/blg/blog/2014/01/22/first-post</id>
+    <content type="html"><![CDATA[<h1>FIRST POST!!!</h1>
+
+<p>Just installed Octopress.</p>
+]]></content>
+  </entry>
   
 </feed>
