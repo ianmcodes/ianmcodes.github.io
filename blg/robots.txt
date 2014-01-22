@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: 
+
+Sitemap: http://dapuck.github.io/blg/sitemap.xml 

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[dapuck.github.io]]></title>
+  <link href="http://dapuck.github.io/blg/atom.xml" rel="self"/>
+  <link href="http://dapuck.github.io/blg/"/>
+  <updated>2014-01-22T14:31:24-06:00</updated>
+  <id>http://dapuck.github.io/blg/</id>
+  <author>
+    <name><![CDATA[Ian McCall]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+</feed>
