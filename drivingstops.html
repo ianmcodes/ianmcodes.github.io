@@ -20,14 +20,17 @@
         };
         window.gmap = new google.maps.Map($('#map')[0],mapOptions);
         $('#search').on('click', function() {
-          google.maps.DirectionsService({
+          var req = {
             "origin": $('input#origin').val(),
             "destination": $('input#destination').val(),
             "travelMode": google.maps.TravelMode.DRIVING
-          }, function(res, stat) {
-            console.log(stat);
-            console.log(res);
-          })
+          };
+          google.maps.DirectionsService(req, 
+            function(res, stat) {
+              console.log(stat);
+              console.log(res);
+            }
+          );
         });
       });
     })(jQuery);
