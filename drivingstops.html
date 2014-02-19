@@ -4,7 +4,7 @@
     
     <style>
     #map {
-      width: 500px;
+      width: 700px;
       height: 500px;
     }
     </style>
@@ -16,9 +16,9 @@
       $(function loaded() {
         var mapOptions = {
           "center": new google.maps.LatLng(39.828175, -98.5795),
-          "zoom": 12
+          "zoom": 4
         };
-        Window.gmap = new google.maps.Map($('#map')[0],mapOptions);
+        window.gmap = new google.maps.Map($('#map')[0],mapOptions);
       });
     })(jQuery);
     </script>
