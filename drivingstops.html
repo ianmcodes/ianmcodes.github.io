@@ -10,9 +10,50 @@
     </style>
     
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBSz0hJ73aWe62FiWuxfMxBBzOnJETyGv8&sensor=false"></script>
     <script type="text/javascript">
     (function init_iife($) {
+      window._maxDriveTime = 43200; // 12h in sec
+      window._radiusEarth = 6371009; // in meters
+      window._driveTimeMarkers = [];
+      
+      function calculate_drivetime_segments(route) {
+        var drivetime = 0;
+        // for each leg
+        route.legs.forEach(function each_leg(leg) {
+          drivetime += leg.duration.value;
+          if(drivetime > _maxDriveTime) {
+            drivetime -= leg.duration.value;
+            leg.steps.forEach(function each_step(step) {
+              drivetime += step.duration.value;
+              if(drivetime > _maxDriveTime) {
+                drivetime -= step.duration.value;
+                // try to calculate where along the path
+                // we reach or pass the limit
+                var speed = step.distance.value / step.duration.value;
+                // for each pair of points calculate the distance and the 
+                // time to travel at speed.
+                var p1 = step.path[0];
+                for(var i = 1; i < step.path.length; i++) {
+                  var p2 = step.path[i];
+                  var greatArc = d3.geo.distance([p1.lng(),p1.lat()], [p2.lng(),p2.lat()]);
+                  var arcLen = greatArc * _radiusEarth;
+                  var time = arcLen / speed;
+                  drivetime += time;
+                  if(drivetime >= _maxDriveTime) {
+                    console.log(p2);
+                    _driveTimeMarkers.push(new google.maps.Marker({position:p2, map: gmap}));
+                    drivetime = 0;
+                  }
+                  p1 = p2;
+                }
+              }
+            });
+          }
+        });
+      }
+      
       $(function loaded() {
         var mapOptions = {
           "center": new google.maps.LatLng(39.828175, -98.5795),
@@ -20,6 +61,7 @@
         };
         window.gmap = new google.maps.Map($('#map')[0],mapOptions);
         var gds = new google.maps.DirectionsService();
+        var gdr = new google.maps.DirectionsRenderer({map: gmap});
         $('#search').on('click', function() {
           var req = {
             "origin": $('input#origin').val(),
@@ -28,8 +70,14 @@
           };
           gds.route(req,
             function(res, stat) {
-              console.log(stat);
-              console.log(res);
+              if(stat !== google.maps.DirectionsStatus.OK) {
+                // show some error?
+                return;
+              }
+              // render route
+              gdr.setDirections(res);
+              // begin drivetime segment calculation.
+              calculate_drivetime_segments(res.routes[0])
             }
           );
         });
