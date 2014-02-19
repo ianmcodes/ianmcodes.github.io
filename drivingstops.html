@@ -9,11 +9,11 @@
     }
     </style>
     
-    <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <!--<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.1.min.js"></script>-->
     <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBSz0hJ73aWe62FiWuxfMxBBzOnJETyGv8&sensor=false"></script>
     <script type="text/javascript">
-    (function init_iife($) {
+    //(function init_iife($) {
       window._maxDriveTime = 43200; // 12h in sec
       window._radiusEarth = 6371009; // in meters
       window._driveTimeMarkers = [];
@@ -54,18 +54,19 @@
         });
       }
       
-      $(function loaded() {
+      /*$(*/
+      document.addEventListener('DOMContentLoaded', function loaded() {
         var mapOptions = {
           "center": new google.maps.LatLng(39.828175, -98.5795),
           "zoom": 4
         };
-        window.gmap = new google.maps.Map($('#map')[0],mapOptions);
+        window.gmap = new google.maps.Map(document.getElementById('map'),mapOptions);
         var gds = new google.maps.DirectionsService();
         var gdr = new google.maps.DirectionsRenderer({map: gmap});
-        $('#search').on('click', function() {
+        d3.select('#search').on('click', function() {
           var req = {
-            "origin": $('input#origin').val(),
-            "destination": $('input#destination').val(),
+            "origin": document.getElementById("origin").value,
+            "destination": document.getElementById('destination').value,
             "travelMode": google.maps.TravelMode.DRIVING
           };
           gds.route(req,
@@ -82,7 +83,7 @@
           );
         });
       });
-    })(jQuery);
+    //})(jQuery);
     </script>
   </head>
   <body>
