@@ -4,7 +4,7 @@
     
     <style>
     #map {
-      width: 700px;
+      width: 800px;
       height: 500px;
     }
     </style>
@@ -19,14 +19,25 @@
           "zoom": 4
         };
         window.gmap = new google.maps.Map($('#map')[0],mapOptions);
+        $('#search').on('click', function() {
+          google.maps.DirectionsService({
+            "origin": $('input#origin').val(),
+            "destination": $('input#destination').val(),
+            "travelMode": google.maps.TravelMode.DRIVING
+          }, function(res, stat) {
+            console.log(stat);
+            console.log(res);
+          })
+        });
       });
     })(jQuery);
     </script>
   </head>
   <body>
   <div>
-    <form>
-      
+    <form id="dform">
+      Start: <input type="text" name="origin" id="origin"> End: <input type="text" name="destination" id="destination"><br/>
+      <input type="button" id="search" value="Route">
     </form>
   </div>
   <div id="map"></div>
