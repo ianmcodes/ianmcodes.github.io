@@ -15,10 +15,10 @@
     (function init_iife($) {
       $(function loaded() {
         var mapOptions = {
-          "center": new google.maps.LatLng(-34.397, 150.644),
-          "zoom": 8
+          "center": new google.maps.LatLng(39.828175, -98.5795),
+          "zoom": 12
         };
-        var map = new google.maps.Map($('#map')[0],mapOptions);
+        Window.gmap = new google.maps.Map($('#map')[0],mapOptions);
       });
     })(jQuery);
     </script>
