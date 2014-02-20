@@ -17,17 +17,23 @@
     #settings {
       float: left;
     }
+
+    #dform input[type=text] {
+      width: 250px;
+    }
   </style>
 
   <!--<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.1.min.js"></script>-->
-  <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBSz0hJ73aWe62FiWuxfMxBBzOnJETyGv8&sensor=false"></script>
+  <script type="text/javascript" src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBSz0hJ73aWe62FiWuxfMxBBzOnJETyGv8&libraries=places&sensor=false"></script>
   <script type="text/javascript">
     //(function init_iife($) {
     window._maxDriveTime = 43200; // 12h in sec
     window._radiusEarth = 6371009; // in meters
     window._driveTimeMarkers = [];
     window._curRoute = null;
+    window._mpg = 0;
+    window._tanksize = 0;
 
     function calculate_drivetime_segments(route) {
       var drivetime = 0;
@@ -54,7 +60,7 @@
                 drivetime += time;
                 if(drivetime >= _maxDriveTime) {
                   console.log(p2);
-                  _driveTimeMarkers.push(new google.maps.Marker({position:p2, map: gmap}));
+                  _driveTimeMarkers.push(new google.maps.Marker({position: p2, map: gmap, title: "Drive time limit (" + (drivetime/3600) + "h)"}));
                   drivetime = 0;
                 }
                 p1 = p2;
@@ -71,6 +77,12 @@
       });
       _driveTimeMarkers = [];
     }
+
+    function calculate_fuel_stops(route, mpg, tanksize) {
+      // mpg => meters/gal
+      // tanksize => gal
+      var gallonsUsed = 0;
+    }
       
       /*$(*/
     document.addEventListener('DOMContentLoaded', function loaded() {
@@ -81,7 +93,9 @@
       window.gmap = new google.maps.Map(document.getElementById('map'),mapOptions);
       var gds = new google.maps.DirectionsService();
       var gdr = new google.maps.DirectionsRenderer({map: gmap});
-      d3.select('#search').on('click', function() {
+      var originAC = new google.maps.places.Autocomplete(document.getElementById("origin"), {types: ['geocode']});
+      var destinationAC = new google.maps.places.Autocomplete(document.getElementById("destination"), {types: ['geocode']});
+      d3.select('#search').on('click', function() { 
         var req = {
           "origin": document.getElementById("origin").value,
           "destination": document.getElementById('destination').value,
@@ -103,11 +117,33 @@
         );
       });
       d3.select('#maxdrivetime').on("change", function() {
-        if(this.validity.valid){
+        if(this.validity.valid) {
           _maxDriveTime = this.value * 3600;
           if(_curRoute) {
             clear_drivetime_pins();
             calculate_drivetime_segments(_curRoute);
+          }
+        }
+      });
+      d3.select('#mpg').on("change", function() {
+        if(this.validity.valid) {
+          // convert miles/gal to meters/gal because
+          // google gives us distance in meters
+          _mpg = this.value * 1609.34;
+          if(_mpg && _tanksize && _curRoute) {
+            // add fuel pins
+            calculate_fuel_stops(_curRoute, _mpg, _tanksize);
+          }
+        }
+      });
+      d3.select('#tanksize').on("change", function() {
+        if(this.validity.valid) {
+          // convert miles/gal to meters/gal because
+          // google gives us distance in meters
+          _tanksize = this.value;
+          if(_mpg && _tanksize && _curRoute) {
+            // add fuel pins
+            calculate_fuel_stops(_curRoute, _mpg, _tanksize);
           }
         }
       });
