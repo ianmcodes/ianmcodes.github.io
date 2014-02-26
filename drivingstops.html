@@ -31,6 +31,7 @@
     window._maxDriveTime = 43200; // 12h in sec
     window._radiusEarth = 6371009; // in meters
     window._driveTimeMarkers = [];
+    window._fuelMarkers = [];
     window._curRoute = null;
     window._mpg = 0;
     window._tanksize = 0;
@@ -81,7 +82,41 @@
     function calculate_fuel_stops(route, mpg, tanksize) {
       // mpg => meters/gal
       // tanksize => gal
-      var gallonsUsed = 0;
+      var maxDistance = mpg * tanksize;
+      var distance = 0;
+      route.legs.forEach(function each_leg(leg) {
+        distance += leg.distance.value;
+        if(distance > maxDistance) {
+          distance -= leg.distance.value;
+          leg.steps.forEach(function each_step(step) {
+            distance += step.distance.value;
+            if(distance > maxDistance) {
+              distance -= step.distance.value;
+              // for each pair of points calculate the distance
+              var p1 = step.path[0];
+              for(var i = 1; i < step.path.length; i++) {
+                var p2 = step.path[i];
+                var greatArc = d3.geo.distance([p1.lng(),p1.lat()], [p2.lng(),p2.lat()]);
+                var arcLen = greatArc * _radiusEarth;
+                distance += arcLen;
+                if(distance >= maxDistance) {
+                  console.log(p2);
+                  _fuelMarkers.push(new google.maps.Marker({position: p2, map: gmap, title: "Fuel stop"}));
+                  distance = 0;
+                }
+                p1 = p2;
+              }
+            }
+          });
+        }
+      });
+    }
+    
+    function clear_fuel_pins() {
+      _fuelMarkers.forEach(function(mkr) {
+        mkr.setMap(null);
+      });
+      _fuelMarkers = [];
     }
       
       /*$(*/
