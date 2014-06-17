@@ -21,7 +21,7 @@
             <li>
               <span>
                 <a href="<%= repo.html_url %>"><%- repo.full_name %></a>
-                <span class="update_time"> - <%= repo.updated_at %></span>
+                <span class="update_time" title="Last updated"> - <%= repo.updated_at %></span>
               </span>
               <span class="description"><%- repo.description %></span>
             </li>
@@ -46,6 +46,10 @@
           ul.no_bull {
             list-style: none;
             padding-left: 0px;
+          }
+          
+          ul#list-o-repos > li {
+              border-bottom: 1px solid gray;
           }
           
           ul#list-o-repos > li > span {
