@@ -185,6 +185,13 @@ aside {
   div.flex_container aside {
     flex-grow:1;
     display: block;
+    padding: 1em;
+    background-color: rgb(241, 241, 241);
+  }
+  
+  .posts > article {
+    border: 1px solid lightgray;
+    padding: 0.5em;
   }
 }
 
