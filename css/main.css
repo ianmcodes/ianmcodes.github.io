@@ -200,3 +200,9 @@ aside {
   }
 }
 
+@media (min-width: 1440px) and (orientation: landscape) {
+  .site {
+    margin-left: 10em;
+    margin-right: 10em;
+  }
+}
