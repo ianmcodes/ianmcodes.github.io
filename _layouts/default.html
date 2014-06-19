@@ -11,6 +11,8 @@
 
         <!-- Custom CSS -->
         <link rel="stylesheet" href="/css/main.css">
+        
+        <link rel="stylesheet" href="/css/octicons/octicons.css">
 
         <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
         <script type="text/javascript" src="http://underscorejs.org/underscore-min.js"></script>
@@ -20,6 +22,11 @@
           <% _.each(repos, function(repo){ %>
             <li>
               <span>
+                <% if(repo.fork) { %>
+                <span class="octicon octicon-repo-forked"></span>
+                <% } else { %>
+                <span class="octicon octicon-repo"></span>
+                <% } %>
                 <a href="<%= repo.html_url %>"><%- repo.full_name %></a>
                 <span class="update_time" title="Last updated"> - <%= repo.updated_at %></span>
               </span>
