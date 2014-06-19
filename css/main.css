@@ -185,6 +185,9 @@ aside {
   div.flex_container section.maincontent {
     flex-grow: 2;
     margin-right: 1em;
+    border: 2px solid lightgray;
+    border-radius: 10px;
+    padding: 1em;
   }
 
   div.flex_container aside {
