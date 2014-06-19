@@ -197,6 +197,11 @@ aside {
   .posts > article {
     border: 1px solid lightgray;
     padding: 0.5em;
+    transition: background-color 400ms linear;
+  }
+  
+  .posts > article:hover {
+    background-color: #E9F1F1;
   }
 }
 
