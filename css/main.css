@@ -59,7 +59,7 @@ a:visited { color: #a0a; }
   font-size: 115%;
   text-align: justify;
   /*width: 42em;*/
-  margin: 2em 5em 2em 5em;
+  margin: 2em 1em 2em 1em;
   line-height: 1.5em;
 }
 
@@ -169,6 +169,11 @@ aside {
 }
 
 @media (min-width: 1024px) and (orientation: landscape) {
+  .site {
+    margin-left: 5em;
+    margin-right: 5em;
+  }
+  
   div.flex_container {
     display: flex;
     flex-direction: row;
