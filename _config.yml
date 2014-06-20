@@ -1,6 +1,7 @@
 name: Ian McCall
 markdown: redcarpet
-pygments: true
+highlighter: true
+#pygments: true
 safe: true
 lsi: false
 timezone: America/Chicago
