@@ -1,0 +1,25 @@
+/* Repo list CSS */
+
+ul.no_bull {
+    list-style: none;
+    padding-left: 0px;
+}
+ul#list-o-repos > li {
+    border-bottom: 1px solid gray;
+    transition: background-color 400ms linear;
+    cursor: default;
+}
+ul#list-o-repos > li:hover {
+    background-color: lightyellow;
+}
+ul#list-o-repos > li > span {
+    display: block;
+}
+ul#list-o-repos > li > span.description {
+    font-style: italic;
+}
+.update_time {
+    color: gray;
+    font-size: small;
+}
+/* Repo list CSS */

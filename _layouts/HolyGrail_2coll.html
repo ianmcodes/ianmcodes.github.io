@@ -8,15 +8,13 @@
 
         <!-- syntax highlighting CSS -->
         <link rel="stylesheet" href="/css/syntax.css">
-
         <!-- Custom CSS -->
-        <!--link rel="stylesheet" href="/css/main.css"-->
-
+        <link rel="stylesheet" href="/css/main_grail.css">
         <link rel="stylesheet" href="/css/octicons/octicons.css">
+        <link rel="stylesheet" href="/css/repo_list.css">
 
         <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
         <script type="text/javascript" src="http://underscorejs.org/underscore-min.js"></script>
-        <!-- <script type="text/javascript" src="javascripts/gh3.js"></script> -->
 
         <script type="text/template" id="repo_tmpl">
           <% _.each(repos, function(repo){ %>
@@ -47,61 +45,10 @@
             });
           });
         </script>
-
-        <style type="text/css">
-            /* Holy grail */
-            .HolyGrail {
-                display: flex;
-                min-height: 100vh;
-                flex-direction: column;
-            }
-            .HolyGrail-body {
-                display: flex;
-                flex: 1;
-            }
-            .HolyGrail-content {
-                flex: 1;
-            }
-            .HolyGrail-left,
-            .HolyGrail-right {
-                /* 12em is the width of the columns */
-                flex: 0 0 12em;
-            }
-            .HolyGrail-left {
-                /* put the nav on the left */
-                order: -1;
-            }
-        </style>
-
-        <style type="text/css">
-          /* Repo list CSS */
-          ul.no_bull {
-            list-style: none;
-            padding-left: 0px;
-          }
-
-          ul#list-o-repos > li {
-              border-bottom: 1px solid gray;
-          }
-
-          ul#list-o-repos > li > span {
-            display: block;
-          }
-
-          ul#list-o-repos > li > span.description {
-            font-style: italic;
-          }
-
-          .update_time {
-            color: gray;
-            font-size: small;
-          }
-          /* Repo list CSS */
-        </style>
     </head>
     <body class="HolyGrail">
 
-<!--        <div class="site">-->
+        <div class="site">
           <header class="header">
             <h1 class="title"><a href="/">{{ site.name }}</a></h1>
             <a class="extra" href="/">home</a>
@@ -112,7 +59,7 @@
             {{ content }}
             </main>
 
-            <nav class="HolyGrail-left"></nav>
+            <nav class="HolyGrail-left" style="display: none"></nav>
 
             <aside class="HolyGrail-right">
               <!--  -->
@@ -135,7 +82,7 @@
               </p>
             </div>
           </footer>
-<!--        </div>-->
+        </div>
 
     </body>
 </html>
