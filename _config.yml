@@ -8,4 +8,5 @@ timezone: America/Chicago
 gems:
 - jekyll-mentions
 - jemoji
-- jekyll-redirectfrom
+- jekyll-redirect-from
+- jekyll-sitemap

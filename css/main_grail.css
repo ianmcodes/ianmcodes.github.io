@@ -14,7 +14,10 @@
 /*html, body { height: 100%; }*/
 
 body {
-    background-color: #FFF;
+    background: -webkit-linear-gradient(white, grey);
+    background: -moz-linear-gradient(white, grey);
+    background: -o-linear-gradient(white, grey);
+    background: linear-gradient(white, grey);
     font: 13.34px Helvetica, Arial, sans-serif;
     font-size: small;
     text-align: center;
@@ -105,6 +108,8 @@ a:visited {
     border-top: 4px solid #eee;
     margin-top: 2em;
     overflow: hidden;
+    background: whitesmoke;
+    padding: 0 0.5em 0 0.5em;
 }
 .footer .contact {
     float: left;
@@ -190,6 +195,7 @@ aside {
         border: 2px solid lightgray;
         border-radius: 10px;
         padding: 1em;
+        background-color: white;
     }
     .HolyGrail-left {
         flex: 0 0 12em;
