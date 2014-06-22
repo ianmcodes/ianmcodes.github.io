@@ -45,7 +45,7 @@ end #JB
 desc "Begin a new post in #{CONFIG['posts']}"
 task :post do
   abort("rake aborted: '#{CONFIG['posts']}' directory not found.") unless FileTest.directory?(CONFIG['posts'])
-  title = ENV["title"] || "new-post"
+  title = ENV["title"] || ENV["draft"] || "new-post"
   tags = ENV["tags"] || "[]"
   category = ENV["category"] || ""
   category = "\"#{category.gsub(/-/,' ')}\"" if !category.empty?
@@ -60,6 +60,12 @@ task :post do
   if File.exist?(filename)
     abort("rake aborted!") if ask("#{filename} already exists. Do you want to overwrite?", ['y', 'n']) == 'n'
   end
+  if ENV["draft"]
+    dfile = File.join(CONFIG['drafts'], "#{slug}.#{CONFIG['post_ext']}")
+    File.rename(dfile, filename)
+    puts "Moved #{dfile} to #{filename}"
+    exit 1
+  end
   
   puts "Creating new post: #{filename}"
   open(filename, 'w') do |post|
@@ -67,8 +73,7 @@ task :post do
     post.puts "layout: post"
     post.puts "title: \"#{title.gsub(/-/,' ')}\""
     post.puts 'description: ""'
-    post.puts "category: #{category}"
-    post.puts "tags: #{tags}"
+    post.puts "categories: #{category}"
     post.puts "---"
     post.puts ""
   end
@@ -100,8 +105,7 @@ task :draft do
     post.puts "layout: post"
     post.puts "title: \"#{title.gsub(/-/,' ')}\""
     post.puts 'description: ""'
-    post.puts "category: #{category}"
-    post.puts "tags: #{tags}"
+    post.puts "categories: #{category}"
     post.puts "---"
     post.puts ""
   end
