@@ -56,6 +56,9 @@ a:visited {
     list-style-type: none;
     margin-bottom: 2em;
 }
+.posts ul {
+    padding-left: 40px;
+}
 .posts li {
     line-height: 1.75em;
 }
