@@ -11,7 +11,14 @@ As a coder, I could write custom scripts to automate most things. Most of these 
 
 But I'm lazy! I don't want to write a ton of code to delete old emails or create reminders. And I just want to solve my problem, not a bunch of problems around my problem. Fortunately there are tools out there that can help. Two that I have used are IFTTT, and Google Apps Script.
 
- - Solutions
-  - Google Apps Script
-  - IFTTT
-  - ?
+IFTTT
+-----
+
+[IFTTT](https://ifttt.com/) (IF This Then That) is an app for iOS and Android (as well as on the web) that allows you to configure "recipes" that are basically really simple if statements, consisting of a condition and an action (This and That). The conditions and actions come from what they call "channels". They currently have over 100 channels, including GitHub and iOS Reminders. To use a channel you just need to activate it through IFTTT's web interface or app and give IFTTT permission.
+
+Creating a recipe is easy. all you need to do is to first select to create a new recipe, select what channel and trigger to watch, and then select what channel and action to take. Depending on what trigger or action you choose, you may need to provide more details. 
+
+Google Apps Script
+------------------
+
+As great as IFTTT is, you are still limited in what you can do with the triggers and actions that they have defined. For example, you cannot use it to delete old emails from your email. 
