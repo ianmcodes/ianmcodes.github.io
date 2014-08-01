@@ -1,8 +1,29 @@
 ---
 layout: post
-title: "Buying a Place: The Hunt"
+title: "Buying My First Place"
 description: ""
 categories: personal home
 ---
 
-Trying to find a place to buy.
+Into
+
+TL;DR;
+------
+
+Me and What I am looking for.
+-----------------------------
+
+Finding an agent
+----------------
+
+"On the Hunt"
+-------------
+
+Putting in an offer
+-------------------
+
+Offer Accepted!
+---------------
+
+Getting to closing
+------------------
