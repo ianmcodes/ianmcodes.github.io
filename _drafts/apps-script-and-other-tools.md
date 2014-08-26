@@ -21,4 +21,6 @@ Creating a recipe is easy. all you need to do is to first select to create a new
 Google Apps Script
 ------------------
 
-As great as IFTTT is, you are still limited in what you can do with the triggers and actions that they have defined. For example, you cannot use it to delete old emails from your email. 
+As great as IFTTT is, you are still limited in what you can do with the triggers and actions that they have defined. For example, you cannot use it to delete old emails. But, if you use Gmail (and Google Drive) you can create an Apps Script.
+
+Google Apps Script is, for the most part, JavaScript with some functions and utilities added for working with Google's services. I won't get into the nitty gritty of writting Apps Scripts (for that you should start [here](https://developers.google.com/apps-script/)). But I will say that you can use it to create simple stand alone functions, more complex addons for Google services like Doc or Sheets, or even full blown web apps. I use an Apps Script to delete old cron emails, and other automated emails that I don't need to keep very long.

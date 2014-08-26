@@ -5,9 +5,7 @@ description: ""
 categories: personal home
 ---
 
-Into
-
-TL;DR;
+Intro
 ------
 
 Me and What I am looking for.
@@ -27,3 +25,11 @@ Offer Accepted!
 
 Getting to closing
 ------------------
+
+### Waiting On The Bank
+
+### Inspection
+
+#### HVAC
+
+### Papper work, Documents and more Papper work
