@@ -218,6 +218,7 @@ aside {
     .posts > article {
         border: 1px solid lightgray;
         padding: 0.5em;
+        background-color: white;
         transition: background-color 400ms linear;
         margin-bottom: 0.5em;
     }
