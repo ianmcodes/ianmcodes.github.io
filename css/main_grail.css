@@ -175,6 +175,10 @@ a:visited {
 aside {
     display: none;
 }
+
+.posts > article {
+    background-color: white;
+}
 @media (min-width: 1024px) and (orientation: landscape) {
     .site {
         margin-left: 5em;
@@ -218,7 +222,6 @@ aside {
     .posts > article {
         border: 1px solid lightgray;
         padding: 0.5em;
-        background-color: white;
         transition: background-color 400ms linear;
         margin-bottom: 0.5em;
     }
