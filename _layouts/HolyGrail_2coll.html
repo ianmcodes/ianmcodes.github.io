@@ -40,8 +40,7 @@
             var repoTmpl = $("script#repo_tmpl").text();
             $.ajax("https://api.github.com/users/dapuck/repos?sort=updated").done(function _process(data){
               console.log(data);
-              var obj = { repos: data };
-              var html = _.template(repoTmpl,obj);
+              var html = _.template(repoTmpl)({ repos: data });
               $("ul#list-o-repos").html(html);
             });
           });
