@@ -1,92 +1,108 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>{{ page.title }}</title>
-        <meta name="viewport" content="width=device-width">
 
-        <!-- syntax highlighting CSS -->
-        <link rel="stylesheet" href="/css/syntax.css">
-        <!-- Custom CSS -->
-        <link rel="stylesheet" href="/css/main_grail.css">
-        <link rel="stylesheet" href="/css/octicons/octicons.css">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>{{ page.title }}</title>
+  <meta name="viewport" content="width=device-width">
 
-        <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
-        <script type="text/javascript" src="http://underscorejs.org/underscore-min.js"></script>
-        {% unless page.norepos %}
-        <link rel="stylesheet" href="/css/repo_list.css">
-        <script type="text/template" id="repo_tmpl">
-          <% _.each(repos, function(repo){ %>
-            <li>
-              <span>
-                <% if(repo.fork) { %>
-                <span class="octicon octicon-repo-forked"></span>
-                <% } else { %>
-                <span class="octicon octicon-repo"></span>
-                <% } %>
-                <a href="<%= repo.html_url %>"><%- repo.full_name %></a>
-                <span class="update_time" title="Last updated"> - <%= repo.updated_at %></span>
-              </span>
-              <span class="description"><%- repo.description %></span>
-            </li>
-          <% }); %>
-        </script>
+  <!-- syntax highlighting CSS -->
+  <link rel="stylesheet" href="/css/syntax.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/css/main_grail.css">
+  <link rel="stylesheet" href="/css/octicons/octicons.css">
 
-        <script type="text/javascript">
-          $(function ready(){
-            if(typeof console === 'undefined')
-              console = { log: function empty() {} };
-            var repoTmpl = $("script#repo_tmpl").text();
-            $.ajax("https://api.github.com/users/dapuck/repos?sort=updated").done(function _process(data){
-              console.log(data);
-              var html = _.template(repoTmpl)({ repos: data });
-              $("ul#list-o-repos").html(html);
-            });
-          });
-        </script>
-        {% endunless %}
-    </head>
-    <body class="HolyGrail">
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+  <script type="text/javascript" src="http://underscorejs.org/underscore-min.js"></script>
+  {% unless page.norepos %}
+  <link rel="stylesheet" href="/css/repo_list.css">
+  <script type="text/template" id="repo_tmpl">
+    <% _.each(repos, function (repo) { %>
+      <li>
+        <span>
+          <% if (repo.fork) { %>
+          <span class = "octicon octicon-repo-forked"></span>
+          <% } else { %>
+          <span class="octicon octicon-repo"></span>
+          <% } %>
+          <a href="<%= repo.html_url %>"><%- repo.full_name %></a>
+          <span class="update_time" title="Last updated"> - <%= repo.updated_at %></span>
+        </span>
+        <span class="description"><%- repo.description %></span>
+      </li>
+    <% }); %>
+  </script>
 
-        <div class="site">
-          <header class="header">
-            <h1 class="title"><a href="/">{{ site.name }}</a></h1>
-            <span class="links">
+  <script type="text/javascript">
+    $(function ready() {
+      if (typeof console === 'undefined')
+        console = {
+          log: function empty() {}
+        };
+      var repoTmpl = $("script#repo_tmpl").text();
+      $.ajax("https://api.github.com/users/dapuck/repos?sort=updated").done(function _process(data) {
+        console.log(data);
+        var html = _.template(repoTmpl)({
+          repos: data
+        });
+        $("ul#list-o-repos").html(html);
+      });
+    });
+  </script>
+  {% endunless %}
+  {% if page.head_include %}
+  {% include page.head_include %}
+  {% endif %}
+</head>
+
+<body class="HolyGrail">
+
+  <div class="site">
+    <header class="header">
+      <h1 class="title"><a href="/">{{ site.name }}</a></h1>
+      <span class="links">
               <a class="extra" href="/">home</a>
               <a class="extra" href="/about/">about</a>
               <a class="extra" href="http://www.da-puck.com/Resume/">Resume</a>
             </span>
-          </header>
+    </header>
 
-          <div class="HolyGrail-body">
-            <main class="HolyGrail-content">
-            {{ content }}
-            </main>
+    <div class="HolyGrail-body">
+      <main class="HolyGrail-content">
+        {{ content }}
+      </main>
 
-            <nav class="HolyGrail-left" style="display: none"></nav>
+      <nav class="HolyGrail-left" style="display: none"></nav>
 
-            <aside class="HolyGrail-right" {% if page.norepos %} style="display: none;" {% endif %}>
-              {% unless page.norepos %}
-              <ul id="list-o-repos" class="no_bull"></ul>
-              {% endunless %}
-            </aside>
-          </div>
+      <aside class="HolyGrail-right" {% if page.norepos %} style="display: none;" {% endif %}>
+        {% unless page.norepos %}
+        <ul id="list-o-repos" class="no_bull"></ul>
+        {% endunless %}
+      </aside>
+    </div>
 
-          <footer class="footer">
-            {% include footer.html %}
-          </footer>
-        </div>
-        <script>
-          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-        
-          ga('create', 'UA-29762064-2', 'auto');
-          ga('require', 'displayfeatures');
-          ga('send', 'pageview');
-        
-        </script>
-    </body>
+    <footer class="footer">
+      {% include footer.html %}
+    </footer>
+  </div>
+  <script>
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+      m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-29762064-2', 'auto');
+    ga('require', 'displayfeatures');
+    ga('send', 'pageview');
+  </script>
+</body>
+
 </html>
