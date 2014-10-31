@@ -11,11 +11,11 @@
         <!-- Custom CSS -->
         <link rel="stylesheet" href="/css/main_grail.css">
         <link rel="stylesheet" href="/css/octicons/octicons.css">
-        <link rel="stylesheet" href="/css/repo_list.css">
 
         <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
         <script type="text/javascript" src="http://underscorejs.org/underscore-min.js"></script>
-
+        {% unless page.norepos %}
+        <link rel="stylesheet" href="/css/repo_list.css">
         <script type="text/template" id="repo_tmpl">
           <% _.each(repos, function(repo){ %>
             <li>
@@ -45,6 +45,7 @@
             });
           });
         </script>
+        {% endunless %}
     </head>
     <body class="HolyGrail">
 
@@ -65,27 +66,15 @@
 
             <nav class="HolyGrail-left" style="display: none"></nav>
 
-            <aside class="HolyGrail-right">
-              <!--  -->
+            <aside class="HolyGrail-right" {% if page.norepos %} style="display: none;" {% endif %}>
+              {% unless page.norepos %}
               <ul id="list-o-repos" class="no_bull"></ul>
+              {% endunless %}
             </aside>
           </div>
 
           <footer class="footer">
-            <div class="contact">
-              <p>
-                Ian McCall<br>
-                Code Monkey<br>
-                ian@ianmccall.codes
-              </p>
-            </div>
-            <div class="contact">
-              <p>
-                <a href="https://github.com/dapuck"><span style="color: black;" class="octicon octicon-mark-github"></span>github.com/dapuck</a><br />
-                <a href="https://twitter.com/ianmccallcodes"><img src="/assets/icons/iconmonstr-twitter-5-icon-16.png">@ianmccallcodes</a><br>
-                <a href="https://www.linkedin.com/in/ianmccallcodes"><img src="/assets/icons/iconmonstr-linkedin-5-icon-16.png">/ianmccallcodes</a>
-              </p>
-            </div>
+            {% include footer.html %}
           </footer>
         </div>
         <script>
