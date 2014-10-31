@@ -19,7 +19,7 @@ body {
   background: -o-linear-gradient(white, grey);
   background: linear-gradient(white, grey);
 */
-  background-color: #aafad8;
+  background-color: #9AA2F5;
   font: 13.34px Helvetica, Arial, sans-serif;
   font-size: small;
   text-align: center;
@@ -89,13 +89,13 @@ a:visited {
   display: inline-block;
 }
 .title a {
-  color: #6F6C6C;
+  color: #FF0000;
 }
 .title a:hover {
   color: #000;
 }
 .header a.extra {
-  color: #aaa;
+  color: #8E8E8E;
   margin-left: 1em;
 }
 .header a.extra:hover {
@@ -182,14 +182,22 @@ aside {
   padding: 0.5em;
 }
 .header {
-  padding-bottom: 0.5em;
+  padding: 0.5em;
+  background-color: #A3D6FA;
+  margin-bottom: 0.5em;
 }
 .header .links {
   display: block;
 }
 @media (min-width: 1024px) and (orientation: landscape) {
+  .header {
+    border-radius: 10px;
+  }
   .header .links {
     display: inline;
+  }
+  .footer {
+    border-radius: 10px;
   }
   .site {
     margin-left: 5em;
@@ -197,6 +205,7 @@ aside {
   }
   aside {
     display: block;
+    border-radius: 10px;
   }
   /* Holy grail */
   .HolyGrail {
