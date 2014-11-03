@@ -2,6 +2,7 @@
 layout: HolyGrail_2coll
 title: IanMcCall.codes
 norepos: true
+head_include: resume_header.html
 ---
 
 Ian McCall
