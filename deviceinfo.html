@@ -6,18 +6,19 @@
         document.getElementById(id).innerHTML = val;
       }
       function init() {
+        var i = 500;
         setInterval(function() {
           updateElement('swidth', screen.width);
-        }, 1000);
+        }, i);
         setInterval(function() {
           updateElement('sheight', screen.height);
-        }, 1000);
+        }, i);
         setInterval(function() {
           updateElement('wwidth', window.innerWidth);
-        }, 1000);
+        }, i);
         setInterval(function() {
           updateElement('wheight', window.innerHeight);
-        }, 1000);
+        }, i);
       }
     </script>
   </head>
