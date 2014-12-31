@@ -9,6 +9,15 @@
         setInterval(function() {
           updateElement('swidth', screen.width);
         }, 1000);
+        setInterval(function() {
+          updateElement('sheight', screen.height);
+        }, 1000);
+        setInterval(function() {
+          updateElement('wwidth', window.innerWidth);
+        }, 1000);
+        setInterval(function() {
+          updateElement('wheight', window.innerHeight);
+        }, 1000);
       }
     </script>
   </head>
@@ -17,13 +26,13 @@
       screen.width: <span id="swidth"></span>
     </div>
     <div>
-      screen.height: <script>document.write(screen.height);</script>
+      screen.height: <span id="sheight"></span>
     </div>
     <div>
-      window.innerWidth: <script>document.write(window.innerWidth);</script>
+      window.innerWidth: <span id="wwidth"></span>
     </div>
     <div>
-      window.innerHeight: <script>document.write(window.innerHeight);</script>
+      window.innerHeight: <span id="wheight"></span>
     </div>
   </body>
 </html>
