@@ -10,7 +10,7 @@
         color: red;
       }
       
-      .d72, .d96 {
+      .d72, .d96, .r1, .r2 {
         display: none;
       }
       
@@ -25,6 +25,12 @@
           display: block;
         }
       }
+      
+      media (min-resolution: 1dppx) {
+        .r1 {
+          display: block;
+        }
+      }
     </style>
   </head>
   <body>
@@ -33,6 +39,8 @@
       <li class="control">Control</li>
       <li class="d72">&gt;=72dpi</li>
       <li class="d96">&gt;=96dpi</li>
+      <li class="r1">1dppx</li>
+      <li class="r2">2dppx</li>
     </ul>
   </body>
 </html>
