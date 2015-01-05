@@ -3,21 +3,24 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
     <title>Test</title>
     <style>
+      html, body {
+        width: 100%;
+      }
       .control {
-        font-color: red;
+        color: red;
       }
       
       .d72, .d96 {
         display: none;
       }
       
-      media all and (min-resolution: 72dpi) {
+      media (min-resolution: 72dpi) {
         .d72 {
           display: block;
         }
       }
       
-      media all and (min-resolution: 96dpi) {
+      media (min-resolution: 96dpi), (-webkit-min-device-pixel-ratio: 2) {
         .d96 {
           display: block;
         }
