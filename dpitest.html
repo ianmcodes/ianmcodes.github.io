@@ -1,0 +1,34 @@
+<html>
+  <head>
+    <title>Test</title>
+    <style>
+      .control {
+        font-color: red;
+      }
+      
+      .d72, .d96 {
+        display: none;
+      }
+      
+      media all and (min-resolution: 72dpi) {
+        .d72 {
+          display: block;
+        }
+      }
+      
+      media all and (min-resolution: 96dpi) {
+        .d96 {
+          display: block;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div>Test</div>
+    <ul>
+      <li class="control">Control</li>
+      <li class="d72">&gt;=72dpi</li>
+      <li class="d96">&gt;=96dpi</li>
+    </ul>
+  </body>
+</html>
