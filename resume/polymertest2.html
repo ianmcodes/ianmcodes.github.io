@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Polymer Resume</title>
+    <script type="text/javascript" src="../bower_components/webcomponentsjs/webcomponents.js"></script>
+    
+    <link rel="import" href="../bower_components/core-scaffold/core-scaffold.html">
+    <link rel="import" href="../bower_components/core-toolbar/core-toolbar.html">
+    <link rel="import" href="../bower_components/core-menu/core-menu.html">
+    <link rel="import" href="../bower_components/paper-item/paper-item.html">
+    <link rel="import" href="../bower_components/core-icon/core-icon.html">
+    <link rel="import" href="../bower_components/core-animated-pages/core-animated-pages.html">
+    <link rel="import" href="../bower_components/core-animated-pages/transitions/slide-from-right.html">
+    <link rel="import" href="../bower_components/core-ajax/core-ajax.html">
+    
+    <link rel="stylesheet" href="../css/polymer_test.css" shim-shadowdom>
+  </head>
+  <body unresolved fullbleed>
+    <template is="auto-binding" id="main">
+      
+      <core-ajax id="ajax" url="{{selectedPage.page.url}}" handleAs="document" on-core-response="{{onResponse}}"></core-ajax>
+      
+      <core-scaffold id="scaffold">
+        <nav>
+          <core-toolbar><span>Menu</span></core-toolbar>
+          <core-menu valueattr="hash" selected="{{route}}" selectedModel="{{selectedPage}}" on-core-select="{{menuItemSelected}}">
+            <template repeat="{{page in pages}}">
+              <paper-item hash="{{page.hash}}" noink>
+                <core-icon icon="label-outline"></core-icon>
+                <a href="#{{page.hash}}">{{page.name}}</a>
+              </paper-item>
+            </template>
+          </core-menu>
+        </nav>
+        <core-toolbar tool flex>
+          <div flex>Polymer Resume</div>
+        </core-toolbar>
+        <div layout horizontal center-center fit>
+          <core-animated-pages id="pages" valueattr="hash" selected="{{route}}" transitions="slide-from-right">
+            <template repeat="{{page in pages}}">
+              <section hash="{{page.hash}}" layout vertical center-center>
+                <div>{{page.name}}</div>
+              </section>
+            </template>
+          </core-animated-pages>
+        </div>
+      </core-scaffold>
+    </template>
+    
+    <script type="text/javascript">
+      (function(){
+        var template = document.querySelector('template#main');
+        var ajax, pages;
+
+        template.pages = [
+          {name: "Work", hash: "one", url: "parts/work.html"},
+          {name: "Education", hash: "two", url: "parts/education.html"},
+          {name: "Technology", hash: "three", url: "parts/technology.html"},
+          {name: "Other", hash: "four", url: "parts/other.html"}
+        ];
+
+        template.addEventListener('template-bound', function(e) {
+          ajax = document.querySelector('#ajax');
+          pages = document.querySelector('#pages');
+        })
+
+        template.menuItemSelected = function(e, detail, sender) {
+          if(detail.isSelected) {
+            this.async(function() {
+              ajax.go();
+            });
+            this.$ && this.$.scaffold.closeDrawer();
+          }
+        };
+
+        template.onResponse = function(e, detail, sender) {
+          var content = detail.response.querySelector('main.HolyGrail-content');
+          console.log(detail);
+          var html = content.innerHTML;
+          this.injectBoundHTML(html, pages.selectedItem.firstElementChild);
+        };
+      })();
+    </script>
+  </body>
+</html>

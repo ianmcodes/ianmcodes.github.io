@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Polymer Resume</title>
+    <script type="text/javascript" src="../bower_components/webcomponentsjs/webcomponents.js"></script>
+    
+    <link rel="import" href="../bower_components/core-scaffold/core-scaffold.html">
+    <link rel="import" href="../bower_components/core-toolbar/core-toolbar.html">
+    <link rel="import" href="../bower_components/core-menu/core-menu.html">
+    <link rel="import" href="../bower_components/paper-item/paper-item.html">
+    <link rel="import" href="../bower_components/core-icon/core-icon.html">
+    <link rel="import" href="../bower_components/core-animated-pages/core-animated-pages.html">
+    <link rel="import" href="../bower_components/core-animated-pages/transitions/slide-from-right.html">
+  </head>
+  <body unresolved fullbleed>
+    <core-scaffold id="scaffold">
+      <nav>
+        <core-toolbar><span>Menu</span></core-toolbar>
+        <core-menu selected="0">
+          <paper-item noink>
+            <core-icon icon="label-outline"></core-icon>
+            <a href="#one">Work</a>
+          </paper-item>
+          <paper-item noink>
+            <core-icon icon="label-outline"></core-icon>
+            <a href="#two">Education</a>
+          </paper-item>
+          <paper-item noink>
+            <core-icon icon="label-outline"></core-icon>
+            <a href="#three">Technology</a>
+          </paper-item>
+          <paper-item noink>
+            <core-icon icon="label-outline"></core-icon>
+            <a href="#four">Other</a>
+          </paper-item>
+        </core-menu>
+      </nav>
+      <core-toolbar tool flex>
+        <div flex>Polymer Resume</div>
+        <core-icon-button icon="refresh"></core-icon-button>
+        <core-icon-button icon="add"></core-icon-button>
+      </core-toolbar>
+      <div layout horizontal center-center fit>
+        <core-animated-pages selected="0" transitions="slide-from-right">
+          <section layout vertical center-center>
+            <div>Work</div>
+          </section>
+          <section layout vertical center-center>
+            <div>Education</div>
+          </section>
+          <section layout vertical center-center>
+            <div>Technology</div>
+          </section>
+          <section layout vertical center-center>
+            <div>Other</div>
+          </section>
+        </core-animated-pages>
+      </div>
+    </core-scaffold>
+  </body>
+</html>
