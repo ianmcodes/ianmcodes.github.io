@@ -1,5 +1,5 @@
 Work Experience
----------------
+===============
 
 ### Where2GetIt, Des Plaines, IL
 #### Development Manager (April 2014 - Present)

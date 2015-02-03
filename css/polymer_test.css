@@ -1,6 +1,14 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
+  font: 13.34px Helvetica, Arial, sans-serif;
+/*
   font-family: "RobotoDraft";
   font-weight: 300;
+*/
 }
 
 core-animated-pages {
@@ -12,9 +20,17 @@ core-animated-pages {
 
 core-animated-pages > * {
   border-radius: 5px;
-/*  font-size: 50px;*/
   background-color: white;
   bottom: auto !important;
+  padding: 5px;
+}
+
+core-animated-pages h1 {
+  margin-bottom: 1em;
+}
+
+core-animated-pages p {
+  margin: 1em 0;
 }
 
 body /deep/ core-toolbar {

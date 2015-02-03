@@ -2,7 +2,7 @@
 layout: post
 title: "Don't make Promises"
 description: ""
-categories: 
+category: post
 ---
 
 I've come to a conclusion that some may disagree with. That Promises, just aren't worth 

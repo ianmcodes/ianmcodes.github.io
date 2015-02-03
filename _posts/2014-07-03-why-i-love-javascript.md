@@ -2,7 +2,7 @@
 layout: post
 title: "Why I Love JavaScript"
 description: "Why I Love JavaScript"
-categories: code
+category: post
 ---
 
 While I am experienced in many languages (Ruby, Python, Perl, Java, etc...), my language of choice is JavaScript. 

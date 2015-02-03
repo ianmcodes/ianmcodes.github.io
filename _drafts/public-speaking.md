@@ -2,7 +2,7 @@
 layout: post
 title: "Public Speaking"
 description: ""
-categories: personal
+category: post
 ---
 
 Tips on public speaking for people that don't do it professionally 

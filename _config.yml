@@ -1,6 +1,6 @@
 name: Ian McCall
 markdown: redcarpet
-highlighter: pygments
+highlighter: true
 #pygments: true
 safe: true
 lsi: false

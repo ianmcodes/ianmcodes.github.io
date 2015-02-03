@@ -2,7 +2,7 @@
 layout: post
 title: "CORS with mod_perl"
 description: ""
-categories: 
+category: post
 ---
 
 Recently at work, I added support for Cross Origin Resource Sharing (CORS) to our web infrastructure. There is lots of information online about how CORS works and how to add support for it to your server. In fact, there is even a web site called [enable-cors.org](http://enable-cors.org/) that has good information on how to enable CORS on many platforms. It's a good for a start, but not enough for a production environment.

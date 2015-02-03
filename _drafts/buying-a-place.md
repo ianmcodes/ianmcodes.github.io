@@ -2,7 +2,7 @@
 layout: post
 title: "Buying My First Place"
 description: ""
-categories: personal home
+category: post
 ---
 
 Intro

@@ -1,34 +1,25 @@
----
-title: Polymer Resume
-pages:
-  - name: Work
-    file: parts/work.md
-    hash: one
-  - name: Education
-    file: parts/education.md
-    hash: two
----
 <!DOCTYPE html>
 <html>
   <head>
     <title>{{ page.title }}</title>
-    <script type="text/javascript" src="../bower_components/webcomponentsjs/webcomponents.js"></script>
     
-    <link rel="import" href="../bower_components/core-scaffold/core-scaffold.html">
-    <link rel="import" href="../bower_components/core-toolbar/core-toolbar.html">
-    <link rel="import" href="../bower_components/core-menu/core-menu.html">
-    <link rel="import" href="../bower_components/paper-item/paper-item.html">
-    <link rel="import" href="../bower_components/core-icon/core-icon.html">
-    <link rel="import" href="../bower_components/core-animated-pages/core-animated-pages.html">
-    <link rel="import" href="../bower_components/core-animated-pages/transitions/slide-from-right.html">
-    <link rel="import" href="../bower_components/core-ajax/core-ajax.html">
+    <link rel="stylesheet" href="/css/syntax.css">
     
-    <link rel="stylesheet" href="../css/polymer_test.css" shim-shadowdom>
+    <script type="text/javascript" src="/bower_components/webcomponentsjs/webcomponents.js"></script>
+    
+    <link rel="import" href="/bower_components/core-scaffold/core-scaffold.html">
+    <link rel="import" href="/bower_components/core-toolbar/core-toolbar.html">
+    <link rel="import" href="/bower_components/core-menu/core-menu.html">
+    <link rel="import" href="/bower_components/paper-item/paper-item.html">
+    <link rel="import" href="/bower_components/core-icon/core-icon.html">
+    <link rel="import" href="/bower_components/core-animated-pages/core-animated-pages.html">
+    <link rel="import" href="/bower_components/core-animated-pages/transitions/slide-from-right.html">
+    <link rel="import" href="/bower_components/core-ajax/core-ajax.html">
+    
+    <link rel="stylesheet" href="/css/polymer_test.css" shim-shadowdom>
   </head>
   <body unresolved fullbleed>
     <template is="auto-binding" id="main">
-      
-<!--      <core-ajax id="ajax" url="{{selectedPage.page.url}}" handleAs="document" on-core-response="{{onResponse}}"></core-ajax>-->
       
       <core-scaffold id="scaffold">
         <nav>
@@ -36,11 +27,20 @@ pages:
           {% raw %}
           <core-menu valueattr="hash" selected="{{route}}" selectedModel="{{selectedPage}}" on-core-select="{{menuItemSelected}}">
           {% endraw %}
-            {% for p in page.pages %}
-              <paper-item hash="{{ p.hash }}" noink>
-                <core-icon icon="label-outline"></core-icon>
-                <a href="#{{ p.hash }}">{{ p.name }}</a>
+            {% for p, i in site.pages %}
+            {% if p.url == page.url and page.sections  %}
+            <core-submenu icon="label-outline" label="{{ page.title }}">
+              {% for s, x in site.sections %}
+              <paper-item hash="{{ s.hash }}" noink>
+                <core-icon icon="label"></core-icon>
+                <a href="#{{ s.hash }}">{{ s.name }}</a>
               </paper-item>
+            </core-submenu>
+            {% else %}
+            <paper-item hash="{{ i }}" noink>
+              <core-icon icon="label-outline"></core-icon>
+              <a href="{{ p.url }}">{{ p.title }}</a>
+            </paper-item>
             {% endfor %}
           </core-menu>
         </nav>
@@ -67,23 +67,12 @@ pages:
         var template = document.querySelector('template#main');
         var ajax, pages;
 
-//        template.pages = [
-//          {name: "Work", hash: "one", url: "parts/work.html"},
-//          {name: "Education", hash: "two", url: "parts/education.html"},
-//          {name: "Technology", hash: "three", url: "parts/technology.html"},
-//          {name: "Other", hash: "four", url: "parts/other.html"}
-//        ];
-
         template.addEventListener('template-bound', function(e) {
-//          ajax = document.querySelector('#ajax');
           pages = document.querySelector('#pages');
         })
 
         template.menuItemSelected = function(e, detail, sender) {
           if(detail.isSelected) {
-//            this.async(function() {
-//              ajax.go();
-//            });
             this.$ && this.$.scaffold.closeDrawer();
           }
         };
