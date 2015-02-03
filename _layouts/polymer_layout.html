@@ -27,20 +27,22 @@
           {% raw %}
           <core-menu valueattr="hash" selected="{{route}}" selectedModel="{{selectedPage}}" on-core-select="{{menuItemSelected}}">
           {% endraw %}
-            {% for p, i in site.pages %}
+            {% for p in site.pages %}
             {% if p.url == page.url and page.sections  %}
             <core-submenu icon="label-outline" label="{{ page.title }}">
-              {% for s, x in site.sections %}
+              {% for s in site.sections %}
               <paper-item hash="{{ s.hash }}" noink>
                 <core-icon icon="label"></core-icon>
                 <a href="#{{ s.hash }}">{{ s.name }}</a>
               </paper-item>
+              {% endfor %}
             </core-submenu>
             {% else %}
-            <paper-item hash="{{ i }}" noink>
+            <paper-item hash="{{ forloop.index }}" noink>
               <core-icon icon="label-outline"></core-icon>
               <a href="{{ p.url }}">{{ p.title }}</a>
             </paper-item>
+            {% endif %}
             {% endfor %}
           </core-menu>
         </nav>
@@ -48,16 +50,7 @@
           <div flex>Polymer Resume</div>
         </core-toolbar>
         <div layout horizontal center-center fit>
-          {% raw %}
-          <core-animated-pages id="pages" valueattr="hash" selected="{{route}}" transitions="slide-from-right">
-          {% endraw %}
-            {% for p in page.pages %}
-              <section hash="{{p.hash}}" layout vertical>
-                {% capture pcontent %}{% include_relative {{p.file}} %}{% endcapture %}
-                {{ pcontent | markdownify }}
-              </section>
-            {% endfor %}
-          </core-animated-pages>
+          {{ content }}
         </div>
       </core-scaffold>
     </template>
