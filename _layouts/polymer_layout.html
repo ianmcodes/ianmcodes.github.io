@@ -27,7 +27,8 @@
           {% raw %}
           <core-menu valueattr="hash" selected="{{route}}" selectedModel="{{selectedPage}}" on-core-select="{{menuItemSelected}}">
           {% endraw %}
-            {% for p in site.pages %}
+            {% assign menu_pages = site.pages | where:"include_in_menu",true | sort: "order" %}
+            {% for p in menu_pages %}
             {% if p.url == page.url and page.sections  %}
             <core-submenu icon="label-outline" label="{{ page.title }}">
               {% for s in site.sections %}
@@ -40,7 +41,7 @@
             {% else %}
             <paper-item hash="{{ forloop.index }}" noink>
               <core-icon icon="label-outline"></core-icon>
-              <a href="{{ p.url }}">{{ p.title }}</a>
+              <a href="{{ p.url }}">{{ p.menu_name }}</a>
             </paper-item>
             {% endif %}
             {% endfor %}
