@@ -7,14 +7,18 @@ order: 0
 menu_name: Home
 ---
 
-<div id="home">
-  <h1>Blog Posts</h1>
-  <div class="posts">
-    {% for post in site.posts %}
-      <article>
-        <span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a>
-        {{ post.excerpt }}
-      </article>
-    {% endfor %}
-  </div>
-</div>
+<core-animated-pages id="pages" valueattr="hash" selected="0" transitions="slide-from-right">
+  <section hash="0" layout vertical>
+    <div id="home">
+      <h1>Blog Posts</h1>
+      <div class="posts">
+        {% for post in site.posts %}
+          <article>
+            <span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a>
+            {{ post.excerpt }}
+          </article>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+</core-animated-pages>
