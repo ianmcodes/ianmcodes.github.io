@@ -1,5 +1,6 @@
 ---
-title: Polymer Resume
+layout: polymer_layout
+title: Resume
 sections:
   - name: Work
     file: parts/work.md
@@ -10,93 +11,20 @@ sections:
   - name: Technology
     file: parts/technology.md
     hash: three
+
+
+include_in_menu: true
+order: 3
+menu_name: Resume
 ---
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>{{ page.title }}</title>
-    
-    <link rel="stylesheet" href="/css/syntax.css">
-    
-    <script type="text/javascript" src="../bower_components/webcomponentsjs/webcomponents.js"></script>
-    
-    <link rel="import" href="../bower_components/core-scaffold/core-scaffold.html">
-    <link rel="import" href="../bower_components/core-toolbar/core-toolbar.html">
-    <link rel="import" href="../bower_components/core-menu/core-menu.html">
-    <link rel="import" href="../bower_components/paper-item/paper-item.html">
-    <link rel="import" href="../bower_components/core-icon/core-icon.html">
-    <link rel="import" href="../bower_components/core-animated-pages/core-animated-pages.html">
-    <link rel="import" href="../bower_components/core-animated-pages/transitions/slide-from-right.html">
-    <link rel="import" href="../bower_components/core-ajax/core-ajax.html">
-    
-    <link rel="stylesheet" href="../css/polymer_test.css" shim-shadowdom>
-    <style>
-      @media print {
-        nav {
-          display: none;
-        }
-        
-        
-      }
-    </style>
-  </head>
-  <body unresolved fullbleed>
-    <template is="auto-binding" id="main">
-      
-      <core-scaffold id="scaffold">
-        <nav>
-          <core-toolbar><span>Menu</span></core-toolbar>
-          {% raw %}
-          <core-menu valueattr="hash" selected="{{route}}" selectedModel="{{selectedPage}}" on-core-select="{{menuItemSelected}}">
-          {% endraw %}
-            {% for p in page.sections %}
-              <paper-item hash="{{ p.hash }}" noink>
-                <core-icon icon="label-outline"></core-icon>
-                <a href="#{{ p.hash }}">{{ p.name }}</a>
-              </paper-item>
-            {% endfor %}
-          </core-menu>
-        </nav>
-        <core-toolbar tool flex>
-          <div flex>Polymer Resume</div>
-        </core-toolbar>
-        <div layout horizontal center-center fit>
-          {% raw %}
-          <core-animated-pages id="pages" valueattr="hash" selected="{{route}}" transitions="slide-from-right">
-          {% endraw %}
-            {% for p in page.sections %}
-              <section hash="{{p.hash}}" layout vertical>
-                {% capture pcontent %}{% include_relative {{p.file}} %}{% endcapture %}
-                {{ pcontent | markdownify }}
-              </section>
-            {% endfor %}
-          </core-animated-pages>
-        </div>
-      </core-scaffold>
-    </template>
-    
-    <script type="text/javascript">
-      (function(){
-        var template = document.querySelector('template#main');
-        var ajax, pages;
 
-        template.addEventListener('template-bound', function(e) {
-          pages = document.querySelector('#pages');
-        })
-
-        template.menuItemSelected = function(e, detail, sender) {
-          if(detail.isSelected) {
-            this.$ && this.$.scaffold.closeDrawer();
-          }
-        };
-
-        template.onResponse = function(e, detail, sender) {
-          var content = detail.response.querySelector('main.HolyGrail-content');
-          console.log(detail);
-          var html = content.innerHTML;
-          this.injectBoundHTML(html, pages.selectedItem.firstElementChild);
-        };
-      })();
-    </script>
-  </body>
-</html>
+{% raw %}
+<core-animated-pages id="pages" valueattr="hash" selected="{{route}}" transitions="slide-from-right">
+{% endraw %}
+  {% for p in page.sections %}
+    <section hash="{{p.hash}}" layout vertical>
+      {% capture pcontent %}{% include_relative {{p.file}} %}{% endcapture %}
+      {{ pcontent | markdownify }}
+    </section>
+  {% endfor %}
+</core-animated-pages>
