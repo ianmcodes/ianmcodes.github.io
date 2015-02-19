@@ -40,3 +40,21 @@ op1().then(function(result) {
 })// .then... keep chaining until you are done.
 ```
 
+Which is obviously much nicer to look at. So you might be wondering why not use Promises? 
+Because there is a much better option out there.
+
+Before I discuss __"The Better Option"__ we should consider what Promises actually do for 
+us. What we get from Promises is a form of control flow that is easier to read that a 
+mess of callbacks. But the control flow Promises provide is very limited. You can only 
+have "waterfall" flow (where the result from the first calls flows to the second, and the
+second to the third, etc.). It won't help you paralelize syncronus calls, or allow you to
+aggregate the results of all calls (unless you code each function to pass the result 
+along). And if you need to chain together an arbitrary number of calls at runtime you 
+could loose the greatest promise of Promises, readability.
+
+So what is the __"The Better Option"__? Its [async](https://github.com/caolan/async). The
+async library provides a whole host of functions for control flow. I wont rehash the 
+entire api here, but it includes parallel, series, and waterfall. All of the control flow
+functions also use more or less the same api. They take a list of functions (an array or 
+object), and a single callback function that gets the aggregated (or final depending on 
+the type of flow) result.
