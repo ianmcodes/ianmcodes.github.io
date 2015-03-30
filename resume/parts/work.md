@@ -6,8 +6,10 @@ Work Experience
 #### Manager of Technical Operations (December 2012 - April 2014)
 #### Front-End Developer (March 2011 - Present)
 
+{% unless page.print %}
 Where 2 Get It is a location based marketing services company based in Anaheim, CA. The company offers local search solution for national brands, such as Chick-fil-a, Patagonia, and Disney Stores. Their solutions include desktop and mobile store locators, data syndication and claiming for Google, InfoUSA, Navteq, and others, location pages for individual stores/dealers, and more.
 For more information on Where 2 Get It, see their website. [www.where2getit.com](http://www.where2getit.com)
+{% endunless %}
 
 As a Developer at Where 2 Get It, I work on bug fixes and new features for our front-end systems written in JavaScript and HTML, our Perl back-end, and our PostgreSQL database. I have also written custom JavaScript code to meet client requirements, as well as putting together development time estimates for client requests.
 
@@ -24,6 +26,7 @@ Model Metrics was a provider cloud computing solutions using salesforce.com, Ama
 
 During my time at Model Metrics I primarily used the ETL (Extract Transform Load) tool, Talend, to do complex data migrations and integrations for clients. I also worked on enhancements to internal tools, written in PHP, that analyzed the quality of clients' data in salesforce.com. One of those enhancements was to improve report generation speed by developing a way to generate the pages of the report in parallel.
 
+{% unless page.print %}
 ### Center for the Studies of Ethics in the Professions (CSEP), Chicago, IL
 #### Student Worker
 
@@ -37,4 +40,4 @@ I worked for the CSEP for a total of 3 years while attending IIT, as part of the
 Vehicle Improvement Products (VIP), located in Antioch, IL, designs and manufactures steering wheels for commercial vehicles (heavy trucks, buses, RVs, and off-highway equipment). Most recently, VIP has become the sole licensed manufacturer of the patented Wiper Shaker™ De-icer. For more information about VIP see their website. [www.vipwheels.com](http://www.vipwheels.com)
 
 I worked for VIP one summer while I was attending school at the Illinois Institute of Technology. While I was there I helped update their website, did trouble shooting on problems with automated testing equipment, and used Active Directory to set domain wide security policies.
-
+{% endunless %}

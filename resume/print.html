@@ -1,0 +1,55 @@
+---
+title: Resume
+sections:
+  - name: Work
+    file: parts/work.md
+    hash: one
+  - name: Education
+    file: parts/education.md
+    hash: two
+  - name: Technology
+    file: parts/technology.md
+    hash: three
+      }
+      }
+      }
+      }
+        display: none;
+      }
+      }
+      }
+      }
+      }
+      }
+        color: black;
+      }
+      }
+      }
+      }
+        display: none;
+      }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div>
+      <h1>Ian McCall</h1>
+      <div>
+        <b>Address: </b><span>1685 Mill St. Unit 405, Des Plaines, IL, 60016</span>
+        <br>
+        <b>Phone: </b><span>(312) 725-9586</span>
+        <br>
+        <b>E-mail: </b><span>ian@ianmccall.codes</span>
+      </div>
+    </div>
+  </header>
+  {% for p in page.sections %}
+  <section>
+    {% capture pcontent %}{% include_relative {{p.file}} %}{% endcapture %}
+    {{ pcontent | markdownify }}
+  </section>
+  {% endfor %}
+</body>
+
+</html>
