@@ -47,14 +47,43 @@ Before I discuss __"The Better Option"__ we should consider what Promises actual
 us. What we get from Promises is a form of control flow that is easier to read that a 
 mess of callbacks. But the control flow Promises provide is very limited. You can only 
 have "waterfall" flow (where the result from the first calls flows to the second, and the
-second to the third, etc.). It won't help you paralelize syncronus calls, or allow you to
+second to the third, etc.). It won't help you parallelize synchronous calls, or allow you to
 aggregate the results of all calls (unless you code each function to pass the result 
 along). And if you need to chain together an arbitrary number of calls at runtime you 
-could loose the greatest promise of Promises, readability.
+could lose the greatest promise of Promises, readability.
 
 So what is the __"The Better Option"__? Its [async](https://github.com/caolan/async). The
 async library provides a whole host of functions for control flow. I wont rehash the 
 entire api here, but it includes parallel, series, and waterfall. All of the control flow
 functions also use more or less the same api. They take a list of functions (an array or 
-object), and a single callback function that gets the aggregated (or final depending on 
-the type of flow) result.
+object), and a single callback function that gets the aggregated result (or final result
+depending on the type of flow).
+
+I've used this library quite a bit in both my personal and professional projects, and it 
+works great in both the browser and the server. Consider this example that achieves the 
+same thing as the previous examples.
+
+``` JavaScript
+async.waterfall([
+  function(callback) {
+    callback(null, op1());
+  },
+  function(arg, callback) {
+    callback(null, op2(arg));
+  },
+  function(arg, callback) {
+    callback(null, op3(arg));
+  },
+  ...
+], function(err, result) {
+  // do something with the final result.
+});
+```
+
+This gives you many of the same things you get with Promises. The code is clean and 
+rather easy to follow. We could even define the array of functions dynamically, so we can 
+have a variable number of functions to execute.
+
+While I doubt that this will convert the Promises faithful, I do hope that this would 
+help some more critically examine the value of Promises in their code, and see that there are 
+alternatives. 
