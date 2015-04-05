@@ -30,6 +30,12 @@ so it may take some time to load on slower systems).
 <script type="text/javascript">
 jQuery(function domLoaded($) {
   var data = {{ site.data.merit_badges_earned_by_year | jsonify }};
+  var show_badges = ["Cooking*","First Aid*","Swimming**","Environmental Science****"];
+  for(var i = 0; i < data.length; i++) {
+    if(show_badges.indexOf(data[i].name) === -1) {
+      data[i].visible = false;
+    }
+  }
   //$.ajax("/assets/merit_badges_earned_by_year.json")
     //.done(function(data){
       $("#load_chart").on("click",function() {
