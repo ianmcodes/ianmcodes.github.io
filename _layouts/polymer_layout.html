@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width">
     
     <link rel="stylesheet" href="/css/syntax.css">
+
+    {% if page.head_js %}
+    {% for js in page.head_js %}
+    <script type="text/javascript" src="{{ js }}"></script>
+    {% endfor %}
+    {% endif %}
     
     <script type="text/javascript" src="/bower_components/webcomponentsjs/webcomponents.js"></script>
 <!--    <script type="text/javascript" src="/bower_components/page/page.js"></script>-->
@@ -20,7 +26,11 @@
     <link rel="import" href="/bower_components/core-animated-pages/core-animated-pages.html">
     <link rel="import" href="/bower_components/core-animated-pages/transitions/slide-from-right.html">
     <link rel="import" href="/bower_components/core-ajax/core-ajax.html">
-    
+    {% if page.head_import %}
+    {% for imp in page.head_import %}
+    <link rel="import" href="{{ imp }}">
+    {% endfor %}
+    {% endif %}
     <link rel="stylesheet" href="/css/polymer_test.css" shim-shadowdom>
   </head>
   <body unresolved fullbleed>
