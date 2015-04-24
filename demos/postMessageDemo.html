@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>postMessage Demo!</title>
+  <script type="text/javascript">
+    function load() {
+      document.getElementById("origin").innerHTML = location.origin;
+    }
+
+    function send() {
+      var message = document.getElementById("message").value;
+      var frame = document.getElementById("frame");
+      frame.contentWindow.postMessage(message,"*");
+    }
+
+    function receiveMessage(evt) {
+      document.getElementById("received").innerHTML += "\n data: \"" + evt.data + "\", origin: \"" + evt.origin + "\"";
+    }
+
+    window.addEventListener("message", receiveMessage, false);
+  </script>
+  <style>
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    .left {
+      float: left;
+    }
+    
+    .half {
+      width: 50%;
+    }
+    
+    body > div {
+      height: 100vh;
+    }
+    
+    body > div > * {
+      margin-left: 5px;
+    }
+    
+    #frame {
+      position: relative;
+      width: 95%;
+      height: 95%;
+    }
+  </style>
+</head>
+
+<body onload="load();">
+  <div class="left half">
+    <h2>Parent Page!</h2>
+    <h3>Origin: <span id="origin"></span></h3>
+    <input id="message" type="text" />
+    <br />
+    <input id="send" type="button" value="Send Message" onclick="send();">
+    <div>
+      <span>Messages Received:</span>
+      <pre id="received"></pre>
+    </div>
+  </div>
+  <div class="left half">
+    <iframe id="frame" src="http://www.da-puck.com/postMessageDemoChild.html"></iframe>
+  </div>
+</body>
+
+</html>
