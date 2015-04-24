@@ -17,8 +17,12 @@
     function receiveMessage(evt) {
       document.getElementById("received").innerHTML += "\n data: \"" + evt.data + "\", origin: \"" + evt.origin + "\"";
     }
-
-    window.addEventListener("message", receiveMessage, false);
+    
+    if(window.addEventListener) {
+      window.addEventListener("message", receiveMessage, false);
+    } else {
+      window.attachEvent("onmessage", receiveMessage);
+    }
   </script>
   <style>
     html,
@@ -26,6 +30,7 @@
       margin: 0;
       padding: 0;
       font-family: Arial, Helvetica, sans-serif;
+      height: 100%;
     }
     
     .left {
@@ -37,7 +42,7 @@
     }
     
     body > div {
-      height: 100vh;
+      height: 100%;
     }
     
     body > div > * {
