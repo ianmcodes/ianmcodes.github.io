@@ -4,8 +4,10 @@
 <head>
   <title>postMessage Demo!</title>
   <script type="text/javascript">
+    var origin = location.origin || (location.protocol + "//" + location.host + ((location.port) ? ":" + location.port : ""));
+    
     function load() {
-      document.getElementById("origin").innerHTML = location.origin;
+      document.getElementById("origin").innerHTML = origin;
     }
 
     function send() {
