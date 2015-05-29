@@ -17,7 +17,11 @@
     }
 
     function receiveMessage(evt) {
-      document.getElementById("received").innerHTML += "\n data: \"" + evt.data + "\", origin: \"" + evt.origin + "\"";
+      if(typeof document.getElementById("received").innerText !== 'undefined') {
+        document.getElementById("received").innerText += "\n data: \"" + evt.data + "\", origin: \"" + evt.origin + "\"";
+      } else {
+        document.getElementById("received").innerHTML += "\n data: \"" + evt.data + "\", origin: \"" + evt.origin + "\"";
+      }
     }
     
     if(window.addEventListener) {
