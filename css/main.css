@@ -1,3 +1,9 @@
+/***
+ * Color Palet (Triadic): http://paletton.com/#uid=3280u0kpyspfNCgkQuKsQnuvXiB
+ * Base: #BADA2C | Shades: #758F00, #97B412, #D0EC52, #E2F87E (green)
+ * Alt1: #CC2958 | Shades: #850026, #A8113C, #DC4D76, #EB7798 (red)
+ * Alt2: #5B2999 | Shades: #310964, #44167F, #6F43A6, #8F69BF (purple)
+ ***/
 /*****************************************************************************/
 /*
 /* Common
@@ -13,7 +19,7 @@
 /*html, body { height: 100%; }*/
 
 body {
-  background-color: #FFF;
+  background-color: #97B412;
   font: 13.34px Helvetica, Arial, sans-serif;
   font-size: small;
   text-align: center;
@@ -71,6 +77,7 @@ a:visited { color: #a0a; }
 
 header h1.title {
     margin-top: .5em;
+    margin-left: .5em;
 }
 
 nav ul li {
@@ -78,11 +85,11 @@ nav ul li {
 }
 
 nav ul li:after {
-    content: " |";
+/*    content: " |";*/
 }
 
 nav ul li:last-child:after {
-    content: "";
+/*    content: "";*/
 }
 
 .title {
@@ -92,7 +99,8 @@ nav ul li:last-child:after {
 
 .title a {
 /*  color: #a00;*/
-    color: #BADA2C;
+    color: black;
+    background-color: #BADA2C;
 }
 
 .title a:hover {
@@ -118,6 +126,9 @@ nav ul li:last-child:after {
   border-top: 4px solid #eee;
   margin-top: 2em;
   overflow: hidden;
+  background-color: white;
+  border-radius: 10px;
+  padding-left: .5em;
 }
 
 .footer .contact {
@@ -137,6 +148,10 @@ nav ul li:last-child:after {
 
 .footer .rss img {
   border: 0;
+}
+
+section.maincontent {
+  background-color: white;
 }
 
 /*****************************************************************************/
@@ -192,6 +207,31 @@ aside {
     background-size: 100%;
     background-position: 0% 20%;
     min-height: 200px;
+    border-radius: 10px;
+  }
+
+  nav ul li {
+    display: inline-block;
+    flex-grow: 1;
+    text-align: center;
+    background-color: #CC2958;
+    border-right: 1px solid black;
+  }
+
+  nav ul li:last-child {
+    border-right: none;
+  }
+
+  nav ul li:hover {
+    background-color: #5B2999;
+  }
+
+  nav a,  nav a:visited {
+    color: black !important;
+  }
+
+  nav ul li:hover a {
+    color: white !important;
   }
 
   .site {
@@ -199,7 +239,7 @@ aside {
     margin-right: 5em;
   }
 
-  div.flex_container {
+  .flex_container {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
