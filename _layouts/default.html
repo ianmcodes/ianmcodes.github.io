@@ -76,10 +76,11 @@
             <section class="maincontent">
                 {{ content }}
             </section>
-
+            {% unless page.norepos %}
             <aside>
                 <ul id="list-o-repos" class="no_bull"></ul>
             </aside>
+            {% endunless %}
         </div>
 
         <footer class="footer">
