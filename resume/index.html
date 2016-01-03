@@ -1,5 +1,5 @@
 ---
-layout: polymer_layout
+layout: default
 title: Resume
 sections:
   - name: Work
@@ -16,15 +16,19 @@ sections:
 include_in_menu: true
 order: 3
 menu_name: Resume
+
+norepos: true
 ---
 
+<!--
 {% raw %}
 <core-animated-pages id="pages" valueattr="hash" selected="{{route}}" transitions="slide-from-right">
 {% endraw %}
+-->
   {% for p in page.sections %}
-    <section hash="{{p.hash}}" layout vertical>
+    <article hash="{{p.hash}}" layout vertical>
       {% capture pcontent %}{% include_relative {{p.file}} %}{% endcapture %}
       {{ pcontent | markdownify }}
-    </section>
+    </article>
   {% endfor %}
-</core-animated-pages>
+<!--</core-animated-pages>-->
