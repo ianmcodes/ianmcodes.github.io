@@ -9,8 +9,8 @@ menu_name: Home
 
 <!--<core-animated-pages id="pages" valueattr="hash" selected="0" transitions="slide-from-right">-->
 <!--  <section hash="0" url="{{ page.url }}" layout vertical>-->
-  <div id="home">
-    <ul class="no_bull">
+  <div id="home" style="text-align: center;">
+    <ul class="no_bull flex_container">
       <li>
         <a>
           <i class="custom_icon-github"></i><br>Github
@@ -56,5 +56,18 @@ menu_name: Home
       </div>
 -->
   </div>
+  <style>
+    @media (max-width: 1024px) {
+      #home > ul.flex_container {
+        display: block;
+      }
+    }
+    @media (min-width: 1024px) and (orientation: landscape) {
+      #home > ul > li {
+        display: inline-block;
+        flex-grow: 1;
+      }
+    }
+  </style>
 <!--  </section>-->
 <!--</core-animated-pages>-->

@@ -181,6 +181,7 @@ nav ul li:hover a {
 
 section.maincontent {
   background-color: white;
+  width: 100%;
 }
 
 /*****************************************************************************/
