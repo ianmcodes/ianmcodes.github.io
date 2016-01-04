@@ -1,5 +1,5 @@
 ---
-layout: polymer_layout
+layout: default
 title: IanMcCall.codes
 
 include_in_menu: true
@@ -7,18 +7,67 @@ order: 0
 menu_name: Home
 ---
 
-<core-animated-pages id="pages" valueattr="hash" selected="0" transitions="slide-from-right">
-  <section hash="0" url="{{ page.url }}" layout vertical>
-    <div id="home">
+<!--<core-animated-pages id="pages" valueattr="hash" selected="0" transitions="slide-from-right">-->
+<!--  <section hash="0" url="{{ page.url }}" layout vertical>-->
+  <div id="home" style="text-align: center;">
+    <ul class="no_bull flex_container">
+      <li>
+        <a href="https://github.com/dapuck/">
+          <i class="custom_icon-github"></i><br>Github
+        </a>
+      </li>
+      <li>
+        <a href="https://www.linkedin.com/in/ianmccallcodes">
+          <i class="custom_icon-linkedin"></i><br>LinkedIn
+        </a>
+      </li>
+      <li>
+        <a href="https://www.twitter.com/ianmccallcodes/">
+          <i class="custom_icon-twitter"></i><br>&#64;ianmccallcodes
+        </a>
+      </li>
+      <li>
+        <a href="https://www.codeeval.com/public/b4544de722f71921dc8531b59db9a6fcc5afcb1b/">
+          <i class="custom_icon-trophy"></i><br>CodeEval
+        </a>
+      </li>
+      <li>
+        <a href="/posts/">
+          <i class="custom_icon-script"></i><br>Blog
+        </a>
+      </li>
+      <li>
+        <a href="/resume/">
+          <i class="custom_icon-text_file"></i><br>Resume
+        </a>
+      </li>
+    </ul>
+<!--
       <h1>Blog Posts</h1>
       <div class="posts">
         {% for post in site.posts %}
           <article>
             <span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a>
-            {{ post.excerpt }}
+            <div class="excerpt">
+              {{ post.excerpt }}
+            </div>
           </article>
         {% endfor %}
       </div>
-    </div>
-  </section>
-</core-animated-pages>
+-->
+  </div>
+  <style>
+    @media (max-width: 1024px) {
+      #home > ul.flex_container {
+        display: block;
+      }
+    }
+    @media (min-width: 1024px) and (orientation: landscape) {
+      #home > ul > li {
+        display: inline-block;
+        flex-grow: 1;
+      }
+    }
+  </style>
+<!--  </section>-->
+<!--</core-animated-pages>-->

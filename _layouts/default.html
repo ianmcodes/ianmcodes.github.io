@@ -1,115 +1,111 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>{{ page.title }}</title>
-        <meta name="viewport" content="width=device-width">
 
-        <!-- syntax highlighting CSS -->
-        <link rel="stylesheet" href="/css/syntax.css">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>{{ page.title }}</title>
+    <meta name="viewport" content="width=device-width">
 
-        <!-- Custom CSS -->
-        <link rel="stylesheet" href="/css/main.css">
-        
-        <link rel="stylesheet" href="/css/octicons/octicons.css">
+    <!-- syntax highlighting CSS -->
+    <link rel="stylesheet" href="/css/syntax.css">
 
-        <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
-        <script type="text/javascript" src="http://underscorejs.org/underscore-min.js"></script>
-        <!-- <script type="text/javascript" src="javascripts/gh3.js"></script> -->
-        
-        <script type="text/template" id="repo_tmpl">
-          <% _.each(repos, function(repo){ %>
-            <li>
-              <span>
-                <% if(repo.fork) { %>
-                <span class="octicon octicon-repo-forked"></span>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/custom_icons.css">
+    <link rel="stylesheet" href="/css/octicons/octicons.css">
+
+    {% if page.head_js %}
+    {% for js in page.head_js %}
+    <script type="text/javascript" src="{{ js }}"></script>
+    {% endfor %}
+    {% endif %}
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script type="text/javascript" src="http://underscorejs.org/underscore-min.js"></script>
+    <!-- <script type="text/javascript" src="javascripts/gh3.js"></script> -->
+
+    {% unless page.norepos %}
+    <link rel="stylesheet" href="/css/repo_list.css">
+    <script type="text/template" id="repo_tmpl">
+        <% _.each(repos, function (repo) { %>
+        <li>
+            <span>
+                <% if (repo.fork) { %>
+                <span class = "octicon octicon-repo-forked"></span>
                 <% } else { %>
                 <span class="octicon octicon-repo"></span>
                 <% } %>
                 <a href="<%= repo.html_url %>"><%- repo.full_name %></a>
                 <span class="update_time" title="Last updated"> - <%= repo.updated_at %></span>
-              </span>
-              <span class="description"><%- repo.description %></span>
-            </li>
-          <% }); %>
-        </script>
-        
-        <script type="text/javascript">
-          $(function ready(){
-            if(typeof console === 'undefined')
-              console = { log: function empty() {} };
+            </span>
+            <span class="description"><%- repo.description %></span>
+        </li>
+        <% }); %>
+    </script>
+
+    <script type="text/javascript">
+        $(function ready() {
+            if (typeof console === 'undefined')
+                console = {
+                    log: function empty() {}
+                };
             var repoTmpl = $("script#repo_tmpl").text();
-            $.ajax("https://api.github.com/users/dapuck/repos?sort=updated").done(function _process(data){
-              console.log(data);
-              var obj = { repos: data };
-              var html = _.template(repoTmpl,obj);
-              $("ul#list-o-repos").html(html);
+            $.ajax("https://api.github.com/users/dapuck/repos?sort=updated").done(function _process(data) {
+                console.log(data);
+                var html = _.template(repoTmpl)({
+                    repos: data
+                });
+                $("ul#list-o-repos").html(html);
             });
-          });
-        </script>
-        
-        <style type="text/css">
-          /* Repo list CSS */
-          ul.no_bull {
-            list-style: none;
-            padding-left: 0px;
-          }
-          
-          ul#list-o-repos > li {
-              border-bottom: 1px solid gray;
-          }
-          
-          ul#list-o-repos > li > span {
-            display: block;
-          }
-          
-          ul#list-o-repos > li > span.description {
-            font-style: italic;
-          }
-          
-          .update_time {
-            color: gray;
-            font-size: small;
-          }
-          /* Repo list CSS */
-        </style>
-    </head>
-    <body>
+        });
+    </script>
+    {% endunless %}
+</head>
 
-        <div class="site">
-          <header class="header">
+<body>
+
+    <div class="site">
+        <header class="header">
             <h1 class="title"><a href="/">{{ site.name }}</a></h1>
-            <a class="extra" href="/">home</a>
-          </header>
+        </header>
+        <nav>
+            <ul class="flex_container">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about/">About</a></li>
+                <li><a href="/posts/">Blog</a></li>
+                <li><a href="/resume/">Resume</a></li>
+            </ul>
+        </nav>
 
-          <div class="flex_container">
+        <div class="flex_container">
             <section class="maincontent">
-            {{ content }}
+                {{ content }}
             </section>
-
+            {% unless page.norepos %}
             <aside>
-              <!--  -->
-              <ul id="list-o-repos" class="no_bull"></ul>
+                <ul id="list-o-repos" class="no_bull"></ul>
             </aside>
-          </div>
-
-          <footer class="footer">
-            <div class="contact">
-              <p>
-                Ian McCall<br />
-                Code Monkey<br />
-                ian@ianmccall.codes
-              </p>
-            </div>
-            <div class="contact">
-              <p>
-                <a href="https://github.com/dapuck">github.com/dapuck</a><br />
-                <!--<a href="https://twitter.com/yourusername">twitter.com/yourusername</a><br />-->
-              </p>
-            </div>
-          </footer>
+            {% endunless %}
         </div>
 
-    </body>
+        <footer class="footer">
+            <div class="contact">
+                <p>
+                    Ian McCall
+                    <br /> Code Monkey
+                    <br /> ian@ianmccall.codes
+                </p>
+            </div>
+            <div class="contact">
+                <p>
+                    <a href="https://github.com/dapuck">github.com/dapuck</a>
+                    <br />
+                    <!--<a href="https://twitter.com/yourusername">twitter.com/yourusername</a><br />-->
+                </p>
+            </div>
+        </footer>
+    </div>
+
+</body>
+
 </html>
