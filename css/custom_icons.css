@@ -1,0 +1,37 @@
+i[class|="custom_icon"] {
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+}
+
+i.custom_icon-github {
+  background-image: url(../assets/icons/iconmonstr-github-5-icon-48.png);
+}
+
+i.custom_icon-linkedin {
+  background-image: url(../assets/icons/iconmonstr-linkedin-5-icon-48.png);
+}
+
+i.custom_icon-twitter {
+  background-image: url(../assets/icons/iconmonstr-twitter-5-icon-48.png);
+}
+
+i.custom_icon-trophy {
+  background-image: url(../assets/icons/iconmonstr-trophy-11-icon-48.png);
+}
+
+i.custom_icon-text_file {
+  background-image: url(../assets/icons/iconmonstr-text-file-3-icon-48.png);
+}
+
+i.custom_icon-script {
+  background-image: url(../assets/icons/iconmonstr-script-4-icon-48.png);
+}
+
+i.custom_icon-javascript {
+  background-image: url(../assets/icons/iconmonstr-javascript-code-icon-48.png);
+}
+
+i.custom_icon-html {
+  background-image: url(../assets/icons/iconmonstr-html-code-icon-48.png);
+}
