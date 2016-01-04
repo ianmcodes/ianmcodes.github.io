@@ -15,6 +15,11 @@
 
     <link rel="stylesheet" href="/css/octicons/octicons.css">
 
+    {% if page.head_js %}
+    {% for js in page.head_js %}
+    <script type="text/javascript" src="{{ js }}"></script>
+    {% endfor %}
+    {% endif %}
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
     <script type="text/javascript" src="http://underscorejs.org/underscore-min.js"></script>
     <!-- <script type="text/javascript" src="javascripts/gh3.js"></script> -->
