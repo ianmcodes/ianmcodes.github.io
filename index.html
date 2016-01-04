@@ -7,6 +7,7 @@ order: 0
 menu_name: Home
 ---
 
+  <link rel="stylesheet" href="css/home.css">
 <!--<core-animated-pages id="pages" valueattr="hash" selected="0" transitions="slide-from-right">-->
 <!--  <section hash="0" url="{{ page.url }}" layout vertical>-->
   <div id="home" style="text-align: center;">
@@ -56,20 +57,5 @@ menu_name: Home
       </div>
 -->
   </div>
-  <style>
-  {% raw %}
-    @media (max-width: 1024px) {
-      #home > ul.flex_container {
-        display: block;
-      }
-    }
-    @media (min-width: 1024px) {
-      #home > ul > li {
-        display: inline-block;
-        flex-grow: 1;
-      }
-    }
-  {% endraw %}
-  </style>
 <!--  </section>-->
 <!--</core-animated-pages>-->

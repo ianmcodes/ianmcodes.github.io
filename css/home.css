@@ -1,0 +1,12 @@
+@media (max-width: 1024px) {
+  #home > ul.flex_container {
+    display: block;
+  }
+}
+
+@media (min-width: 1024px) {
+  #home > ul > li {
+    display: inline-block;
+    flex-grow: 1;
+  }
+}
