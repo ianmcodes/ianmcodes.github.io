@@ -25,10 +25,12 @@ norepos: true
 <core-animated-pages id="pages" valueattr="hash" selected="{{route}}" transitions="slide-from-right">
 {% endraw %}
 -->
+  <div id="resume">
   {% for p in page.sections %}
     <article hash="{{p.hash}}" layout vertical>
       {% capture pcontent %}{% include_relative {{p.file}} %}{% endcapture %}
       {{ pcontent | markdownify }}
     </article>
   {% endfor %}
+  </div>
 <!--</core-animated-pages>-->

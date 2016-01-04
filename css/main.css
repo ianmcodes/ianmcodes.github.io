@@ -88,8 +88,8 @@ a:visited { color: #a0a; }
 }
 
 header h1.title {
-    margin-top: .5em;
-    margin-left: .5em;
+  margin-top: .5em;
+  margin-left: .5em;
 }
 
 nav ul li {
@@ -128,8 +128,8 @@ nav ul li:hover a {
 
 .title a {
 /*  color: #a00;*/
-    color: black;
-    background-color: #BADA2C;
+  color: black;
+  background-color: #BADA2C;
 }
 
 .title a:hover {
@@ -224,6 +224,21 @@ section.maincontent {
 
 /*****************************************************************************/
 /*
+/* Resume
+/*
+/*****************************************************************************/
+div#resume img {
+  width: 100%;
+}
+
+@media (min-width: 500px) {
+  div#resume img {
+    width: auto;
+  }
+}
+
+/*****************************************************************************/
+/*
 /* Responsive
 /*
 /*****************************************************************************/
@@ -232,8 +247,8 @@ aside {
 }
 
 ul.no_bull {
-    list-style: none;
-    padding-left: 0px;
+  list-style: none;
+  padding-left: 0px;
 }
 
 @media (min-width: 1024px) and (orientation: landscape) {
