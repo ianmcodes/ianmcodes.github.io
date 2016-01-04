@@ -46,6 +46,10 @@ a:visited { color: #a0a; }
   margin-bottom: 2em;
 }
 
+.posts .excerpt {
+  display: none;
+}
+
 .posts li {
   line-height: 1.75em;
 }
@@ -253,6 +257,11 @@ aside {
     display: block;
     padding: 1em;
     background-color: rgb(241, 241, 241);
+  }
+
+
+  .posts .excerpt {
+    display: none;
   }
 
   .posts > article {
