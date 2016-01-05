@@ -4,7 +4,6 @@ title: "Charting Merit Badges"
 description: ""
 categories: 
 head_js:
-  - "/bower_components/jquery/dist/jquery.js"
   - "/bower_components/highcharts/highcharts.js"
 head_import:
   - "/bower_components/paper-button/paper-button.html"
@@ -24,7 +23,7 @@ to create an interactive chart.
 Just click the button below to load the chart. (There are a lot of data points 
 so it may take some time to load on slower systems).
 
-<paper-button id="load_chart" raised>Load Chart</paper-button>
+<button id="load_chart" raised>Load Chart</button>
 
 <div id="badge_chart" style="width: 100%; height: 800px;"></div>
 <script type="text/javascript">
