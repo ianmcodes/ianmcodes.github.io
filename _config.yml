@@ -1,7 +1,6 @@
 name: IanMcCall.CODES
-markdown: redcarpet
-highlighter: pygments
-#pygments: true
+markdown: kramdown
+highlighter: rouge
 safe: true
 lsi: false
 timezone: America/Chicago
