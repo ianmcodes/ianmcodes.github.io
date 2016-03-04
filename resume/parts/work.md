@@ -1,26 +1,28 @@
 Work Experience
 ===============
 
-### Where2GetIt, Des Plaines, IL
-#### Development Manager (April 2014 - Present)
-#### Manager of Technical Operations (December 2012 - April 2014)
-#### Front-End Developer (March 2011 - Present)
+### Brandify (formerly Where2GetIt), Des Plaines, IL
+<h4>Development Manager (April 2014 - Present)</h4>
+<h4>Manager of Technical Operations (December 2012 - April 2014)</h4>
+<h4>Front-End Developer (March 2011 - Present)</h4>
+
+ * JavaScript, Perl, HTML, CSS, SVN, Git, Storm, Kafka
 
 {% unless page.print %}
-Where 2 Get It is a location based marketing services company based in Anaheim, CA. The company offers local search solution for national brands, such as Chick-fil-a, Patagonia, and Disney Stores. Their solutions include desktop and mobile store locators, data syndication and claiming for Google, InfoUSA, Navteq, and others, location pages for individual stores/dealers, and more.
-For more information on Where 2 Get It, see their website. [www.where2getit.com](http://www.where2getit.com)
+Brandify is a location based marketing services company based in Anaheim, CA. The company offers local search solution for national brands, such as Chick-fil-a, Patagonia, and Disney Stores. Their solutions include desktop and mobile store locators, data syndication and claiming for Google, InfoUSA, Navteq, and others, location pages for individual stores/dealers, and more.
+For more information on Brandify, see their website. [www.brandify.com](http://www.brandify.com)
 {% endunless %}
 
-As a Developer at Where 2 Get It, I work on bug fixes and new features for our front-end systems written in JavaScript and HTML, our Perl back-end, and our PostgreSQL database. I have also written custom JavaScript code to meet client requirements, as well as putting together development time estimates for client requests.
+Over the many years I have been with the company I have worked on a veriety of projects. I have created brand new mobile libraries for our main locator product, as well as enhancements to our existing front-end locator code. Some of those enhacements were to enable multiple waypoint driving directions, and a feature called "Allong the Way" which allows the user to see locations that are near their chosen route. I have also set the architecture for newer responsive libraries built using Backbone.
 
-Part of my duties as Manager of Technical Operations included integrating code written by our core group of developers as well as contract developers, and deploying code to our Staging and Production environments. I also worked with a contractor on creating a set of Selenium tests that are used for automated QA. As part of that, I created an enhanced wrapper around the test that we were using. I currently maintain it as an Open Source project called [sei-improved](https://www.npmjs.org/package/sei-improved).
+Inaddition to front-end work I have also worked on enhancements to the existing backend server code, written in Perl. One of the first backend features that I worked on was to extend the abilty to generate static maps to include driving directions maps. I've also made enhancements to our local landing pages system, which allows us to dynamicly generate a web page for each location that a client has. Some of those enhancements include the ability to inject a small image gallery and ads onto the page, which are controlled by both the corperate client and the location managers.
 
-Now as Development Manager, I take a more direct role in managing the team. I need to make sure that everyone has work to do, and knows what the expectations are. I also work on requirements and design documents for new features and changes to our architecture.
-
-Some of my more notable accomplishments at Where 2 Get It have been the creation of a set of JavaScript libraries for the mobile locator, creating a contract building system, a dynamic photo gallery generator, and a set of scripts to automate code deployment. I have also worked on, and continue to work on, integrating several Google products into Where2GetIt's architecture. These would include Google Maps and Geocoder, Google Drive, and Google Map Engine. The integration with Google Map Engine (GME) also involved using Amazon Simple Notification Service (SNS) and Simple Queue Service (SQS).
+Most resently I have been working on the architecture and development of a new NodeJS server which uses Hapijs. This new server is designed for flexibility, scaleability, and speed. Along side architeching a new NodeJS code base for Brandify, I have also been leading the way in adopting Apache Storm and Kafka for processing realtime data and events. I desighed and coded the first topologies, and I have trained other developers in the company in how to use Kafka and how to create and deploy Storm topologies.
 
 ### Model Metrics, Chicago, IL
 #### Developer (May 2010 - August 2010)
+
+* Salesforce
 
 Model Metrics was a provider cloud computing solutions using salesforce.com, Amazon, and Google. Most recently Model Metrics has been acquired by salesforce.com.
 
@@ -29,6 +31,8 @@ During my time at Model Metrics I primarily used the ETL (Extract Transform Load
 {% unless page.print %}
 ### Center for the Studies of Ethics in the Professions (CSEP), Chicago, IL
 #### Student Worker
+
+* HTML, Perl
 
 The Center for the Studies of Ethics in the Professions (CSEP), at the Illinois Institute of Technology (IIT), promotes research and teaching on practical moral problems in the professions. It is the first interdisciplinary center for ethics to focus on the professions. The CSEP continues to do interdisciplinary research, assist professional societies in creating and updating codes of ethics, and they also conduct ethics workshops. They also provide a number of resources for ethics research, such as their Codes of Ethics Online Collection. For more information about the CSEP see their website. [ethics.iit.edu](http://ethics.iit.edu)
 
