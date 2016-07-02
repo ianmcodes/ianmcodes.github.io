@@ -32,7 +32,3 @@ My first Node.js addon, written in C++. It provides an interface to allow you to
 {% endunless %}
 
 Just as the name implies, this is a simple "spinner" animation for command line node applications. It has start and stop functions, and even lets you customize the animation.
-
-[Lobby-Cast](https://github.com/dapuck/loby-cast)
-
-My first Chromecast app. It has a browser based sender (which can be found [here](http://www.ianmccall.codes/lobby-cast/)) and a Custom receiver. It is all built using HTML and JavaScript.

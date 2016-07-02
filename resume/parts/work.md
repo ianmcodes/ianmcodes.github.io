@@ -9,7 +9,7 @@ Work Experience
 
 #### Front-End Developer
 
- * JavaScript, Perl, HTML, CSS, SVN, Git, Storm, Kafka
+JavaScript, Perl, HTML, CSS, SVN, Git, Storm, Kafka
 
 {% unless page.print %}
 Brandify is a location based marketing services company based in Anaheim, CA. The company offers local search solution for national brands, such as Chick-fil-a, Patagonia, and Disney Stores. Their solutions include desktop and mobile store locators, data syndication and claiming for Google, InfoUSA, Navteq, and others, location pages for individual stores/dealers, and more.
@@ -26,7 +26,7 @@ Most recently I have been working on the architecture and development of a new N
 
 #### Developer (May 2010 - August 2010)
 
-* Salesforce
+Salesforce
 
 Model Metrics was a provider cloud computing solutions using salesforce.com, Amazon, and Google. Most recently Model Metrics has been acquired by salesforce.com.
 
@@ -37,7 +37,7 @@ During my time at Model Metrics I primarily used the ETL (Extract Transform Load
 
 #### Student Worker
 
-* HTML, Perl
+HTML, Perl
 
 The Center for the Studies of Ethics in the Professions (CSEP), at the Illinois Institute of Technology (IIT), promotes research and teaching on practical moral problems in the professions. It is the first interdisciplinary center for ethics to focus on the professions. The CSEP continues to do interdisciplinary research, assist professional societies in creating and updating codes of ethics, and they also conduct ethics workshops. They also provide a number of resources for ethics research, such as their Codes of Ethics Online Collection. For more information about the CSEP see their website. [ethics.iit.edu](http://ethics.iit.edu)
 
