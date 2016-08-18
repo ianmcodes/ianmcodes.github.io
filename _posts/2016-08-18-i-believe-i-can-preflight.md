@@ -53,4 +53,4 @@ $r->pnotes("CORS_PreFlight" => 1);
 
 Refrences:
 
- * "HTTP access control (CORS)" _MDN Mozilla Developer Network_ https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS
+ * "HTTP access control (CORS)" _MDN Mozilla Developer Network_ [https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS)
