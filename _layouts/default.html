@@ -12,12 +12,14 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" media="(min-width: 1024px) and (orientation: landscape)" href="/css/main-1024.css">
+    <link rel="stylesheet" media="(min-width: 1440px) and (orientation: landscape)" href="/css/main-1440.css">
     <link rel="stylesheet" href="/css/custom_icons.css">
-    <link rel="stylesheet" href="/css/octicons/octicons.css">
+    <link rel="stylesheet" href="/css/octicons/octicons.min.css">
     
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
 
-    <script type="text/javascript" defer src="/bower_components/jquery/dist/jquery.js"></script>
+    <script type="text/javascript" defer src="/bower_components/jquery/dist/jquery.min.js"></script>
     <script type="text/javascript" defer src="/bower_components/underscore/underscore-min.js"></script>
     <script type="text/javascript" defer src="/js/swinit.js" data-service-worker="/sw.js"></script>
     {% if page.head_js %}

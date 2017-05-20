@@ -2,3 +2,4 @@
 _site
 Gemfile
 .brackets.json
+node_modules
