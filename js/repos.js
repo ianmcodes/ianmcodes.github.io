@@ -12,6 +12,7 @@
                     repos: data
                 });
                 $("ul#list-o-repos").html(html);
-                $("#repo-container").show();
+                // let css decide if it should be seen
+                document.getElementById('repo-container').style.display = "";
             });
         });
