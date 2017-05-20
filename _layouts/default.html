@@ -17,12 +17,12 @@
     
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
 
-    <script type="text/javascript" src="/bower_components/jquery/dist/jquery.js"></script>
-    <script type="text/javascript" src="/bower_components/underscore/underscore-min.js"></script>
-    <script type="text/javascript" src="/js/swinit.js" data-service-worker="/sw.js"></script>
+    <script type="text/javascript" defer src="/bower_components/jquery/dist/jquery.js"></script>
+    <script type="text/javascript" defer src="/bower_components/underscore/underscore-min.js"></script>
+    <script type="text/javascript" defer src="/js/swinit.js" data-service-worker="/sw.js"></script>
     {% if page.head_js %}
     {% for js in page.head_js %}
-    <script type="text/javascript" src="{{ js }}"></script>
+    <script type="text/javascript" defer src="{{ js }}"></script>
     {% endfor %}
     {% endif %}
 
@@ -45,22 +45,7 @@
         <% }); %>
     </script>
 
-    <script type="text/javascript">
-        $(function ready() {
-            if (typeof console === 'undefined')
-                console = {
-                    log: function empty() {}
-                };
-            var repoTmpl = $("script#repo_tmpl").text();
-            $.ajax("https://api.github.com/users/dapuck/repos?sort=updated").done(function _process(data) {
-                console.log(data);
-                var html = _.template(repoTmpl)({
-                    repos: data
-                });
-                $("ul#list-o-repos").html(html);
-            });
-        });
-    </script>
+    <script type="text/javascript" defer src="/js/repos.js"></script>
     {% endunless %}
 </head>
 
@@ -84,7 +69,7 @@
                 {{ content }}
             </section>
             {% unless page.norepos %}
-            <aside>
+            <aside id="repo-container" style="display:none;">
                 <ul id="list-o-repos" class="no_bull"></ul>
             </aside>
             {% endunless %}
