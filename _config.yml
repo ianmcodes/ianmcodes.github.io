@@ -9,3 +9,5 @@ gems:
 - jemoji
 - jekyll-redirect-from
 - jekyll-sitemap
+exclude:
+- /bower_componenets
