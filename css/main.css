@@ -25,9 +25,9 @@ body {
   text-align: center;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  /*font-size: 100%;*/
-}
+/* h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+} */
 
 h1 { margin-bottom: 1em; }
 p { margin: 1em 0; }
@@ -114,12 +114,12 @@ nav ul li:hover {
 }
 
 nav a,  nav a:visited {
-  color: black !important;
+  color: white;
 }
 
-nav ul li:hover a {
+/* nav ul li:hover a {
   color: white !important;
-}
+} */
 
 .title {
   display: inline-block;
@@ -165,9 +165,9 @@ nav ul li:hover a {
   margin-right: 3em;
 }
 
-.footer .contact a {
+/* .footer .contact a {
   color: #8085C1;
-}
+} */
 
 .footer .rss {
   margin-top: 1.1em;
