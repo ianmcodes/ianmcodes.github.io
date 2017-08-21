@@ -1,7 +1,6 @@
 (function() {
     var styles = [
         '/css/syntax.css',
-        '/css/custom_icons.css',
         '/css/octicons/octicons.min.css'
     ];
     if(window.deferedStyles) {
