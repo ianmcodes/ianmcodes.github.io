@@ -1,0 +1,24 @@
+{
+  "name": "dapuck.github.io",
+  "version": "1.0.0",
+  "description": "dapuck.github.io\r ================",
+  "main": "sw.js",
+  "dependencies": {
+    "uglify": "^0.1.5",
+    "uglifycss": "0.0.27"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dapuck/dapuck.github.io.git"
+  },
+  "author": "Ian McCall <ian@ianmccall.codes>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dapuck/dapuck.github.io/issues"
+  },
+  "homepage": "https://github.com/dapuck/dapuck.github.io#readme"
+}

@@ -7,9 +7,19 @@ order: 0
 menu_name: Home
 ---
 
-  <link rel="stylesheet" href="css/home.css">
-<!--<core-animated-pages id="pages" valueattr="hash" selected="0" transitions="slide-from-right">-->
-<!--  <section hash="0" url="{{ page.url }}" layout vertical>-->
+  <!-- <link rel="stylesheet" href="css/home.css"> -->
+  <script>
+  (function() {
+  if(window.loadDeferedStyle) {
+    window.loadDeferedStyle('/css/home.css');
+    return;
+  }
+  window.deferedStyles = (window.deferedStyles || []);
+  window.deferedStyles.push('/css/home.css');
+  })();
+  </script>
+  <!--<core-animated-pages id="pages" valueattr="hash" selected="0" transitions="slide-from-right">-->
+  <!--  <section hash="0" url="{{ page.url }}" layout vertical>-->
   <div id="home" style="text-align: center;">
     <ul class="no_bull flex_container">
       <li>

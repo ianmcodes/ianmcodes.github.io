@@ -11,16 +11,20 @@
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/main.css">
+    <!-- <link rel="stylesheet" href="/css/main.css"> -->
+    <style type="text/css">
+    {% include main.min.css %}
+    </style>
     <link rel="stylesheet" media="(min-width: 1024px) and (orientation: landscape)" href="/css/main-1024.css">
     <link rel="stylesheet" media="(min-width: 1440px) and (orientation: landscape)" href="/css/main-1440.css">
-    <link rel="stylesheet" href="/css/syntax.css">
+    <!-- <link rel="stylesheet" href="/css/syntax.css">
     <link rel="stylesheet" href="/css/custom_icons.css">
-    <link rel="stylesheet" href="/css/octicons/octicons.min.css">
+    <link rel="stylesheet" href="/css/octicons/octicons.min.css"> -->
 
     <script type="text/javascript" defer src="/bower_components/jquery/dist/jquery.min.js"></script>
     <script type="text/javascript" defer src="/bower_components/underscore/underscore-min.js"></script>
     <script type="text/javascript" defer src="/js/swinit.js" data-service-worker="/sw.js"></script>
+    <script type="text/javascript" defer src="/js/deferstyles.js"></script>
     {% if page.head_js %}
     {% for js in page.head_js %}
     <script type="text/javascript" defer src="{{ js }}"></script>
@@ -28,7 +32,7 @@
     {% endif %}
 
     {% unless page.norepos %}
-    <link rel="stylesheet" href="/css/repo_list.css">
+    <!-- <link rel="stylesheet" href="/css/repo_list.css"> -->
     <script type="text/template" id="repo_tmpl">
         <% _.each(repos, function (repo) { %>
         <li>
