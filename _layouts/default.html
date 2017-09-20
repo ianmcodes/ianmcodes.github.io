@@ -36,14 +36,15 @@
 
     {% unless page.norepos %}
     <!-- <link rel="stylesheet" href="/css/repo_list.css"> -->
+    <style>.octicon{display:inline-block;vertical-align:text-top;fill:currentColor}</style>
     <script type="text/template" id="repo_tmpl">
         <% _.each(repos, function (repo) { %>
         <li>
             <span>
                 <% if (repo.fork) { %>
-                <span class = "octicon octicon-repo-forked"></span>
+                <span class = "octicon octicon-repo-forked"><svg version="1.1" width="16" height="16" viewBox="0 0 10 16" class="octicon octicon-repo-forked" aria-hidden="true"><use xlink:href="#repo-forked" /></svg></span>
                 <% } else { %>
-                <span class="octicon octicon-repo"></span>
+                <span class="octicon octicon-repo"><svg version="1.1" width="16" height="16" viewBox="0 0 12 16" class="octicon octicon-repo" aria-hidden="true"><use xlink:href="#repo" /></svg></span>
                 <% } %>
                 <a href="<%= repo.html_url %>"><%- repo.full_name %></a>
                 <span class="update_time" title="Last updated"> - <%= repo.updated_at %></span>
@@ -58,7 +59,9 @@
 </head>
 
 <body>
-
+    <div style="display:none;">
+        {% include sprite.octicons.svg %}
+    </div>
     <div class="site">
         <header class="header">
             <h1 class="title"><a href="/">{{ site.name }}</a></h1>

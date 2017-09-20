@@ -1,7 +1,7 @@
 (function() {
     var styles = [
-        '/css/syntax.css',
-        '/css/octicons/octicons.min.css'
+        '/css/syntax.css'//,
+        // '/css/octicons/octicons.min.css'
     ];
     if(window.deferedStyles) {
         styles = styles.concat(window.deferedStyles);
