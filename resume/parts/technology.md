@@ -5,11 +5,11 @@ In addition to the experience that I have gained through work and earning my deg
 
 ### Personal Projects
 
-I always have a number of on going programing projects that are primarily for my own personal use and enrichment. You can find the code for most of these projects on my GitHub profile page (https://github.com/dapuck). My most active projects on GitHub use Node.js. I find coding for Node.js very enjoyable, especially given my experience with JavaScript. I even have some modules in the npm registry, you can find a list on my profile (https://www.npmjs.org/~dapuck).
+I always have a number of on going programing projects that are primarily for my own personal use and enrichment. You can find the code for most of these projects on my GitHub profile page (https://github.com/ianmcodes). My most active projects on GitHub use Node.js. I find coding for Node.js very enjoyable, especially given my experience with JavaScript. I even have some modules in the npm registry, you can find a list on my profile (https://www.npmjs.org/~dapuck).
 
 Some of the projects I am actively working on are:
 
-[node-svn-interface](https://github.com/dapuck/node-svn-interface)
+[node-svn-interface](https://github.com/ianmcodes/node-svn-interface)
 
 {% unless page.print %}
 [![NPM](https://nodei.co/npm/svn-interface.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/svn-interface/)
@@ -17,7 +17,7 @@ Some of the projects I am actively working on are:
 
 My most popular project. It is a Node.js module that interacts with SVN by spawn and the console svn command. I created this module to use with the some deployment scripts that I wrote as Manager of Technical operations at Where2GetIt.
 
-[node-mac-vhid](https://github.com/dapuck/node-mac-vhid)
+[node-mac-vhid](https://github.com/ianmcodes/node-mac-vhid)
 
 {% unless page.print %}
 [![NPM](https://nodei.co/npm/mac-vhid.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/mac-vhid/)
@@ -25,7 +25,7 @@ My most popular project. It is a Node.js module that interacts with SVN by spawn
 
 My first Node.js addon, written in C++. It provides an interface to allow you to simulate mouse and keyboard actions through Node on a Mac.
 
-[node-simple-spinner](https://github.com/dapuck/node-simple-spinner)
+[node-simple-spinner](https://github.com/ianmcodes/node-simple-spinner)
 
 {% unless page.print %}
 [![NPM](https://nodei.co/npm/simple-spinner.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/simple-spinner/)

@@ -1,7 +1,7 @@
 {
-  "name": "dapuck.github.io",
+  "name": "ianmcodes.github.io",
   "version": "1.0.0",
-  "description": "dapuck.github.io\r ================",
+  "description": "ianmcodes.github.io\r ================",
   "main": "sw.js",
   "dependencies": {
     "uglify": "^0.1.5",
@@ -13,12 +13,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dapuck/dapuck.github.io.git"
+    "url": "git+https://github.com/ianmcodes/ianmcodes.github.io.git"
   },
   "author": "Ian McCall <ian@ianmccall.codes>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/dapuck/dapuck.github.io/issues"
+    "url": "https://github.com/ianmcodes/ianmcodes.github.io/issues"
   },
-  "homepage": "https://github.com/dapuck/dapuck.github.io#readme"
+  "homepage": "https://github.com/ianmcodes/ianmcodes.github.io#readme"
 }

@@ -41,7 +41,7 @@
           log: function empty() {}
         };
       var repoTmpl = $("script#repo_tmpl").text();
-      $.ajax("https://api.github.com/users/dapuck/repos?sort=updated").done(function _process(data) {
+      $.ajax("https://api.github.com/users/ianmcodes/repos?sort=updated").done(function _process(data) {
         console.log(data);
         var html = _.template(repoTmpl)({
           repos: data
