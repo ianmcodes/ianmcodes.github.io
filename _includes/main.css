@@ -98,6 +98,8 @@ nav ul li {
   text-align: center;
   background-color: #CC2958;
   border-right: 1px solid black;
+  line-height: 2em;
+  font-size: 125%;
 }
 
 nav ul li a {
