@@ -1,5 +1,6 @@
 .DS_store
 _site
 Gemfile
+Gemfile.lock
 .brackets.json
 node_modules
