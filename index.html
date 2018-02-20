@@ -27,8 +27,8 @@ menu_name: Home
   </style>
   <!--<core-animated-pages id="pages" valueattr="hash" selected="0" transitions="slide-from-right">-->
   <!--  <section hash="0" url="{{ page.url }}" layout vertical>-->
-  <div id="home" style="text-align: center;">
-    <ul class="no_bull flex_container">
+  <div id="home">
+    <ul class="no_bull flex_container" style="text-align: center;">
       <li>
         <a href="https://github.com/ianmcodes/">
           <i class="custom_icon-github"></i><br>Github
@@ -60,19 +60,19 @@ menu_name: Home
         </a>
       </li>
     </ul>
-<!--
-      <h1>Blog Posts</h1>
-      <div class="posts">
-        {% for post in site.posts %}
-          <article>
-            <span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a>
-            <div class="excerpt">
-              {{ post.excerpt }}
-            </div>
-          </article>
-        {% endfor %}
-      </div>
--->
+
+    <h1 style="text-align:center; margin-top:1em;">Blog Posts</h1>
+    <div class="posts">
+      {% for post in site.posts %}
+        <article>
+          <span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a>
+          <div class="excerpt">
+            {{ post.excerpt }}
+          </div>
+        </article>
+      {% endfor %}
+    </div>
+
   </div>
 <!--  </section>-->
 <!--</core-animated-pages>-->
