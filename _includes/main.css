@@ -184,6 +184,7 @@ nav a,  nav a:visited {
 section.maincontent {
   background-color: white;
   width: 100%;
+  padding: 5px;
 }
 
 /*****************************************************************************/
@@ -191,6 +192,10 @@ section.maincontent {
 /* Posts
 /*
 /*****************************************************************************/
+
+pre.highlight {
+  overflow: scroll;
+}
 
 /* standard */
 .post pre {
