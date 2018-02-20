@@ -9,7 +9,7 @@ $(function ready() {
     $.ajax("https://api.github.com/users/ianmcodes/repos?sort=updated").done(function _process(data) {
         console.log(data);
         var html = _.template(repoTmpl)({
-            repos: data
+            repos: data.splice(0,20)
         });
         $("ul#list-o-repos").html(html);
         // let css decide if it should be seen
