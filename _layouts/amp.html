@@ -1,0 +1,50 @@
+<!doctype html>
+<html amp lang="en">
+  <head>
+    <meta charset="utf-8">
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <title>{{ page.title }}</title>
+    <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <style amp-custom type="text/css">
+    {% include main.min.css %}
+    </style>
+    <!--<link rel="stylesheet" media="(min-width: 1024px) and (orientation: landscape)" href="/css/main-1024.css">
+    <link rel="stylesheet" media="(min-width: 1440px) and (orientation: landscape)" href="/css/main-1440.css">-->
+    <style amp-custom type="text/css">
+    {% include custom_icons.css %}
+    </style>
+  </head>
+  <body>
+    <div style="display:none;">
+      {% include sprite.octicons.svg %}
+    </div>
+    <div class="site">
+      <header class="header">
+        <h1 class="title"><a href="/">{{ site.name }}</a></h1>
+      </header>
+      <nav>
+        <ul class="flex_container">
+          <li><a href="/">Home</a></li>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/posts/">Blog</a></li>
+          <li><a href="/resume/">Resume</a></li>
+        </ul>
+      </nav>
+      <div class="flex_container">
+        <section class="maincontent">
+          {{ content }}
+        </section>
+        {% unless page.norepos %}
+        <aside id="repo-container" style="display:none;">
+          <ul id="list-o-repos" class="no_bull"></ul>
+        </aside>
+        {% endunless %}
+      </div>
+      <footer class="footer">
+        {% include amp_footer.html %}
+      </footer>
+    </div>
+  </body>
+</html>
