@@ -72,13 +72,13 @@ a:visited { color: #a0a; }
   flex-wrap: nowrap;
   justify-content: center;
   align-items: stretch;
+  width: 100%;
 }
 
 .site {
   font-size: 115%;
-  text-align: justify;
-  /*width: 42em;*/
-  margin: 2em 1em 2em 1em;
+  text-align: left;
+  margin: 2em 0.5em 2em 0.5em;
   line-height: 1.5em;
 }
 
@@ -155,11 +155,11 @@ nav a,  nav a:visited {
   font-size: 80%;
   color: #666;
   border-top: 4px solid #eee;
-  margin-top: 2em;
+  margin-top: 0.5em;
   overflow: hidden;
   background-color: white;
   border-radius: 10px;
-  padding-left: .5em;
+  padding-left: 0.5em;
 }
 
 .footer .contact {
@@ -184,6 +184,9 @@ nav a,  nav a:visited {
 section.maincontent {
   background-color: white;
   width: 100%;
+}
+
+.maincontent article {
   padding: 5px;
 }
 

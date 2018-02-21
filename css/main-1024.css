@@ -17,16 +17,17 @@
   }
 
   div.flex_container section.maincontent {
-    flex-grow: 2;
+    flex: 1;
+    display: flex;
     margin-right: 1em;
     border: 2px solid lightgray;
     border-radius: 10px;
-    padding: 1em;
+    /* padding: 1em; */
   }
 
   div.flex_container aside {
-    flex-grow:1;
-    display: block;
+    flex:1;
+    display: flex;
     padding: 1em;
     background-color: rgb(241, 241, 241);
   }
