@@ -194,7 +194,7 @@ section.maincontent {
 /*****************************************************************************/
 
 pre.highlight {
-  overflow: scroll;
+  overflow: auto;
 }
 
 /* standard */
