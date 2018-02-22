@@ -26,6 +26,7 @@
 
   div.flex_container section.maincontent article {
     padding: 0;
+    width: 100%;
   }
 
   div.flex_container aside {
