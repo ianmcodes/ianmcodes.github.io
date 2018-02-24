@@ -1,9 +1,15 @@
 Work Experience
 ===============
 
-### Brandify (formerly Where2GetIt), Des Plaines, IL (March 2011 - Present)
+### tronc, Chicago, IL
 
-#### Development Manager (April 2014 - Present)
+#### Sr. Software Engineer (September 2017 - Present)
+
+Tronc is a media publishing company who's properties include the Chicago Tribune, New York Daily News, and other papers.
+
+### Brandify (formerly Where2GetIt), Des Plaines, IL (March 2011 - September 2017)
+
+#### Development Manager (April 2014 - September 2017)
 
 #### Manager of Technical Operations (December 2012 - April 2014)
 
