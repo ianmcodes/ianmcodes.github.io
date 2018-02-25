@@ -2,15 +2,11 @@
 layout: default
 ---
 
-<!--<core-animated-pages id="pages" valueattr="hash" selected="0" transitions="slide-from-right">-->
-<!--  <section hash="0" layout vertical>-->
     <article>
         <h2>{{ page.title }}</h2>
-        <p class="meta">{{ page.date | date_to_string }}</p>
+        <time datetime="{{ page.date }}" class="meta">{{ page.date | date_to_string }}</time>
 
         <div class="post">
         {{ content }}
         </div>
     </article>
-<!--  </section>-->
-<!--</core-animated-pages>-->
