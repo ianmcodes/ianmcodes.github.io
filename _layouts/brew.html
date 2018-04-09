@@ -1,0 +1,44 @@
+---
+layout: default
+---
+
+<style>
+  .brew ul {
+    margin-left: 1em;
+  }
+</style>
+
+<article class="brew">
+  <time datetime="{{ page.date }}" class="meta">{{ page.date | date_to_string }}</time>
+  <ul>
+    <li>{{ page.type | capitalize }}</li>
+    <li>Start
+      <ul>
+        <li>Temp: {{ page.start.temp }}&deg;F</li>
+        <li>Sg: {{ page.start.sg }}</li>
+        <li>Est. ABV: {{ page.start.est_abv }}%</li>
+      </ul>
+    </li>
+    {% if page.end_cook %}
+    <li>End (Cook)
+      <ul>
+          <li>Temp: {{ page.end_cook.temp }}&deg;F</li>
+          <li>Sg: {{ page.end_cook.sg }}</li>
+          <li>Est. ABV: {{ page.end_cook.abv }}%</li>
+      </ul>
+    </li>
+    {% endif %}
+    {% if page.end %}
+    <li>End
+      <ul>
+          <li>Temp: {{ page.end.temp }}&deg;F</li>
+          <li>Sg: {{ page.end.sg }}</li>
+          <li>Est. ABV: {{ page.end.abv }}%</li>
+      </ul>
+    </li>
+    {% endif %}
+  </ul>
+  <div>
+    {{ content }}
+  </div>
+</article>

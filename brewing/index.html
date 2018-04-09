@@ -1,0 +1,20 @@
+---
+layout: default
+title: Brewing
+
+include_in_menu: true
+order: 4
+menu_name: Brewing
+---
+
+<div style="width:100%">
+  <p>
+    Something about brewing.
+  </p>
+  <ul>
+  {% assign brews = site.pages | where:"layout","brew" | sort: "date" %}
+  {% for b in brews %}
+    <li><a href="{{b.url}}">{{b.title}} ({{b.type}}) [{{b.date}}]</a></li>
+  {% endfor %}
+  </ul>
+</div>
