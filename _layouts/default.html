@@ -24,6 +24,7 @@
     <script type="text/javascript" defer src="/js/deferstyles.js"></script>
     {% if page.head_js %}
     {% for js in page.head_js %}
+    <link rel="stylesheet" href="/css/repo_list.css">
     <script type="text/javascript" defer src="{{ js }}"></script>
     {% endfor %}
     {% endif %}
