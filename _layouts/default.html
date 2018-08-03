@@ -29,23 +29,6 @@
     {% endif %}
     {% unless page.norepos %}
     <style>.octicon{display:inline-block;vertical-align:text-top;fill:currentColor}</style>
-    <script type="text/template" id="repo_tmpl">
-        <% _.each(repos, function (repo) { %>
-        <li>
-            <span>
-                <% if (repo.fork) { %>
-                <span class = "octicon octicon-repo-forked"><svg version="1.1" width="16" height="16" viewBox="0 0 10 16" class="octicon octicon-repo-forked" aria-hidden="true"><use xlink:href="#repo-forked" /></svg></span>
-                <% } else { %>
-                <span class="octicon octicon-repo"><svg version="1.1" width="16" height="16" viewBox="0 0 12 16" class="octicon octicon-repo" aria-hidden="true"><use xlink:href="#repo" /></svg></span>
-                <% } %>
-                <a href="<%= repo.html_url %>"><%- repo.full_name %></a>
-                <span class="update_time" title="Last updated"> - <%= repo.updated_at %></span>
-            </span>
-            <span class="description"><%- repo.description %></span>
-        </li>
-        <% }); %>
-    </script>
-    <script type="text/javascript" defer src="/js/repos.js"></script>
     {% endunless %}
 </head>
 
@@ -73,7 +56,25 @@
             </section>
             {% unless page.norepos %}
             <aside id="repo-container" class="rounded" style="display:none;">
-                <ul id="list-o-repos" class="no_bull"></ul>
+                {% if site.github %}
+                <ul id="list-o-repos" class="no_bull">
+                    {% assign sorted_repos = site.github.public_repositories | sort: "updated_at" | reverse %}
+                    {% for repo in sorted_repos %}
+                    <li>
+                        <span>
+                            {% if repo.fork %}
+                            <span class = "octicon octicon-repo-forked"><svg version="1.1" width="16" height="16" viewBox="0 0 10 16" class="octicon octicon-repo-forked" aria-hidden="true"><use xlink:href="#repo-forked" /></svg></span>
+                            {% else %}
+                            <span class="octicon octicon-repo"><svg version="1.1" width="16" height="16" viewBox="0 0 12 16" class="octicon octicon-repo" aria-hidden="true"><use xlink:href="#repo" /></svg></span>
+                            {% endif %}
+                            <a href="{{repo.html_url}}">{{repo.full_name}}</a>
+                            <span class="update_time" title="Last updated"> - {{repo.updated_at}}</span>
+                        </span>
+                        <span class="description">{{repo.description}}</span>
+                    </li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
             </aside>
             {% endunless %}
         </div>
