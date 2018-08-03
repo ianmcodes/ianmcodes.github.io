@@ -5,7 +5,7 @@ title: IanMcCall.codes
 
 {% if site.github %}
 <ul>
-  {% assign sorted_repos = site.github.public_repositories | sort "updated_at" %}
+  {% assign sorted_repos = site.github.public_repositories | sort: "updated_at" %}
   {% for repo in sorted_repos %}
   <li>
       <span>
