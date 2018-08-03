@@ -3,8 +3,10 @@ layout: default
 title: IanMcCall.codes
 ---
 
+{% if site.github %}
 <ul>
-  {% for repo in site.github.public_repositories %}
+  {% assign sorted_repos = site.github.public_repositories | sort "updated_at" %}
+  {% for repo in sorted_repos %}
   <li>
       <span>
           {% if repo.fork %}
@@ -19,3 +21,4 @@ title: IanMcCall.codes
   </li>
   {% endfor %}
 </ul>
+{% endif %}
