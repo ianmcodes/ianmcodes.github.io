@@ -55,7 +55,7 @@
                 {{ content }}
             </section>
             {% unless page.norepos %}
-            <aside id="repo-container" class="rounded" style="display:none;">
+            <aside id="repo-container" class="rounded">
                 {% if site.github %}
                 <ul id="list-o-repos" class="no_bull">
                     {% assign sorted_repos = site.github.public_repositories | sort: "updated_at" | reverse %}
