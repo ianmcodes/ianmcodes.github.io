@@ -1,11 +1,15 @@
 Work Experience
 ===============
 
-### tronc, Chicago, IL
+### Tribune Publishing, Chicago, IL
 
 #### Sr. Software Engineer (September 2017 - Present)
 
-Tronc is a media publishing company who's properties include the Chicago Tribune, New York Daily News, and other papers.
+{% unless page.print %}
+Tribune Publishing is a media publishing company who's properties include the Chicago Tribune, New York Daily News, and other papers.
+{% endunless %}
+
+Worked on optimizations in both CSS and JS. Developed enhancements to websites to improve ad revenue. Worked on improvements and tooling around docker to help with development
 
 ### Brandify (formerly Where2GetIt), Des Plaines, IL (March 2011 - September 2017)
 
