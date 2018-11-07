@@ -5,6 +5,8 @@ Work Experience
 
 #### Sr. Software Engineer (September 2017 - Present)
 
+JavaScript, HTML, CSS, JSP, Git, Docker, AWS
+
 {% unless page.print %}
 Tribune Publishing is a media publishing company who's properties include the Chicago Tribune, New York Daily News, and other papers.
 {% endunless %}
