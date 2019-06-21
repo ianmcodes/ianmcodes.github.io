@@ -1,7 +1,7 @@
 /*jshint esnext: true, browser: true, devel: true, worker: true*/
 /*globals caches*/
 var self = this;
-var CACHENAME = "codes-ianmccall-v1";
+var CACHENAME = "codes-ianmccall-v2";
 var precache = [
     '/assets/images/banner.jpg',
     '/css/syntax.css',
@@ -10,8 +10,6 @@ var precache = [
     '/css/octicons/octicons.css',
     '/css/octicons/octicons.woff',
     '/css/repo_list.css',
-    '/bower_components/jquery/dist/jquery.js',
-    '/bower_components/underscore/underscore-min.js',
     '/js/swinit.js',
     '/css/home.css'
 ];

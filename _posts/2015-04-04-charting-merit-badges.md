@@ -4,9 +4,7 @@ title: "Charting Merit Badges"
 description: ""
 categories: 
 head_js:
-  - "/bower_components/highcharts/highcharts.js"
-head_import:
-  - "/bower_components/paper-button/paper-button.html"
+  - "https://code.highcharts.com/highcharts.js"
 
 ---
 
@@ -27,7 +25,7 @@ so it may take some time to load on slower systems).
 
 <div id="badge_chart" style="width: 100%; height: 800px;"></div>
 <script type="text/javascript">
-jQuery(function domLoaded($) {
+document.addEventListener('DOMContentLoaded', function domLoaded() {
   var data = {{ site.data.merit_badges_earned_by_year | jsonify }};
   var show_badges = ["Cooking*","First Aid*","Swimming**","Environmental Science****"];
   for(var i = 0; i < data.length; i++) {
@@ -35,28 +33,25 @@ jQuery(function domLoaded($) {
       data[i].visible = false;
     }
   }
-  //$.ajax("/assets/merit_badges_earned_by_year.json")
-    //.done(function(data){
-      $("#load_chart").on("click",function() {
-        $("#badge_chart").highcharts({
-          title: {
-            text: "Merit Badges Earned by Year"
-          },
-          subtitle: {
-            text: "Source: Bryan on Scouting"
-          },
-          xAxis: {
-            categories: ["2009", "2010", "2011", "2012", "2013", "2014"]
-          },
-          yAxis: {
-            title: {
-              text: "Number Earned"
-            }
-          },
-          series: data
-        });
-        $('#load_chart').hide();
-      });
-    //});
+  document.querySelector("#load_chart").onclick = function() {
+    Highcharts.chart('badge_chart', {
+      title: {
+        text: "Merit Badges Earned by Year"
+      },
+      subtitle: {
+        text: "Source: Bryan on Scouting"
+      },
+      xAxis: {
+        categories: ["2009", "2010", "2011", "2012", "2013", "2014"]
+      },
+      yAxis: {
+        title: {
+          text: "Number Earned"
+        }
+      },
+      series: data
+    });
+    document.querySelector('#load_chart').hidden = true;
+  };
 });
 </script>
