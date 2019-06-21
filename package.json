@@ -4,8 +4,9 @@
   "description": "ianmcodes.github.io\r ================",
   "main": "sw.js",
   "dependencies": {
+    "highcharts": "^7.1.2",
     "uglify": "^0.1.5",
-    "uglifycss": "0.0.27"
+    "uglifycss": "0.0.29"
   },
   "devDependencies": {},
   "scripts": {
