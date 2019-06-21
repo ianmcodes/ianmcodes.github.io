@@ -1,2 +1,2 @@
 #!/bin/sh
-jekyll serve --watch --drafts
+bundle exec jekyll serve --watch --drafts
