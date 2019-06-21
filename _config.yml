@@ -1,8 +1,10 @@
 name: IanMcCall.CODES
+title: IanMcCall.CODES
+repository: ianmcodes/ianmcodes.github.io
 url: https://www.ianmccall.codes
 markdown: kramdown
 highlighter: rouge
-safe: true
+# safe: true
 lsi: false
 timezone: America/Chicago
 plugins:
@@ -11,4 +13,8 @@ plugins:
   - jekyll-redirect-from
   - jekyll-sitemap
   - jekyll-github-metadata
-exclude: ["bower_componenets"]
+  - jekyll-seo-tag
+exclude: ["bower_components", "vendor"]
+
+# SEO
+
