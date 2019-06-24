@@ -170,9 +170,16 @@ nav a,  nav a:visited {
   margin-right: 3em;
 }
 
-/* .footer .contact a {
-  color: #8085C1;
-} */
+.footer .contact a {
+  display: flex;
+  min-height: 48px;
+  align-items: center;
+}
+
+.footer .contact a img {
+  vertical-align: middle;
+  height: 16px;
+}
 
 .footer .rss {
   margin-top: 1.1em;
