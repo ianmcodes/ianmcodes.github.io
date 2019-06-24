@@ -10,7 +10,8 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "uglifycss _includes/main.css > _includes/main.min.css && uglifycss _includes/custom_icons.css > _includes/custom_icons.min.css"
   },
   "repository": {
     "type": "git",
