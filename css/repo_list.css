@@ -19,7 +19,7 @@ ul#list-o-repos > li > span.description {
     font-style: italic;
 }
 .update_time {
-    color: gray;
+    color: #505050;
     font-size: small;
 }
 /* Repo list CSS */
