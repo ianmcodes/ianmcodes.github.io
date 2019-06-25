@@ -29,7 +29,15 @@ body {
   font-size: 100%;
 } */
 
-h1 { margin-bottom: 1em; }
+h1 {
+  margin-bottom: 1em;
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 1.5em;
+}
+
 p { margin: 1em 0; }
 
 a         { color: #00a; }
@@ -123,17 +131,11 @@ nav a,  nav a:visited {
   color: white;
 }
 
-/* nav ul li:hover a {
-  color: white !important;
-} */
-
 .title {
   display: inline-block;
-  /*margin-bottom: 2em;*/
 }
 
 .title a {
-/*  color: #a00;*/
   color: black;
   background-color: #97B412;
 }
@@ -208,6 +210,10 @@ section.maincontent {
 
 pre.highlight {
   overflow: auto;
+}
+
+.post-title {
+  margin-bottom: 0;
 }
 
 /* standard */

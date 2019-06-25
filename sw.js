@@ -1,11 +1,10 @@
 /*jshint esnext: true, browser: true, devel: true, worker: true*/
 /*globals caches*/
 var self = this;
-var CACHENAME = "codes-ianmccall-v2";
+var CACHENAME = "codes-ianmccall-v3";
 var precache = [
     '/assets/images/banner.jpg',
     '/css/syntax.css',
-    '/css/main.css',
     '/css/custom_icons.css',
     '/css/octicons/octicons.css',
     '/css/octicons/octicons.woff',
