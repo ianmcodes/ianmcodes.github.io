@@ -18,6 +18,9 @@
     <style type="text/css">
     {% include custom_icons.min.css %}
     </style>
+    {% if page.custom_css %}
+    <style type="text/css">{{ page.custom_css }}</style>
+    {% endif %}
 
     <script type="text/javascript" defer src="/js/swinit.js" data-service-worker="/sw.js"></script>
     <script type="text/javascript" defer src="/js/deferstyles.js"></script>
