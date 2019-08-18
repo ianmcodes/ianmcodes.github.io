@@ -37,10 +37,10 @@ i.custom_icon-html {
   background-image: url(/assets/icons/iconmonstr-code-2.svg);
 }
 
-@media (min-width: 2560px) {
+/* @media (min-width: 2560px) {
   i[class|="custom_icon"] {
     width: 128px;
     height: 128px;
     background-size: 128px 128px;
   }
-}
+} */

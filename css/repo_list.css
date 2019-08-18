@@ -4,10 +4,15 @@ ul.no_bull {
     list-style: none;
     padding-left: 0px;
 }
+ul#list-o-repos {
+    width: 100%;
+}
 ul#list-o-repos > li {
     border-bottom: 1px solid gray;
     transition: background-color 400ms linear;
     cursor: default;
+    width: 100%;
+    overflow: hidden;
 }
 ul#list-o-repos > li:hover {
     background-color: lightyellow;
