@@ -218,6 +218,14 @@ pre.highlight {
   margin-bottom: 0;
 }
 
+.post-subtitle:empty {
+  display: none;
+}
+
+.post-subtitle {
+  margin: .25em 0 .25em 0;
+}
+
 /* standard */
 .post pre {
   border: 1px solid #ddd;
