@@ -5,29 +5,25 @@ title: IanMcCall.codes
 include_in_menu: true
 order: 0
 menu_name: Home
+custom_css: >-
+  #home {
+    width: 100%;
+  }
+  #home > ul > li {
+    display: inline-block;
+    flex-grow: 1;
+  }
+  #home > ul > li > a {
+    display: block;
+  }
+  @media (max-width: 425px) {
+    #home > ul > li > a {
+      font-size: 0;
+    }
+  }
+
 ---
 
-  <style>
-    #home > ul > li > a {
-      display: block;
-    }
-    
-    @media (max-width: 1000px) {
-      #home > ul.flex_container {
-        display: block;
-      }
-    }
-
-    @media (min-width: 1000px) {
-      #home {
-        width: 100%;
-      }
-      #home > ul > li {
-        display: inline-block;
-        flex-grow: 1;
-      }
-    }
-  </style>
   <div id="home">
     <ul class="no_bull flex_container" style="text-align: center;">
       <li>

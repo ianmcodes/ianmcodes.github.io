@@ -21,7 +21,6 @@
     display: flex;
     margin-right: 1em;
     border: 2px solid lightgray;
-    padding: 1em;
   }
 
   div.flex_container section.maincontent article {

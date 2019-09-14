@@ -1,9 +1,4 @@
 /* Repo list CSS */
-
-ul.no_bull {
-    list-style: none;
-    padding-left: 0px;
-}
 ul#list-o-repos {
     width: 100%;
 }

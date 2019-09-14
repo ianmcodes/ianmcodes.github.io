@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width">
     <link rel="manifest" href="/manifest.json">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
 
     <!-- Custom CSS -->
     <style type="text/css">
@@ -14,12 +15,12 @@
     </style>
     <link rel="stylesheet" media="(min-width: 1024px) and (orientation: landscape)" href="/css/main-1024.css">
     <link rel="stylesheet" media="(min-width: 1440px) and (orientation: landscape)" href="/css/main-1440.css">
-    <link rel="preload" href="/css/syntax.css">
+    <link rel="preload" as="style" href="/css/syntax.css">
     <style type="text/css">
     {% include custom_icons.min.css %}
     </style>
     {% if page.custom_css %}
-    <style type="text/css">{{ page.custom_css }}</style>
+    <style type="text/css">{{ page.custom_css | strip_newlines }}</style>
     {% endif %}
 
     <script type="text/javascript" defer src="/js/swinit.js" data-service-worker="/sw.js"></script>

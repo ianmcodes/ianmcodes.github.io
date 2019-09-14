@@ -76,6 +76,7 @@ a:visited { color: #a0a; }
 
 .rounded {
   border-radius: 10px;
+  overflow: hidden;
 }
 
 .flex_container {
@@ -196,6 +197,7 @@ nav a,  nav a:visited {
 section.maincontent {
   background-color: white;
   width: 100%;
+  padding: 1em;
 }
 
 .maincontent article {
