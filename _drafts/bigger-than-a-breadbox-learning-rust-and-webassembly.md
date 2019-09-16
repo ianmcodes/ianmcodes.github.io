@@ -19,6 +19,6 @@ What I want is a WebAssembly example that is not trivial but also not very compl
 
 Let me first explain why I choose Rust. I actually went back and forth between doing this in Rust or [Go](https://golang.org/). They both have good tools for building to WebAssembly, and they both have a syntax that shouldn't be totaly alien to anybody that has be coding for a little while. But the support and libraries for WebAssembly seemed to be just a little more complete in Rust. That said, in the future I may rewrite this in Go and see which one I like better.
 
-The second thing you may be wondering is why a prime checker, and why the Fermat Primeality Test? Well, a half-way decent prime checker is definetly not trivial. And while there are better and more efficient algorithms (Miller-Rabin or Bailey-PSW) I find the Fermat test is easier to understand and explain.
+The second thing you may be wondering is why a prime checker, and why the Fermat Primeality Test? Well, a half-way decent prime checker is definetly not trivial. Depending on language features an libraries you use you may need to implement helper functions, making the example more complex and closer to what production code may look like. And while there are better and more efficient algorithms (Miller-Rabin or Bailey-PSW) I find the Fermat test is easier to understand and explain.
 
 _things I leaned plus issues (walk through of code?)_
