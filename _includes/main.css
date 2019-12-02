@@ -155,7 +155,6 @@ nav a,  nav a:visited {
 }
 
 .header a.extra {
-  /* color: #aaa; */
   margin-left: 1em;
 }
 
@@ -163,14 +162,8 @@ nav a,  nav a:visited {
   color: black;
 }
 
-.meta {
-  /* color: #555; */
-}
-
 .footer {
-  font-size: 80%;
-  /* color: #666; */
-  /* border-top: 4px solid white; */
+  font-size: 100%;
   border: var(--border);
   margin-top: 0.5em;
   overflow: hidden;
@@ -191,7 +184,11 @@ nav a,  nav a:visited {
 
 .footer .contact a img {
   vertical-align: middle;
-  height: 16px;
+  /* height: 16px; */
+}
+
+.footer .contact a span {
+  line-height: 32px;
 }
 
 .footer .rss {
