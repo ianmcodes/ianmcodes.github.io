@@ -16,6 +16,7 @@ gem "jekyll-redirect-from"
 gem "jekyll-sitemap"
 gem "jekyll-github-metadata"
 gem "jekyll-seo-tag"
+gem "jekyll-feed"
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw] if Gem.win_platform?
 gem 'wdm', '>= 0.1.0' if Gem.win_platform?
