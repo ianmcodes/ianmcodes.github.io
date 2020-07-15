@@ -1,6 +1,6 @@
-@media (min-width: 1440px) and (orientation: landscape) {
+@media (min-width: 1440px) {
   .site {
     margin: auto;
-    width: 1100px;
+    width: 60vw;
   }
 }

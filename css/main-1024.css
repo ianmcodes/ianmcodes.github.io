@@ -1,4 +1,4 @@
-@media (min-width: 1024px) and (orientation: landscape) {
+@media (min-width: 1024px) {
   header.header {
     background-image: url(/assets/images/banner.jpg);
     background-size: 100%;
