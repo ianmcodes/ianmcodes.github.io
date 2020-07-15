@@ -1,13 +1,13 @@
 Education
 =========
 
-### Illinois Institute of Technology (May 2010)
+## Illinois Institute of Technology (May 2010)
 
-#### Bachelor of Science in Computer Information Systems
+### Bachelor of Science in Computer Information Systems
 
-#### Minor in Internet Application Development
+### Minor in Internet Application Development
 
-#### Specialization in Information Security
+### Specialization in Information Security
 
 **Course Work:**
 Operating Systems              | Technical Communications           |

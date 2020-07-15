@@ -1,25 +1,25 @@
 Work Experience
 ===============
 
-### Tribune Publishing, Chicago, IL
+## Tribune Publishing, Chicago, IL
 
-#### Sr. Software Engineer (September 2017 - Present)
+### Sr. Software Engineer (September 2017 - Present)
 
-JavaScript, HTML, CSS, JSP, Git, Docker, AWS
+JavaScript, HTML, CSS, JSP, Git, Docker, AWS, React
 
 {% unless page.print %}
 Tribune Publishing is a media publishing company who's properties include the Chicago Tribune, New York Daily News, and other papers.
 {% endunless %}
 
-Worked on optimizations in both CSS and JS. Developed enhancements to websites to improve ad revenue. Worked on improvements and tooling around docker to help with development
+Worked on optimizations in both CSS and JS. Developed enhancements to websites to improve ad revenue and subscriber retention. Worked on improvements and tooling around docker to help with development.
 
-### Brandify (formerly Where2GetIt), Des Plaines, IL (March 2011 - September 2017)
+## Brandify (formerly Where2GetIt), Des Plaines, IL (March 2011 - September 2017)
 
-#### Development Manager (April 2014 - September 2017)
+### Development Manager (April 2014 - September 2017)
 
-#### Manager of Technical Operations (December 2012 - April 2014)
+### Manager of Technical Operations (December 2012 - April 2014)
 
-#### Front-End Developer
+### Front-End Developer (March 2011 - December 2012)
 
 JavaScript, Perl, HTML, CSS, SVN, Git, Storm, Kafka
 
@@ -34,9 +34,9 @@ In addition to front-end work I have also worked on enhancements to the existing
 
 Most recently I have been working on the architecture and development of a new Node.js server which uses Hapijs. This new server is designed for flexibility, scalability, and speed. Along side architecting a new Node.js code base for Brandify, I have also been leading the way in adopting Apache Storm and Kafka for processing real-time data and events. I designed and coded the first topologies, and I have trained other developers in the company in how to use Kafka and how to create and deploy Storm topologies.
 
-### Model Metrics, Chicago, IL
+## Model Metrics, Chicago, IL
 
-#### Developer (May 2010 - August 2010)
+### Developer (May 2010 - August 2010)
 
 Salesforce
 
@@ -44,10 +44,11 @@ Model Metrics was a provider cloud computing solutions using salesforce.com, Ama
 
 During my time at Model Metrics I primarily used the ETL (Extract Transform Load) tool, Talend, to do complex data migrations and integrations for clients. I also worked on enhancements to internal tools, written in PHP, that analyzed the quality of clients' data in salesforce.com. One of those enhancements was to improve report generation speed by developing a way to generate the pages of the report in parallel.
 
+{% comment %}
 {% unless page.print %}
-### Center for the Studies of Ethics in the Professions (CSEP), Chicago, IL
+## Center for the Studies of Ethics in the Professions (CSEP), Chicago, IL
 
-#### Student Worker
+### Student Worker
 
 HTML, Perl
 
@@ -63,3 +64,4 @@ Vehicle Improvement Products (VIP), located in Antioch, IL, designs and manufact
 
 I worked for VIP one summer while I was attending school at the Illinois Institute of Technology. While I was there I helped update their website, did trouble shooting on problems with automated testing equipment, and used Active Directory to set domain wide security policies.
 {% endunless %}
+{% endcomment %}
