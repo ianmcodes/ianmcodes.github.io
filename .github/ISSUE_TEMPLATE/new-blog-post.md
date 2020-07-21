@@ -19,5 +19,4 @@ _Research, Opinion, or Demo_
 * [ ] Publish
 * [ ] Promote
 	* [ ] Twitter?
-	* [ ] Reddit?
 	* [ ] Other?

@@ -24,5 +24,4 @@ _Why is the page or section needed_
 * [ ] Publish
 * [ ] Promote?
 	* [ ] Twitter?
-	* [ ] Reddit?
 	* [ ] Other?
