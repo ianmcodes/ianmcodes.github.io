@@ -47,6 +47,7 @@ task :post do
   abort("rake aborted: '#{CONFIG['posts']}' directory not found.") unless FileTest.directory?(CONFIG['posts'])
   title = ENV["title"] || ENV["draft"] || "new-post"
   tags = ENV["tags"] || "[]"
+  author = ENV["author"] || "imccall"
   category = ENV["category"] || ""
   category = "\"#{category.gsub(/-/,' ')}\"" if !category.empty?
   slug = title.downcase.strip.gsub(' ', '-').gsub(/[^\w-]/, '')
@@ -74,6 +75,7 @@ task :post do
     post.puts "title: \"#{title.gsub(/-/,' ')}\""
     post.puts 'description: ""'
     post.puts "categories: #{category}"
+    post.puts "author: #{author}"
     post.puts "---"
     post.puts ""
   end
@@ -85,6 +87,7 @@ task :draft do
   abort("rake aborted: '#{CONFIG['drafts']}' directory not found.") unless FileTest.directory?(CONFIG['drafts'])
   title = ENV["title"] || "new-post"
   tags = ENV["tags"] || "[]"
+  author = ENV["author"] || "imccall"
   category = ENV["category"] || ""
   category = "\"#{category.gsub(/-/,' ')}\"" if !category.empty?
   slug = title.downcase.strip.gsub(' ', '-').gsub(/[^\w-]/, '')
@@ -106,6 +109,7 @@ task :draft do
     post.puts "title: \"#{title.gsub(/-/,' ')}\""
     post.puts 'description: ""'
     post.puts "categories: #{category}"
+    post.puts "author: #{author}"
     post.puts "---"
     post.puts ""
   end
