@@ -16,6 +16,18 @@ plugins:
   - jekyll-seo-tag
   - jekyll-feed
 exclude: ["bower_components", "vendor"]
+defaults:
+  - 
+    scope: 
+      path: ""
+      type: "posts"
+    values:
+      author: "imccall"
+  -
+    scope:
+      path: ""
+    values:
+      image: "/assets/images/banner.jpg"
 
 # SEO
 
