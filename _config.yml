@@ -15,6 +15,7 @@ plugins:
   - jekyll-github-metadata
   - jekyll-seo-tag
   - jekyll-feed
+  - jekyll-sitemap
 exclude: ["bower_components", "vendor"]
 defaults:
   - 
@@ -23,6 +24,31 @@ defaults:
       type: "posts"
     values:
       author: "imccall"
+  -
+    scope:
+      path: "assets"
+    values:
+      sitemap: false
+  - 
+    scope:
+      path: "js"
+    values:
+      sitemap: false
+  - 
+    scope:
+      path: "css"
+    values:
+      sitemap: false
+  - 
+    scope:
+      path: "tronc"
+    values:
+      sitemap: false
+  - 
+    scope:
+      path: "**/*_old.*"
+    values:
+      sitemap: false
   -
     scope:
       path: ""
