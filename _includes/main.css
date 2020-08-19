@@ -104,9 +104,15 @@ a:visited { color: #a0a; } */
   text-decoration: none;
 }
 
-header h1.title {
+/* header h1.title {
   margin-top: .5em;
   margin-left: .5em;
+} */
+
+header .title a {
+  display: block;
+  width: 300px;
+  margin: auto;
 }
 
 nav ul {
@@ -142,7 +148,7 @@ nav a,  nav a:visited {
 }
 
 .title {
-  display: inline-block;
+  display: block;
 }
 
 .title a {

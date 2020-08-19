@@ -6,6 +6,15 @@
     min-height: 200px;
   }
 
+  header h1.title {
+    margin-top: .5em;
+    margin-left: .5em;
+  }
+
+  header .title a {
+    margin: 0;
+  }
+
   .site {
     margin-left: 2em;
     margin-right: 2em;
