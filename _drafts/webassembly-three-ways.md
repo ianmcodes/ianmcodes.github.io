@@ -19,7 +19,10 @@ The program in this case will be the Fermat Prime Check algorithm. It's somethin
 
 I want to assess how easy it is to go from "zero to hero" in each language. These languages are going to be new to me. So while there may be some very clever or obscure way of doing things, that may provide incredible performance gains, that wouldn't provide a fair comparison. And someone new to the language would not know these tricks.
 
-In addition, I will try to add some hard numbers on top of the subjective measurements, by doing some size and speed comparisons.
+In addition, I will try to add some hard numbers on top of the subjective measurements, by doing some size and speed comparisons. Size comparison is simply the size on disk. And the speed test was performed using [Benchmark.js](https://benchmarkjs.com/) and the same set of 9 prime numbers for each.
+```
+[5, 13, 277, 2999, 10151, 154877, 5297879, 15485339, 694847533]
+```
 
 ## The Contenders
 
@@ -28,6 +31,10 @@ For this I am starting with comparing [AssemblyScript](https://www.assemblyscrip
 The language I probably have the most of an edge with would be AssemblyScript. It is a variant of TypeScript, which is basically a type layer on JavaScript, a language I am very familiar with. In the case of Go and Rust I went through some tutorials before writing the Prime checker for this test. In fact, I wrote an [earlier post when I did the Rust implementation](/2020/06/28/bigger-than-a-breadbox-learning-rust-and-webassembly.html).
 
 ## AssemblyScript
+
+[My Code](https://github.com/ianmcodes/as-primecheck)
+
+[Live Demo](https://www.ianmccall.codes/as-primecheck/)
 
 ### Learning the Language
 
@@ -41,11 +48,19 @@ To export functions to JS you use the same `export` keyword you use to export fu
 
 ### Tool Chain
 
+The AssemblyScript tools are easily installed using `npm`. Installing the `assemblyscript` module gives you access to `asinit` and `as` commands, which you can run using `npx`. The `asinit` command which scaffolds an AssemblyScript project. After that you can use the `asc` command to compile your project. The compiler supports a number of optimization options and can generate binary, wasm text format, and JS equivalent all at the same time.
+
+To load and run your compiled code on a page you will need to use the `@assemblyscript/loader` module. Because of that, I decided to leverage "browserify" to be able to build a script to run in the browser.
+
 ### Performance
 
 #### Size (Binaries & Loader)
 
+For size, the optimized WASM binary weighed in at 3.2K.
+
 #### Benchmark
+
+Bechmark.js clocked it at approx. 0.03146ms (+/-0.85%) per run (average of 62 runs).
 
 ## Rust
 
@@ -59,7 +74,11 @@ In a previous post I talked about [learning Rust](/2020/06/28/bigger-than-a-brea
 
 #### Size (Binaries & Loader)
 
+Binary: 33K
+
 #### Benchmark
+
+approx. 0.09850 (+/-3.41%)
 
 ## Go
 
@@ -77,4 +96,8 @@ _A note on tinygo_: If you have looked into using Go to build Wasm modules you h
 
 #### Size (Binaries & Loader)
 
+Binary: 1.4M
+
 #### Benchmark
+
+approx. 0.27862 (+/-1.78%)
