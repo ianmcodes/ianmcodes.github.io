@@ -9,7 +9,7 @@ My fiancé and I have been going for hikes every weekend since we haven't been g
 
 So here is a quick review of the ones I bought.
 
-## [Water Buffalo Hydration Pack Backpack - Water Backpack - 2L Water Bladder](https://amzn.to/3jgklif)
+## [Water Buffalo Hydration Pack Backpack - Water Backpack - 2L Water Bladder](https://amzn.to/3jgklif)(_affiliate link_)
 
 <iframe style="width:120px;height:240px;float:left;padding-right:1em;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=ianmccallcode-20&language=en_US&marketplace=amazon&region=US&placement=B07FTQXTP9&asins=B07FTQXTP9&linkId=ad0d99e2cdecc7200138bdc0e989c5c6&show_border=true&link_opens_in_new_window=true"></iframe>
 
@@ -17,7 +17,7 @@ The backpack on this one is very nice. The shoulder straps are padded and they h
 
 The bladder and hose were good (but not as good as the other one). So far they have performed fine, no leaks or major issues. The bladder holds 2 liters of water, which is enough for a good long hike. The hose attaches to the bladder using a standard barb fitting. It also has a 90 degree angled bite valve which can be locked by twisting the valve 180 degrees. It can be a little tricky to fill since there isn't a good way to hold the bladder and point the fill port up with out using two hands.
 
-## [Mubasel Gear Hydration Backpack Pack with 2L BPA Free Bladder](https://amzn.to/2WvwLZV)
+## [Mubasel Gear Hydration Backpack Pack with 2L BPA Free Bladder](https://amzn.to/2WvwLZV)(_affiliate link_)
 
 <iframe style="width:120px;height:240px;float:left;padding-right:1em;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=ianmccallcode-20&language=en_US&marketplace=amazon&region=US&placement=B015GONGTG&asins=B015GONGTG&linkId=2d1039d0af524b79931839448c1f925a&show_border=true&link_opens_in_new_window=true"></iframe>
 
