@@ -52,16 +52,6 @@ The AssemblyScript tools are easily installed using `npm`. Installing the `assem
 
 To load and run your compiled code on a page you will need to use the `@assemblyscript/loader` module. Because of that, I decided to leverage "browserify" to be able to build a script to run in the browser.
 
-### Performance
-
-#### Size (Binaries & Loader)
-
-For size, the optimized WASM binary weighed in at 3.2K.
-
-#### Benchmark
-
-Bechmark.js clocked it at approx. 0.03146ms (+/-0.85%) per run (average of 62 runs).
-
 ## Rust
 
 ### Learning the language
@@ -70,15 +60,6 @@ In a previous post I talked about [learning Rust](/2020/06/28/bigger-than-a-brea
 
 ### Tool Chain
 
-### Performance
-
-#### Size (Binaries & Loader)
-
-Binary: 33K
-
-#### Benchmark
-
-approx. 0.09850 (+/-3.41%)
 
 ## Go
 
@@ -92,12 +73,20 @@ _A note on tinygo_: If you have looked into using Go to build Wasm modules you h
 
 ### Tool Chain
 
-### Performance
+## Performance
 
-#### Size (Binaries & Loader)
+### Size
 
-Binary: 1.4M
+| Language | Binary Size |
+|----------|-------------|
+| AssemblyScript | 3.2K |
+| Rust | 33K |
+| Go | 1.4M |
 
-#### Benchmark
+### Benchmark
 
-approx. 0.27862 (+/-1.78%)
+| Language | Average Execution Time (ms) |
+|----------------|------|----|
+| AssemblyScript | 0.03146 (+/-0.85%) |
+| Rust | 0.09850 (+/-3.41%) |
+| Go | 0.27862 (+/-1.78%) |
