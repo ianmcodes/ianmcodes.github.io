@@ -32,8 +32,7 @@ The language I probably have the most of an edge with would be AssemblyScript. I
 
 ## AssemblyScript
 
-[My Code](https://github.com/ianmcodes/as-primecheck)
-
+[My Code](https://github.com/ianmcodes/as-primecheck) |
 [Live Demo](https://www.ianmccall.codes/as-primecheck/)
 
 ### Learning the Language
@@ -54,14 +53,21 @@ To load and run your compiled code on a page you will need to use the `@assembly
 
 ## Rust
 
+[My Code](https://github.com/ianmcodes/rust-primecheck) |
+[Live Demo](https://www.ianmccall.codes/rust-primecheck/)
+
 ### Learning the language
 
 In a previous post I talked about [learning Rust](/2020/06/28/bigger-than-a-breadbox-learning-rust-and-webassembly.html#learning-rust). The short version is that the way it works is very different from other languages I've used. The hardest thing to get used to is how extremely strict Rust is about variables. For somebody that is used to playing fast and loose with variables in JS and other web programing languages, the way Rust handles variables requires some getting used to. But the good thing is that the build tools are really good at pointing out what you are doing wrong and how to fix it.
 
 ### Tool Chain
 
+Besides Rust and Cargo, to build for WebAssembly you will need to install `wasm-pack` from here (https://rustwasm.github.io/wasm-pack/installer/). Once you have that and you setup your `Cargo.toml` file, it's as simple as running `wasm-pack build --release -t web`. The build process creates your binary and a JS loader so you can more easily load your wasm binary on your page.
 
 ## Go
+
+[My Code](https://github.com/ianmcodes/go-primecheck) |
+[Live Demo](https://www.ianmccall.codes/go-primecheck/)
 
 ### Learning the language
 
@@ -73,6 +79,10 @@ _A note on tinygo_: If you have looked into using Go to build Wasm modules you h
 
 ### Tool Chain
 
+The standard install of GoLang has everything you need to target WebAssembly. So to create your binary you just need to run `GOOS=js GOARCH=wasm go build -o main.wasm`.
+
+To load the binary on a page you will need to copy `wasm_exec.js` from `{GoHome}/misc/wasm/` to your project. Then you can load the script on your page and use the `Go()` class it provides to run you wasm binary.
+
 ## Performance
 
 ### Size
@@ -83,6 +93,8 @@ _A note on tinygo_: If you have looked into using Go to build Wasm modules you h
 | Rust | 33K |
 | Go | 1.4M |
 
+As you can see AssemblyScript is the clear winner size wise. But the really surprizing result here is how huge the Go binary is! The go compiler doesn't provide any optimization options it's self. In fact the guidance from the Go team for [reducing the size of Wasm files](https://github.com/golang/go/wiki/WebAssembly#reducing-the-size-of-wasm-files) is to just use gzip or brotli compression. Or to switch to using TinyGo.
+
 ### Benchmark
 
 | Language | Average Execution Time (ms) |
@@ -90,3 +102,8 @@ _A note on tinygo_: If you have looked into using Go to build Wasm modules you h
 | AssemblyScript | 0.03146 (+/-0.85%) |
 | Rust | 0.09850 (+/-3.41%) |
 | Go | 0.27862 (+/-1.78%) |
+
+Again, a win for AssemblyScript, but much closer this time. Rust was only an average of 0.06704ms slower than AS. Though it's also important to point out that AS was much more consistent from run to run than Rust or Go.
+
+## Conclusion?
+From this, you maybe convinced that AssemblyScript is the way to go, but I think it's a little premature to make that conclusion. This test is limited to just passing in numbers, not complex objects that would require using the `ArrayBuffer` memory and passing pointers. And even then, the AssemblyScript version only works because Chrome added support for passing `BigInt` into wasm in Chrome 85. The loaders for Rust and Go handle that complication for you. So, depending on the complexity of what you are trying to do, you may find yourself better off accepting the size overhead that comes with Rust or Go.
