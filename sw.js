@@ -38,6 +38,9 @@ self.addEventListener('activate', function(event) {
 
 self.addEventListener('fetch', function(event) {
     var url = new URL(event.request.url);
+    if(url.origin !== location.origin) {
+        return;
+    }
     if(url.origin === location.origin && url.pathname.match(/^\/assets\/icons/)) {
         event.respondWith(handleIcon(event));
         return;
