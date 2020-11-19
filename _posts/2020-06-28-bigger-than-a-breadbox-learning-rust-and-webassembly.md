@@ -3,7 +3,8 @@ layout: post
 title: "Learning Rust and WebAssembly"
 subtitle: "Bigger Than a Breadbox, Smaller Than a House"
 description: ""
-categories: 
+categories: post
+tags: WebAssembly Rust programming js
 ---
 
 __TL;DR;__ You can find the live demo [here](https://www.ianmccall.codes/rust-primecheck/).

@@ -2,10 +2,10 @@
 layout: post
 title: "Charting Merit Badges"
 description: ""
-categories: 
+tags: charts Boy_Scouts
+category: post
 head_js:
   - "https://code.highcharts.com/highcharts.js"
-
 ---
 
 Back around the end of March Bryan Wendell, from Bryan on Scouting, posted an update 

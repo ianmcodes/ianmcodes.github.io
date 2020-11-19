@@ -2,7 +2,8 @@
 layout: post
 title: "4.2 Stars with CSS and SVG"
 description: ""
-categories: 
+categories: post
+tags: css svg ratings
 ---
 
 For a personal project, I needed a way to display an average star rating. There are a lot of ways to do this, but I thought this was a clever way to achive the look I wanted. I'm not sure if anyone else has done it this way. If someone has, I haven't seen an example of it before.

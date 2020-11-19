@@ -2,7 +2,8 @@
 layout: post
 title: "Stress vs. Pressure"
 description: ""
-categories: 
+categories: post
+tags: stress thoughts
 ---
 
 Stress. We all want to avoid stress. Stress causes deformation, degradation. Over time, stress breaks and destroys.

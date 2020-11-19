@@ -2,7 +2,8 @@
 layout: post
 title: "Getting Google Home to Read My Work Calendar (Sort of)"
 description: ""
-categories: 
+category: post
+tags: Google Google_Home calendar Apps_Script js
 ---
 
 I love my Google Home devices. I was skeptical at first about how useful how useful a device could be if the only way to interact with is is through voice commands, but it turns out there are a whole host of tasks where it's actually really convenient to just say "Hey Google" a command and listen to the response. There are limitations to the interaction medium, but I can almost always turn to my phone or a computer in those cases.

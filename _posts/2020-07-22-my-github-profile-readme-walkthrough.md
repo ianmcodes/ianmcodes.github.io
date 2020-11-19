@@ -2,8 +2,9 @@
 layout: post
 title: "My GitHub Profile README Walkthrough"
 description: ""
-categories: 
+categories: post
 author: imccall
+tags: GitHub README profile automation
 ---
 
 ![Screen shot of profile](https://pbs.twimg.com/media/EdFZEgwWkAA0H8E?format=png&name=small)

@@ -2,7 +2,8 @@
 layout: post
 title: "WebAssembly Three Ways"
 description: "Go vs Rust vs AssemblyScript"
-categories: 
+categories: post
+tags: WebAssembly Rust Golang AS js programming
 ---
 
 [WebAssembly](https://webassembly.org/) is byte code for the web. It is an open standard that has been implemented by all of the major browsers (FireFox, Chrome, Safari, Edge). It has also been implemented as a compilation target for a number of programing languages. Which may have you asking, if I want to build something in WebAssembly what language should I use?

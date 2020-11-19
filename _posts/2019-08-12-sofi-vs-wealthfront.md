@@ -3,8 +3,9 @@ layout: post
 author: imccall
 title: "SoFi Vs. Wealthfront"
 description: "6 months with two robo advisors (plus high interest savings!)"
-categories: 
+categories: post
 custom_css: "span.green { color: green; }"
+tags: finance SoFi Wealthfront money
 ---
 
 Back in January I signed up to two different robo advisors, so I could compare them and see which one worked better for me and if they did better than my traditional brokerage account. If you are not familiar with the concept of a robo advisor they are brokerages where, instead of picking stocks and funds yourself or with the help of a financial advisor, you select a level of risk and an algorithm selects a set of financial assets for you. The algorithm can also automatically re-balance your portfolio and do "tax loss harvesting" for you (I'll explain that latter).

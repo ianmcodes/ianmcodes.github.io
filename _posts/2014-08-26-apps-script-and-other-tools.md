@@ -1,8 +1,9 @@
 ---
 layout: post
 title: "Apps Script and other tools"
-description: "Easy ways to make life easyer"
+description: "Easy ways to make life easier"
 category: post
+tags: automation IFTTT Apps_Script
 ---
 
 If you are like me, you have a lot to do in any given day. Some big, complicated things, like designing a new server architecture or crafting a complex and efficient SQL query. But there are also a lot of little things, like sorting and deleting email or keeping track of your Github issues.

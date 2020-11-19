@@ -2,7 +2,8 @@
 layout: post
 title: "I Believe I Can PreFlight!"
 description: "Responding to CORS PreFlight Request"
-categories: 
+categories: post
+tags: CORS webdev perl mod_perl
 ---
 
 This is a follow up to my previous post about [CORS with mod_perl]({% post_url 2014-09-17-cors-with-mod_perl %}), I wrote a little bit about CORS (Cross Origin Resource Sharing) and about setting the `Access-Control-Allow-Origin` header from mod_perl. If you haven't read it, I would recommend doing so (and not just because I wrote it :wink:).

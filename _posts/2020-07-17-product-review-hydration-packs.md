@@ -2,7 +2,8 @@
 layout: post
 title: "[Product Review] Hydration packs"
 description: ""
-categories: "review"
+categories: review post
+tags: review camping equipment hydration
 ---
 
 My fiancé and I have been going for hikes every weekend since we haven't been going anywhere else because of "you know what". After one very hot and sweaty hike, I decided to get us a couple hydration packs. Hydration packs are basically a small backpack that holds a bag of water with a hose attached, so you can drink on the go.
