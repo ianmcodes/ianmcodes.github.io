@@ -76,6 +76,7 @@ task :post do
     post.puts 'description: ""'
     post.puts "categories: #{category}"
     post.puts "author: #{author}"
+    post.puts "tags: #{tags}"
     post.puts "---"
     post.puts ""
   end
@@ -110,6 +111,7 @@ task :draft do
     post.puts 'description: ""'
     post.puts "categories: #{category}"
     post.puts "author: #{author}"
+    post.puts "tags: #{tags}"
     post.puts "---"
     post.puts ""
   end
