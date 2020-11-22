@@ -7,29 +7,29 @@ author: imccall
 tags: [VHS,scripting,bash,powershell,video_editing]
 ---
 
-![VHS Tapes](/assets/images/convert_vhs/Tapes.jpg)
+[![VHS Tapes](/assets/images/convert_vhs/Tapes.jpg)](/assets/images/convert_vhs/Tapes.jpg)
 
 Recently I undertook a project to convert a number of old home movies on VHS tapes to digital. Here is how I did it.
 
 The first problem was how to initially ingest the video. I didn't have a VCR, so the first step was to get on eBay and get one. Fortunately I found one that was a good price. Also, the seller was not too far away so it arrived quickly. The second problem was how to hookup the VCR to a computer.
 
-![VCR](/assets/images/convert_vhs/VCR.jpg)
+[![VCR](/assets/images/convert_vhs/VCR.jpg)](/assets/images/convert_vhs/VCR.jpg)
 
 I had an [Elgato Cam Link 4k (paid link)](https://amzn.to/3pMSTfj), but that only has an HDMI input, and VCR predated HDMI by a fair bit. I did some searching and I was able to find an [RCA to HDMI converter (paid link)](https://amzn.to/3lWjkgA) that worked out great. I got the version that came with cables, so I didn't then have to hunt for some RCA cables.
 
-![Converter box with cables](/assets/images/convert_vhs/converter.jpg)
+[![Converter box with cables](/assets/images/convert_vhs/converter.jpg)](/assets/images/convert_vhs/converter.jpg)
 
-![Everything hooked up](/assets/images/convert_vhs/all_working.jpg)
+[![Everything hooked up](/assets/images/convert_vhs/all_working.jpg)](/assets/images/convert_vhs/all_working.jpg)
 
 After the hardware acquisitions, it was just a matter of hooking it up to my laptop (along with an external hard drive) starting to record the tapes. To actually record the video I used the free and open-source tool [OBS](https://obsproject.com/). OBS it typically used by people looking to live stream on Twitch, YouTube, or other sites, but it can also be used to record to a file. In OBS I setup the Cam Link as a video capture device and configured it to record at 1920x1080 and to record to an external dive. By default OBS records in `mkv` format. You can change this to `mp4`, but there is a risk that the file will be unreadable if OBS is not able to finalize the file when you are done recording. Because some of the tapes would be several hours long (thanks to Super Long Play), I decided to record to mkv and convert to `mp4` later.
 
-![OBS warning about mp4](/assets/images/ScreenShots/OBS_2020-11-20_151342.png)
+[![OBS warning about mp4](/assets/images/ScreenShots/OBS_2020-11-20_151342.png)](/assets/images/ScreenShots/OBS_2020-11-20_151342.png)
 
 Once I was ready to start recording a tape, I would rewind it to make sure I was at the start, start recording on OBS, hit play on the VCR, and then walk away. I would check in on it every half hour to an hour until it was done. When the tape was done, I would stop the recording on OBS and setup the next tape. Most of the tapes worked without an issue, but there was one that required a lot more work.
 
 It was probably the oldest tape that I was trying to convert. It had some video on it of my sister and I from when we were very little. It broke while I was rewinding it to the start. Of course I didn't know that until I started playing it and heard bad tape crunching noises coming from the machine. Fortunately it didn't break in the middle, but the end had come loose from the take-up spool. I had to carefully open up the cassette and reattach the end to the spool with some tape. I also did my best to flatten some of the tape that had gotten wrinkled, but I don't think that helped that much.
 
-![Fixing VHS Tape](/assets/images/convert_vhs/Fixing_Tape.jpg)
+[![Fixing VHS Tape](/assets/images/convert_vhs/Fixing_Tape.jpg)](/assets/images/convert_vhs/Fixing_Tape.jpg)
 
 Once I had all the tapes recorded I wanted to do a little processing and cleanup. First I wanted to convert them to `mp4`, because that is a more commonly used format and my video editing tools don't work with `mkv` files. I also wanted to break the files up into discrete events, since many of the tapes had multiple different events on them (along with movies recorded from broadcast TV). 
 
