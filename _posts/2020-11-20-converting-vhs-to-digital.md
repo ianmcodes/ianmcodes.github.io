@@ -70,6 +70,6 @@ The video editing software I used was [Davinci Resolve](https://www.blackmagicde
 13. repeat steps 11 and 12 with each timeline
 14. move to the Deliver panel and create a render job for each timeline.
 
-And then repeat that for each tape recorded. It looks like a lot of work, but it's not so bad once you get into a rhythm with it. (If you really want me to go into more detail about this, [create an issue on my github](https://github.com/ianmcodes/ianmcodes.github.io/issues))
+And then repeat that for each tape recorded. It looks like a lot of work, but it's not so bad once you get into a rhythm with it. (If you really want me to go into more detail about this, [@ me on Twitter](https://twitter.com/ianmccallcodes))
 
 In all I converted 22 VHS tapes and generated 52 separate video clips taking up about 51 Gigs of disk space.
