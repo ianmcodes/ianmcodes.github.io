@@ -7,6 +7,13 @@ order: 2
 menu_name: About
 ---
 
-As you can likely guess, my name is Ian McCall, and I live and work in the [Chicago](https://goo.gl/maps/e1U9W) area. I am currently a Sr. Software Engineer for [Tribune Publishing](https://www.tribpub.com/).
+Hi 👋. My name is Ian, and I live and work in the [Chicagoland area](https://en.wikipedia.org/wiki/Chicago_metropolitan_area). If you want to know more about my professional experience, take a look at my [resume](/resume).
 
-I used to work for a company called [Brandify](http://www.brandify.com/). I started there as a Front-end Developer and in the end I left as Development Manager. I mostly used JavaScript (both Node.js and browser) and Perl. I worked on a lot of different integrations with Google APIs (mostly the Google Maps API) and other APIs. I worked with Storm and Kafka at Brandify as well.
+On this site I like to write about my various personal projects. Mostly code, but also finance, 3D printing, crafting, and other things. 
+
+You can also check out my other social media below:
+
+* <img src="/assets/icons/iconmonstr-youtube-10-32.png" alt="youtube" style="vertical-align:middle;" />YouTube: [IanMCodes](https://www.youtube.com/channel/UCZhZYfeKgkKv-gvXB-4z_8A)
+* <img src="/assets/icons/iconmonstr-twitter-5-icon-32.png" alt="twitter" style="vertical-align:middle;" />Twitter: [@ianmccallcodes](https://twitter.com/ianmccallcodes)
+* <img src="/assets/icons/iconmonstr-github-5-icon-32.png" alt="github" style="vertical-align:middle;" />Github: [@ianmcodes](https://github.com/ianmcodes)
+* <img src="/assets/icons/iconmonstr-linkedin-5-icon-32.png" alt="linkedin" style="vertical-align:middle;" />LinkedIn: [in/ianmccallcodes](https://www.linkedin.com/in/ianmccallcodes)
