@@ -6,6 +6,23 @@
   gtag('js', new Date());
 
   gtag('config', 'G-9KTYG5N3TC');
+
+  // Track extrenal link clicks
+  document.addEventListener('click', function trackClick(evt) {
+    var originReg = new RegExp('^' + location.origin);
+    var target = evt.target.closest('a');
+    var url = target.href;
+    if (target.tagName.toLowerCase() === 'a') {
+      if (!originReg.test(url)) {
+        console.log(url);
+        ga('send', 'event', 'outbound', 'click', url, {
+          'transport': 'beacon',
+          'hitCallback': function() { document.location = url; }
+        });
+        return false;
+      }
+    }
+  });
 </script>
 <!-- Twitter universal website tag code -->
 <script>
