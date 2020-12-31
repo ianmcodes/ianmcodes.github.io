@@ -1,9 +1,23 @@
 Work Experience
 ===============
 
+## ShopRunner, Chicago, IL
+
+### Sr. Software Engineer (November 2020 - Present)
+
+JavaScript, NodeJS, Git, Docker, GCP, React, MongoDB, BigTable
+
+{% unless page.print %}
+ShopRunner is an e-commerce platform company that provides retailers a suite of tools. Including payment systems, a marketplace to connect with consumers, and fraud detection capabilities.
+
+FedEx announced on 12/02/2020 that they would acquire ShopRunner, pending regulatory approval of the deal.
+{% endunless %}
+
+Worked on fraud detection products built in NodeJS and hosted on GCP.
+
 ## Tribune Publishing, Chicago, IL
 
-### Sr. Software Engineer (September 2017 - Present)
+### Sr. Software Engineer (September 2017 - November 2020)
 
 JavaScript, HTML, CSS, JSP, Git, Docker, AWS, React
 
