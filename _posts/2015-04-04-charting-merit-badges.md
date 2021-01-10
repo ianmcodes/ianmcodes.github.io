@@ -2,7 +2,7 @@
 layout: post
 title: "Charting Merit Badges"
 description: ""
-tags: charts Boy_Scouts
+tags: [charts, Boy Scouts]
 category: post
 head_js:
   - "https://code.highcharts.com/highcharts.js"

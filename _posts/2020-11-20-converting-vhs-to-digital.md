@@ -4,7 +4,7 @@ title: "Converting VHS to Digital"
 description: ""
 categories: "post"
 author: imccall
-tags: [VHS,scripting,bash,powershell,video_editing]
+tags: [VHS, scripting, bash, powershell, video editing]
 ---
 
 [![VHS Tapes](/assets/images/convert_vhs/Tapes.jpg)](/assets/images/convert_vhs/Tapes.jpg)
