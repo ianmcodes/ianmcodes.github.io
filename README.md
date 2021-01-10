@@ -15,3 +15,11 @@ ianmcodes.github.io
     * `xcode-select --install && brew install ruby`
 1. `gem install jekyll bundler`
 1. `bundle`
+
+## Create a draft post
+
+`rake draft title="A Title" [date="YYYY-MM-DD"] [tags=[tag1,tag2]] [category="category"]`
+
+### Publish draft
+
+`rake post draft="Title | slug"`
