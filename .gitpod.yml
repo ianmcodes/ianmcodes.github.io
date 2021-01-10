@@ -1,0 +1,6 @@
+tasks:
+  - init: npm install && npm run build && bundle install
+    command: bundle exec jekyll serve --watch --drafts
+
+ports:
+  - port: 4000
