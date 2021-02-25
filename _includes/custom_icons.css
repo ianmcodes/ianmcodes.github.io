@@ -41,6 +41,10 @@ i.custom_icon-camera {
   background-image: url(/assets/icons/iconmonstr-photo-camera-2.svg);
 }
 
+i.custom_icon-youtube {
+  background-image: url(/assets/icons/iconmonstr-youtube-10.svg);
+}
+
 /* @media (min-width: 2560px) {
   i[class|="custom_icon"] {
     width: 128px;
