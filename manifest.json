@@ -6,6 +6,12 @@
             "src": "/assets/icons/ianmcodes_logo/maskable_icon_x512.png",
             "type": "image/png",
             "sizes": "512x512",
+            "purpose": "any"
+        },
+        {
+            "src": "/assets/icons/ianmcodes_logo/maskable_icon_x512.png",
+            "type": "image/png",
+            "sizes": "512x512",
             "purpose": "maskable"
         },
         {
@@ -16,7 +22,8 @@
         }
     ],
     "start_url": "/?utm_source=homescreen",
-    "display": "browser",
+    "display": "minimal-ui",
     "theme_color": "#97B412",
+    "background_color": "#97b412",
     "description": "Ian McCall's personal website"
 }
