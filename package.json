@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "description": "ianmcodes.github.io\r ================",
   "main": "sw.js",
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
     "uglifycss": "0.0.29"
   },
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "uglifycss _includes/main.css > _includes/main.min.css && uglifycss _includes/custom_icons.css > _includes/custom_icons.min.css"
