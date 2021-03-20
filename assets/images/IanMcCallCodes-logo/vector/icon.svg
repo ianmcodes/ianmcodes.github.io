@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="150"
+   height="150"
+   viewBox="0 0 39.6875 39.687502"
+   version="1.1"
+   id="svg4772"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
+   sodipodi:docname="icon.svg"
+   inkscape:export-filename="C:\Users\imccall\Documents\ianmcodes.github.io\assets\images\IanMcCallCodes-logo\vector\icon.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96">
+  <defs
+     id="defs4766" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="5.6568542"
+     inkscape:cx="20.087142"
+     inkscape:cy="24.817605"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     units="px"
+     inkscape:window-width="3840"
+     inkscape:window-height="2066"
+     inkscape:window-x="-11"
+     inkscape:window-y="-11"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata4769">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-257.31249)">
+    <g
+       style="fill:#f73289;stroke:none"
+       data-v-423bf9ae=""
+       id="1d4cb789-82d1-493a-bf8e-12bf7f9b24c4"
+       transform="matrix(0.48202555,0,0,0.48168397,-1.8473993,255.48046)"
+       inkscape:export-xdpi="159.99998"
+       inkscape:export-ydpi="159.99998">
+      <path
+         inkscape:connector-curvature="0"
+         d="M 38.182,57.753 20.18,47.91 v -5.455 l 18.002,-9.803 v 6.422 l -12.557,6.039 12.557,6.266 z m 1.666,4.327 6.503,-34.162 h 3.785 L 43.56,62.08 Z M 51.8,57.78 V 51.4 L 64.372,45.181 51.8,39.028 V 32.696 L 69.82,42.5 v 5.41 z"
+         id="path4731" />
+      <path
+         inkscape:connector-curvature="0"
+         d="M 44.999,86.031 9.465,65.517 V 24.484 L 44.999,3.969 80.535,24.485 V 65.514 Z M 13.07,63.434 44.999,81.868 76.93,63.434 V 26.566 L 44.999,8.131 13.07,26.565 Z"
+         id="path4733" />
+    </g>
+  </g>
+</svg>
