@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>{{ page.title }}</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="WebBluetooth Controller">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  </head>
+  <body>
+    <div>
+      <input type="button" value="SCAN" id="scan" />
+    </div>
+    <div>
+      <ul>
+        <li><label><input type="radio" name="anim" value=0 />Rainbow</label></li>
+        <li><label><input type="radio" name="anim" value=1 checked />Red</label></li>
+        <li><label><input type="radio" name="anim" value=2 />Chase</label></li>
+        <li><label><input type="radio" name="anim" value=3 />Party! 🎉</label></li>
+      </ul>
+    </div>
+
+    <script type="module">
+      const btn = document.getElementById('scan');
+      const serviceUUID = "19B10000-E8F2-537E-4F6C-D104768A1214".toLowerCase();
+      const characteristicUUID = "19B10001-E8F2-537E-4F6C-D104768A1214".toLowerCase()
+      let characteristic;
+      let device;
+      
+      btn.addEventListener("click", requestDevice);
+      const switches = Array.from(document.querySelectorAll('[name=anim]'));
+      switches.forEach((el) => {
+        el.addEventListener("change", (evt) => {
+          if(el.checked) {
+            const arr = new Uint8Array(1);
+            arr[0] = parseInt(el.value);
+            characteristic.writeValue(arr);
+          }
+        });
+      });
+
+      async function requestDevice() {
+        device = await navigator.bluetooth.requestDevice({
+          filters: [{
+            name: "BusyLight"
+          }],
+          optionalServices: [serviceUUID]
+        });
+        device.addEventListener('gattserverdisconnected', onDisconnected);
+        const server = await gattConnect(device);
+        await setup(server);
+        const arr = new Uint8Array(1);
+        arr[0] = 1;
+        await characteristic.writeValue(arr);
+      }
+
+      async function gattConnect(device, retry = 5) {
+        let server;
+        try {
+          server = await device.gatt.connect();
+        } catch(e) {
+          if (retry > 0) {
+            server = await gattConnect(device, retry - 1);
+          }
+        }
+        return server;
+      }
+
+      async function setup(server) {
+        const service = await server.getPrimaryService(serviceUUID);
+        characteristic = await service.getCharacteristic(characteristicUUID);
+        window.characteristic = characteristic;
+        const data = await characteristic.readValue();
+        console.log(`Current state: ${new Uint8Array(data.buffer)}`);
+      }
+
+      async function onDisconnected(evt) {
+        const device = evt.target;
+        const server = await gattConnect(device);
+        await setup(server);
+      }
+    </script>
+  </body>
+</html>
