@@ -1,29 +1,43 @@
 ---
 layout: default
 title: IanMcCall.codes
+
+custom_css: >-
+  .bt-main-container {
+    width: 100%;
+  }
+  .bt-main-container > div {
+    margin: 10px 0;
+  }
+  .bt-mode-ctrl > ul {
+    list-style-type: none;
+  }
 ---
 
-<div style="width:100%;">
-  <input type="button" value="SCAN" id="scan" />
-</div>
-<div style="width:100%;">
-  <ul>
-    <li><label><input type="radio" name="anim" value=0 />Rainbow</label></li>
-    <li><label><input type="radio" name="anim" value=1 checked />Red</label></li>
-    <li><label><input type="radio" name="anim" value=2 />Chase</label></li>
-    <li><label><input type="radio" name="anim" value=3 />Party! 🎉</label></li>
-  </ul>
+<div class="bt-main-container">
+  <div>
+    <input type="button" value="SCAN" id="scan" /> <span id="status"></span>
+  </div>
+  <div class="bt-mode-ctrl">
+    <ul>
+      <li><label><input type="radio" name="anim" value=0 />Rainbow</label></li>
+      <li><label><input type="radio" name="anim" value=1 checked />Red</label></li>
+      <li><label><input type="radio" name="anim" value=2 />Chase</label></li>
+      <li><label><input type="radio" name="anim" value=3 />Party! 🎉</label></li>
+    </ul>
+  </div>
 </div>
 
 <script type="module">
   const btn = document.getElementById('scan');
+  const statusDsp = document.getElementById('status');
+  const switches = Array.from(document.querySelectorAll('[name=anim]'));
   const serviceUUID = "19B10000-E8F2-537E-4F6C-D104768A1214".toLowerCase();
   const characteristicUUID = "19B10001-E8F2-537E-4F6C-D104768A1214".toLowerCase()
   let characteristic;
   let device;
   
   btn.addEventListener("click", requestDevice);
-  const switches = Array.from(document.querySelectorAll('[name=anim]'));
   switches.forEach((el) => {
     el.addEventListener("change", (evt) => {
       if(el.checked) {
@@ -42,11 +56,12 @@ title: IanMcCall.codes
       optionalServices: [serviceUUID]
     });
     device.addEventListener('gattserverdisconnected', onDisconnected);
+    statusDsp.innerHTML = 'Connecting to device.'
     const server = await gattConnect(device);
     await setup(server);
     const arr = new Uint8Array(1);
-    arr[0] = 1;
-    await characteristic.writeValue(arr);
+    // arr[0] = 1;
+    // await characteristic.writeValue(arr);
   }
 
   async function gattConnect(device, retry = 5) {
@@ -54,10 +69,12 @@ title: IanMcCall.codes
     try {
       server = await device.gatt.connect();
     } catch(e) {
+      statusDsp.innerHTML = `Connection Failed. Trying ${retry - 1} more time(s)...`
       if (retry > 0) {
         server = await gattConnect(device, retry - 1);
       }
     }
+    statusDsp.innerHTML = 'Connected!';
     return server;
   }
 
@@ -66,11 +83,18 @@ title: IanMcCall.codes
     characteristic = await service.getCharacteristic(characteristicUUID);
     window.characteristic = characteristic;
     const data = await characteristic.readValue();
-    console.log(`Current state: ${new Uint8Array(data.buffer)}`);
+    const value = new Uint8Array(data.buffer);
+    // console.log(`Current state: ${new Uint8Array(data.buffer)}`);
+    switches.forEach((el) => {
+      if(el.value == value[0]) {
+        el.checked = true;
+      }
+    });
   }
 
   async function onDisconnected(evt) {
     const device = evt.target;
+    statusDsp.innerHTML = 'Disconnected! Attempting to reconnect...';
     const server = await gattConnect(device);
     await setup(server);
   }
