@@ -49,7 +49,7 @@ custom_css: >-
   });
 
   async function requestDevice() {
-    device = await navigator.bluetooth.requestDevice({
+    window.device = device = await navigator.bluetooth.requestDevice({
       filters: [{
         name: "BusyLight"
       }],
@@ -59,9 +59,6 @@ custom_css: >-
     statusDsp.innerHTML = 'Connecting to device.'
     const server = await gattConnect(device);
     await setup(server);
-    const arr = new Uint8Array(1);
-    // arr[0] = 1;
-    // await characteristic.writeValue(arr);
   }
 
   async function gattConnect(device, retry = 5) {
@@ -72,6 +69,9 @@ custom_css: >-
       statusDsp.innerHTML = `Connection Failed. Trying ${retry - 1} more time(s)...`
       if (retry > 0) {
         server = await gattConnect(device, retry - 1);
+      } else {
+        statusDsp.innerHTML = 'Cannot connect to device!';
+        throw e;
       }
     }
     statusDsp.innerHTML = 'Connected!';
