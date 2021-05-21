@@ -10,10 +10,11 @@ JavaScript, NodeJS, Git, Docker, GCP, React, MongoDB, BigTable
 {% unless page.print %}
 ShopRunner is an e-commerce platform company that provides retailers a suite of tools. Including payment systems, a marketplace to connect with consumers, and fraud detection capabilities.
 
-FedEx announced on 12/02/2020 that they would acquire ShopRunner, pending regulatory approval of the deal.
+FedEx announced on 12/02/2020 that they would acquire ShopRunner, pending regulatory approval of the deal. The acuision was completed before the end of the month.
 {% endunless %}
 
-Worked on fraud detection products built in NodeJS and hosted on GCP.
+Worked on fraud detection products built in NodeJS and hosted on GCP. This included making recomending and implementing changes to how Cloud BigTable was used, 
+and changes to React front end for reviewing flaged orders
 
 ## Tribune Publishing, Chicago, IL
 
