@@ -48,9 +48,16 @@
 </head>
 
 <body>
+    <div style="display:none;">
+        {% include sprite.octicons.svg %}
+    </div>
     <div class="site">
         <header class="header rounded">
-            <h1 class="title"><a href="/"><img src="/assets/images/IanMcCallCodes-logo/vector/default.svg#svgView(viewBox(30 130 240 40))" alt="Logo" width="300" height="50"/></a></h1>
+            <h1 class="title">
+                <a href="/">
+                    {% include default.logo.svg %}
+                </a>
+            </h1>
         </header>
         <nav>
             <ul class="flex_container rounded">
@@ -75,7 +82,7 @@
                     <li>
                         <span>
                             {% if repo.fork %}
-                            <span class = "octicon octicon-repo-forked"><svg version="1.1" width="16" height="16" viewBox="0 0 10 16" class="octicon octicon-repo-forked" aria-hidden="true"><use xlink:href="#repo-forked" /></svg></span>
+                            <span class="octicon octicon-repo-forked"><svg version="1.1" width="16" height="16" viewBox="0 0 10 16" class="octicon octicon-repo-forked" aria-hidden="true"><use xlink:href="#repo-forked" /></svg></span>
                             {% else %}
                             <span class="octicon octicon-repo"><svg version="1.1" width="16" height="16" viewBox="0 0 12 16" class="octicon octicon-repo" aria-hidden="true"><use xlink:href="#repo" /></svg></span>
                             {% endif %}
