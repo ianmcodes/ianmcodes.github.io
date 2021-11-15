@@ -6,6 +6,8 @@
   --punch-color: #97B412;
   --complement-color: #ABAD9A;
   --border: 1px solid black;
+  --text-color: black;
+  --background-color: white;
 }
 
 /*****************************************************************************/
@@ -145,7 +147,7 @@ nav ul li:last-child {
 } */
 
 nav a,  nav a:visited {
-  color: black;
+  color: var(--text-color);
 }
 
 .title {
@@ -153,12 +155,12 @@ nav a,  nav a:visited {
 }
 
 .title a {
-  color: black;
+  color: var(--text-color);
   background-color: var(--main-color);
 }
 
 .title a:hover {
-  color: black;
+  color: var(--text-color);
 }
 
 .header a.extra {
@@ -166,7 +168,7 @@ nav a,  nav a:visited {
 }
 
 .header a.extra:hover {
-  color: black;
+  color: var(--text-color);
 }
 
 .footer {
@@ -209,7 +211,7 @@ nav a,  nav a:visited {
 }
 
 section.maincontent {
-  background-color: white;
+  background-color: var(--background-color);
   width: 100%;
   padding: 1em;
 }
@@ -243,7 +245,7 @@ pre.highlight {
 /* standard */
 .post pre {
   border: var(--border);
-  background-color: white;
+  background-color: var(--background-color);
   padding: 0 .4em;
 }
 
@@ -253,7 +255,7 @@ pre.highlight {
 
 .post code {
   border: var(--border);
-  background-color: white;
+  background-color: var(--background-color);
   padding: 0 .2em;
 }
 
@@ -299,7 +301,7 @@ div#resume img {
 aside {
   display:none;
   border: var(--border);
-  background-color: white;
+  background-color: var(--background-color);
 }
 
 ul.no_bull {
