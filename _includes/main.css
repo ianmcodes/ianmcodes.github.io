@@ -1,13 +1,119 @@
 /**/
 /* Colors
 /**/
-:root {
+/* :root {
   --main-color: white;
   --punch-color: #97B412;
   --complement-color: #ABAD9A;
   --border: 1px solid black;
   --text-color: black;
   --background-color: white;
+} */
+
+:root, [data-theme="default"] {
+  /* main */
+  --color-primary-darker: hsl(82, 51%, 37%);
+  --color-primary-dark: hsl(82, 51%, 47%);
+  --color-primary: hsl(82, 51%, 57%);
+  --color-primary-light: hsl(82, 51%, 67%);
+  --color-primary-lighter: hsl(82, 51%, 77%);
+
+  --color-accent-darker: hsl(334, 92%, 38%);
+  --color-accent-dark: hsl(334, 92%, 48%);
+  --color-accent: hsl(334, 92%, 58%);
+  --color-accent-light: hsl(334, 92%, 68%);
+  --color-accent-lighter: hsl(334, 92%, 78%);
+
+  --color-black: hsl(204, 28%, 7%);
+  --color-white: hsl(0, 0%, 100%);
+
+  /* feedback */
+  --color-warning-darker: hsl(46, 100%, 47%);
+  --color-warning-dark: hsl(46, 100%, 50%);
+  --color-warning: hsl(46, 100%, 61%);
+  --color-warning-light: hsl(46, 100%, 71%);
+  --color-warning-lighter: hsl(46, 100%, 80%);
+
+  --color-success-darker: hsl(190, 50%, 40%);
+  --color-success-dark: hsl(190, 50%, 50%);
+  --color-success: hsl(190, 50%, 60%);
+  --color-success-light: hsl(190, 50%, 70%);
+  --color-success-lighter: hsl(190, 50%, 80%);
+
+  --color-error-darker: hsl(342, 89%, 38%);
+  --color-error-dark: hsl(342, 89%, 43%);
+  --color-error: hsl(342, 89%, 48%);
+  --color-error-light: hsl(342, 89%, 56%);
+  --color-error-lighter: hsl(342, 89%, 62%);
+
+  /* // background */
+  --color-bg-darker: hsl(210, 4%, 89%);
+  --color-bg-dark: hsl(180, 3%, 94%);
+  --color-bg: hsl(0, 0%, 100%);
+  --color-bg-light: hsl(180, 3%, 100%);
+  --color-bg-lighter: hsl(210, 4%, 100%);
+
+  /* // color contrasts */
+  --color-contrast-lower: hsl(180, 1%, 84%);
+  --color-contrast-low: hsl(210, 2%, 64%);
+  --color-contrast-medium: hsl(204, 2%, 46%);
+  --color-contrast-high: hsl(210, 7%, 21%);
+  --color-contrast-higher: hsl(204, 28%, 7%);
+}
+
+[data-theme="dark"] {
+  /* // main */
+  --color-primary-darker: hsl(82, 51%, 37%);
+  --color-primary-dark: hsl(82, 51%, 47%);
+  --color-primary: hsl(82, 51%, 57%);
+  --color-primary-light: hsl(82, 51%, 67%);
+  --color-primary-lighter: hsl(82, 51%, 77%);
+
+  --color-accent-darker: hsl(334, 92%, 38%);
+  --color-accent-dark: hsl(334, 92%, 48%);
+  --color-accent: hsl(334, 92%, 58%);
+  --color-accent-light: hsl(334, 92%, 68%);
+  --color-accent-lighter: hsl(334, 92%, 78%);
+
+  --color-black: hsl(204, 28%, 7%);
+  --color-white: hsl(0, 0%, 100%);
+
+  /* // feedback */
+  --color-warning-darker: hsl(46, 100%, 47%);
+  --color-warning-dark: hsl(46, 100%, 50%);
+  --color-warning: hsl(46, 100%, 61%);
+  --color-warning-light: hsl(46, 100%, 71%);
+  --color-warning-lighter: hsl(46, 100%, 80%);
+
+  --color-success-darker: hsl(190, 50%, 40%);
+  --color-success-dark: hsl(190, 50%, 50%);
+  --color-success: hsl(190, 50%, 60%);
+  --color-success-light: hsl(190, 50%, 70%);
+  --color-success-lighter: hsl(190, 50%, 80%);
+
+  --color-error-darker: hsl(342, 92%, 41%);
+  --color-error-dark: hsl(342, 92%, 47%);
+  --color-error: hsl(342, 92%, 54%);
+  --color-error-light: hsl(342, 92%, 60%);
+  --color-error-lighter: hsl(342, 92%, 65%);
+
+  /* // background */
+  --color-bg-darker: hsl(204, 15%, 6%);
+  --color-bg-dark: hsl(203, 18%, 9%);
+  --color-bg: hsl(203, 24%, 13%);
+  --color-bg-light: hsl(203, 18%, 17%);
+  --color-bg-lighter: hsl(204, 15%, 20%);
+
+  /* // color contrasts */
+  --color-contrast-lower: hsl(208, 12%, 24%);
+  --color-contrast-low: hsl(208, 6%, 40%);
+  --color-contrast-medium: hsl(213, 5%, 56%);
+  --color-contrast-high: hsl(223, 8%, 82%);
+  --color-contrast-higher: hsl(240, 100%, 99%);
+
+  /* // font rendering */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /*****************************************************************************/
@@ -25,7 +131,7 @@
 /*html, body { height: 100%; }*/
 
 body {
-  background-color: var(--complement-color);
+  background-color: var(--color-bg);
   font: 13.34px Helvetica, Arial, sans-serif;
   font-size: small;
   text-align: center;
@@ -119,16 +225,15 @@ header .title a {
 }
 
 nav ul {
-  border: var(--border);
-  background-color: var(--punch-color);
+  border: var(--color-contrast-medium);
+  background-color: var(--color-primary);
 }
 
 nav ul li {
   display: inline-block;
   flex-grow: 1;
   text-align: center;
-  /* background-color: #CC2958; */
-  border-right: var(--border);
+  border-right: var(--color-contrast-medium);
   line-height: 2em;
   font-size: 125%;
 }
@@ -142,12 +247,8 @@ nav ul li:last-child {
   border-right: none;
 }
 
-/* nav ul li:hover {
-  background-color: #5B2999;
-} */
-
 nav a,  nav a:visited {
-  color: var(--text-color);
+  color: var(--color-contrast-higher);
 }
 
 .title {
@@ -155,12 +256,12 @@ nav a,  nav a:visited {
 }
 
 .title a {
-  color: var(--text-color);
+  color: var(--color-contrast-higher);
   background-color: var(--main-color);
 }
 
 .title a:hover {
-  color: var(--text-color);
+  color: var(--color-contrast-higher);
 }
 
 .header a.extra {
@@ -168,12 +269,12 @@ nav a,  nav a:visited {
 }
 
 .header a.extra:hover {
-  color: var(--text-color);
+  color: var(--color-contrast-higher);
 }
 
 .footer {
   font-size: 100%;
-  border: var(--border);
+  border: var(--color-contrast-medium);
   margin-top: 0.5em;
   overflow: hidden;
   background-color: white;
@@ -244,7 +345,7 @@ pre.highlight {
 
 /* standard */
 .post pre {
-  border: var(--border);
+  border: var(--color-contrast-medium);
   background-color: var(--background-color);
   padding: 0 .4em;
 }
@@ -254,7 +355,7 @@ pre.highlight {
 }
 
 .post code {
-  border: var(--border);
+  border: var(--color-contrast-medium);
   background-color: var(--background-color);
   padding: 0 .2em;
 }
@@ -265,7 +366,7 @@ pre.highlight {
 
 /* terminal */
 .post pre.terminal {
-  border: var(--border);
+  border: var(--color-contrast-medium);
   background-color: black;
   color: white;
 }
@@ -300,7 +401,7 @@ div#resume img {
 /*****************************************************************************/
 aside {
   display:none;
-  border: var(--border);
+  border: var(--color-contrast-medium);
   background-color: var(--background-color);
 }
 
@@ -314,8 +415,8 @@ ul.no_bull {
 }
 
 .taglist > .tag {
-  background-color: #ABAD9A;
-  color: black;
+  background-color: var(--color-accent);
+  color: var(--color-contrast-higher);
   padding: 0.25em;
   border-radius: 5px;
 }
