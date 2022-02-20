@@ -1,3 +1,7 @@
+[data-theme="dark"] i[class|="custom_icon"] {
+  filter: invert(100%);
+}
+
 i[class|="custom_icon"] {
   display: inline-block;
   width: 48px;
@@ -44,11 +48,3 @@ i.custom_icon-camera {
 i.custom_icon-youtube {
   background-image: url(/assets/icons/iconmonstr-youtube-10.svg);
 }
-
-/* @media (min-width: 2560px) {
-  i[class|="custom_icon"] {
-    width: 128px;
-    height: 128px;
-    background-size: 128px 128px;
-  }
-} */

@@ -9,9 +9,6 @@ ul#list-o-repos > li {
     width: 100%;
     overflow: hidden;
 }
-ul#list-o-repos > li:hover {
-    background-color: lightyellow;
-}
 ul#list-o-repos > li > span {
     display: block;
 }
