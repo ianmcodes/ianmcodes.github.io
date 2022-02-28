@@ -37,6 +37,13 @@
     <script type="text/javascript" defer src="{{ js }}"></script>
     {% endfor %}
     {% endif %}
+    <script type="text/javascript">
+        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.querySelector('html').dataset.theme = 'dark';
+        } else {
+            document.querySelector('html').dataset.theme = 'light';
+        }
+    </script>
     {% unless page.norepos %}
     <style>.octicon{display:inline-block;vertical-align:text-top;fill:currentColor}</style>
     <link rel="preload" as="style" href="/css/repo_list.css" onload="this.onload=null;this.rel='stylesheet'">
