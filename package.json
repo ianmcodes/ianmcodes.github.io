@@ -5,15 +5,11 @@
   "main": "sw.js",
   "dependencies": {},
   "devDependencies": {
-    "@builder.io/partytown": "^0.5.1",
     "uglifycss": "0.0.29"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npm run build:partyTown && npm run build:mainCss && npm run build:customIcons",
-    "build:partyTown": "partytown copylib partytown && cp partytown/partytown.js _includes/partytown.js",
-    "build:mainCss": "uglifycss _includes/main.css > _includes/main.min.css",
-    "build:customIcons": "uglifycss _includes/custom_icons.css > _includes/custom_icons.min.css"
+    "build": "uglifycss _includes/main.css > _includes/main.min.css && uglifycss _includes/custom_icons.css > _includes/custom_icons.min.css"
   },
   "repository": {
     "type": "git",
