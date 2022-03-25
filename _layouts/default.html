@@ -15,7 +15,7 @@
     <link rel="preconnect" href="https://www.googletagmanager.com">
     <link rel="preconnect" href="//static.ads-twitter.com">
 
-    <!-- Custom CSS -->
+    <!-- CSS -->
     <style type="text/css">
     {% include main.min.css %}
     </style>
@@ -30,6 +30,7 @@
     <style type="text/css">{{ page.custom_css | strip_newlines }}</style>
     {% endif %}
 
+    <!-- JS -->
     <script type="text/javascript" defer src="/js/swinit.js" data-service-worker="/sw.js"></script>
     <script type="text/javascript" defer src="/js/deferstyles.js"></script>
     {% if page.head_js %}
@@ -44,12 +45,22 @@
             document.querySelector('html').dataset.theme = 'light';
         }
     </script>
+    <script>
+    partytown = {
+        lib: "/partytown/"
+    };
+    </script>
+    <script type="text/javascript">
+    {% include partytown.js %}
+    </script>
+
     {% unless page.norepos %}
     <style>.octicon{display:inline-block;vertical-align:text-top;fill:currentColor}</style>
     <link rel="preload" as="style" href="/css/repo_list.css" onload="this.onload=null;this.rel='stylesheet'">
     {% endunless %}
+    
     {% unless page.noads %}
-    <script data-ad-client="ca-pub-4369183861672737" async defer src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script type="text/partytown" data-ad-client="ca-pub-4369183861672737" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     {% endunless %}
     {% seo %}
 </head>
