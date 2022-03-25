@@ -16,7 +16,7 @@ plugins:
   - jekyll-seo-tag
   - jekyll-feed
   - jekyll-sitemap
-exclude: ["bower_components", "vendor"]
+exclude: ["bower_components", "vendor", "node_modules"]
 defaults:
   - 
     scope: 
