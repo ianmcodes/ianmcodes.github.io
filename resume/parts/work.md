@@ -1,9 +1,20 @@
 Work Experience
 ===============
 
+## Firstup, Remote
+
+### Sr Full-Stack Engineer (September 2022 - Present)
+
+JavaScript, NodeJS, Ruby, Git, Docker, Kubernetes, AWS, PostgreSQL
+
+* Integrations with 3rd party APIs built in Node.js
+* Improved tooling for logging and log collection with Datadog
+* Setup log correlation in Datadog for Node.js applications
+* Made and implemented recommendations for team process improvement
+
 ## ShopRunner, Chicago, IL
 
-### Sr. Software Engineer (November 2020 - Present)
+### Sr. Software Engineer (November 2020 - September 2022)
 
 JavaScript, NodeJS, Git, Docker, GCP, React, MongoDB, BigTable
 
