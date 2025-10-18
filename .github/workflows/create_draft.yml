@@ -1,0 +1,36 @@
+name: Create Draft Post
+
+on:
+  workflow_dispatch:
+    inputs:
+      title:
+        description: 'Title of the draft post'
+        required: true
+      tags:
+        description: 'Comma-separated tags for the draft post'
+        required: false
+      category:
+        description: 'Category for the draft post'
+        required: false
+
+jobs:
+  create_draft:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Create Draft Post
+        run: |
+          TITLE="${{ github.event.inputs.title }}"
+          TAGS="${{ github.event.inputs.tags }}"
+          CATEGORIES="${{ github.event.inputs.category }}"
+
+          OUTPUT=$(rake draft title="$TITLE" tags="$TAGS" categories="$CATEGORIES")
+          FILENAME=$(echo "$OUTPUT" | grep -oP 'Creating new post: \K.*')
+          echo "Created draft file: $FILENAME"
+          
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          
+          git add $FILENAME
+          git commit -m "Create draft post: $TITLE"
+          git push origin HEAD:main
