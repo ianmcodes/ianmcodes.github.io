@@ -11,7 +11,7 @@ My daughter and I both use electric toothbrushes, and they're great! The best fe
 
 But I'm a software engineer! I can build a solution for this. And since I do mostly web development, I'll build it for the web on CodePen!
 
-Yes, there are many toothbrush timer apps on the app stores. But this is simple
+Yes, there are many toothbrush timer apps on the app stores. But this is simple to build and doesn't need to harvest all of my personal data.
 
 <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="GgoMmOr" data-pen-title="Toothbrush Timer" data-user="ianmcodes" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
   <span>See the Pen <a href="https://codepen.io/ianmcodes/pen/GgoMmOr">
