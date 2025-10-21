@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>imc-tag Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 2em;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h1 {
+            margin-bottom: 1em;
+        }
+        .demo-section {
+            margin-bottom: 2em;
+            padding: 1em;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .demo-section h2 {
+            margin-top: 0;
+        }
+        .tag-container {
+            display: flex;
+            gap: 1em;
+            flex-wrap: wrap;
+            margin-top: 1em;
+        }
+    </style>
+    <script src="/js/imc-tag.js"></script>
+</head>
+<body>
+    <h1>imc-tag Web Component Demo</h1>
+    
+    <div class="demo-section">
+        <h2>Basic Usage</h2>
+        <p>Tags with different names:</p>
+        <div class="tag-container">
+            <imc-tag name="JavaScript"></imc-tag>
+            <imc-tag name="HTML"></imc-tag>
+            <imc-tag name="CSS"></imc-tag>
+        </div>
+    </div>
+
+    <div class="demo-section">
+        <h2>Various Tag Lengths</h2>
+        <p>Tags with different text lengths:</p>
+        <div class="tag-container">
+            <imc-tag name="A"></imc-tag>
+            <imc-tag name="Short"></imc-tag>
+            <imc-tag name="Medium Length"></imc-tag>
+            <imc-tag name="Very Long Tag Name Example"></imc-tag>
+        </div>
+    </div>
+
+    <div class="demo-section">
+        <h2>Empty Tag</h2>
+        <p>Tag with no name attribute:</p>
+        <div class="tag-container">
+            <imc-tag></imc-tag>
+        </div>
+    </div>
+
+    <div class="demo-section">
+        <h2>In Inline Context</h2>
+        <p>
+            Here's a tag <imc-tag name="inline"></imc-tag> in the middle of text.
+            You can also have multiple tags like <imc-tag name="tag1"></imc-tag> and 
+            <imc-tag name="tag2"></imc-tag> next to each other.
+        </p>
+    </div>
+
+    <div class="demo-section">
+        <h2>XSS Protection Test</h2>
+        <p>Tag with HTML/script in the name (should be rendered as text, not executed):</p>
+        <div class="tag-container">
+            <imc-tag name="<script>alert('XSS')</script>"></imc-tag>
+            <imc-tag name="<b>Bold</b>"></imc-tag>
+        </div>
+    </div>
+</body>
+</html>
