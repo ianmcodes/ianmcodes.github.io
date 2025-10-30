@@ -32,10 +32,11 @@ class ImcTag extends HTMLElement {
           display: inline-block;
         }
         .tag-container {
+          box-sizing: border-box;
           display: flex;
           align-items: center;
           justify-content: center;
-          padding: 0.5em 1em;
+          padding: 0 0.5em;
           border: 2px solid black;
           border-radius: 9999px;
           text-align: center;
