@@ -1,7 +1,7 @@
 /*jshint esnext: true, browser: true, devel: true, worker: true*/
 /*globals caches*/
 var self = this;
-var CACHENAME = "codes-ianmccall-v7";
+var CACHENAME = "codes-ianmccall-v8";
 var precache = [
     '/',
     '/?utm_source=homescreen',
@@ -17,6 +17,7 @@ var precache = [
     '/css/repo_list.css',
     '/js/swinit.js',
     '/js/deferstyles.js',
+    '/js/imc-tag.js',
     '/assets/images/IanMcCallCodes-logo/vector/default.svg',
 ];
 
