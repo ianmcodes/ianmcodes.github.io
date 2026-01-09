@@ -17,6 +17,8 @@ plugins:
   - jekyll-feed
   - jekyll-sitemap
 exclude: ["bower_components", "vendor", "node_modules"]
+include:
+  - ".well-known"
 defaults:
   - 
     scope: 
