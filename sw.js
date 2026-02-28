@@ -26,6 +26,8 @@ self.addEventListener('install', function(event) {
     event.waitUntil(
         caches.open(CACHENAME).then(function(cache) {
             return cache.addAll(precache);
+        }).then(function() {
+            return self.skipWaiting();
         })
     );
 });
@@ -40,6 +42,8 @@ self.addEventListener('activate', function(event) {
                     }
                 })
             );
+        }).then(function() {
+            return self.clients.claim();
         })
     );
 });
