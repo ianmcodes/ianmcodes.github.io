@@ -5,10 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>{{ page.title }}</title>
     <meta name="viewport" content="width=device-width">
-    <meta name="theme-color" content="#97B412">
+    <meta name="theme-color" content="#0f172a">
     <meta name="description" content="Personal homepage for the software engeneer Ian McCall.">
     <link rel="manifest" href="/manifest.json">
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/assets/images/logo_2026_color.ico" type="image/x-icon">
     <link rel="apple-touch-icon" href="/assets/icons/ianmcodes_logo/maskable_icon_x192.png">
 
     <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
@@ -63,17 +63,18 @@
         <header class="header rounded">
             <h1 class="title">
                 <a href="/">
-                    {% include default.logo.svg %}
+                    <img src="/assets/images/logo_2026_color_nobg.png" alt="Ian McCall's Logo" class="logo">
+                    <span class="im-gradient-text">{{ site.name }}</span>
                 </a>
             </h1>
         </header>
         <nav>
             <ul class="flex_container rounded">
-                <li><a href="/">Home</a></li>
-                <li><a href="/about/">About</a></li>
-                <li><a href="/posts/">Blog</a></li>
-                <li><a href="/brewing/">Brewing</a></li>
-                <li><a href="/resume/">Resume</a></li>
+                <li class="im-button"><a href="/">Home</a></li>
+                <li class="im-button"><a href="/about/">About</a></li>
+                <li class="im-button"><a href="/posts/">Blog</a></li>
+                <li class="im-button"><a href="/brewing/">Brewing</a></li>
+                <li class="im-button"><a href="/resume/">Resume</a></li>
             </ul>
         </nav>
 

@@ -1,13 +1,14 @@
 /*jshint esnext: true, browser: true, devel: true, worker: true*/
 /*globals caches*/
 var self = this;
-var CACHENAME = "codes-ianmccall-v8";
+var CACHENAME = "codes-ianmccall-v9";
 var precache = [
     '/',
     '/?utm_source=homescreen',
-    '/assets/icons/ianmcodes_logo/maskable_icon_x512.png',
-    '/assets/icons/ianmcodes_logo/maskable_icon_x192.png',
-    '/assets/images/banner.jpg',
+    '/assets/images/banner_2026.png',
+    '/assets/images/logo_2026_color_x512.png',
+    '/assets/images/logo_2026_color_x192.png',
+    '/assets/images/logo_2026_color_nobg.png',
     '/css/main-1024.css',
     '/css/main-1440.css',
     '/css/main-4k.css',
@@ -18,7 +19,6 @@ var precache = [
     '/js/swinit.js',
     '/js/deferstyles.js',
     '/js/imc-tag.js',
-    '/assets/images/IanMcCallCodes-logo/vector/default.svg',
 ];
 
 self.addEventListener('install', function(event) {

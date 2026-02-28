@@ -3,19 +3,19 @@
     "name": "Ian McCall Codes",
     "icons": [
         {
-            "src": "/assets/icons/ianmcodes_logo/maskable_icon_x512.png",
+            "src": "/assets/images/logo_2026_color_x512.png",
             "type": "image/png",
             "sizes": "512x512",
             "purpose": "any"
         },
         {
-            "src": "/assets/icons/ianmcodes_logo/maskable_icon_x512.png",
+            "src": "/assets/images/logo_2026_color_x512.png",
             "type": "image/png",
             "sizes": "512x512",
             "purpose": "maskable"
         },
         {
-            "src": "/assets/icons/ianmcodes_logo/maskable_icon_x192.png",
+            "src": "/assets/images/logo_2026_color_x192.png",
             "type": "image/png",
             "sizes": "192x192",
             "purpose": "maskable"
@@ -23,7 +23,7 @@
     ],
     "start_url": "/?utm_source=homescreen",
     "display": "minimal-ui",
-    "theme_color": "#97B412",
-    "background_color": "#97b412",
+    "theme_color": "#0f172a",
+    "background_color": "#0f172a",
     "description": "Ian McCall's personal website"
 }

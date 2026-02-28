@@ -1,9 +1,10 @@
 @media (min-width: 1024px) {
   header.header {
-    background-image: url(/assets/images/banner.jpg);
+    /* background-image: url(/assets/images/banner.jpg); */
+    background-image: url(/assets/images/banner_2026.png);
     background-size: 100%;
-    background-position: 0% 20%;
-    min-height: 200px;
+    background-position: 0% 50%;
+    min-height: 250px;
   }
 
   header h1.title {
