@@ -58,20 +58,17 @@ self.addEventListener('fetch', function(event) {
     //     return;
     // }
     event.respondWith(
-        caches.match(event.request)
-        .then(function(response) {
-            if(!!response) {
-                return response;
-            }
-            return fetch(event.request)
-            .then((response) => {
-                let respClone = response.clone();
-                caches.open(CACHENAME)
-                .then((cache) => {
-                    cache.put(event.request, respClone);
-                });
-                return response;
+        fetch(event.request)
+        .then((response) => {
+            let respClone = response.clone();
+            caches.open(CACHENAME)
+            .then((cache) => {
+                cache.put(event.request, respClone);
             });
+            return response;
+        })
+        .catch(() => {
+            return caches.match(event.request);
         })
     );
 });
