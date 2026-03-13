@@ -83,10 +83,10 @@ Also, some time later after updating my site and LinkedIn, I decided I wanted to
 
 [![Monogram](/assets/images/logo_post/Monogram.png)](/assets/images/logo_post/Monogram.png)
 
-You may notice that it looks similar to, but not exactly what it generated before. 
+You may notice that it looks similar to, but not exactly what it generated before. This is likely that the way the image generation model works is non deterministic. Even if you pick up the same session, or branch the conversation from when you first generated the sample image, the sate of the image generator is not preserved.
 
 ## Takeaways?
 
-Even with these issues, I'm still very happy with what it was able to generate for me. The result is much more polished and professional looking than I would have been able to generate on my own. This is the part where AI evangelists would start crowing about how "no one needs designers or artists anymore". But I know that just isn't true. The result I got, while much better than I could do alone, is also derivative and a little generic. A competent artist/designer could make something much better. 
+Even with these issues, I'm still very happy with what it was able to generate for me. The result is much more polished and professional looking than I would have been able to generate on my own. This is the part where AI evangelists would start crowing about how "no one needs designers or artists anymore", but I know that just isn't true. The result I got, while much better than I could do alone, is also derivative and a little generic. And it has that same purple gradient that AIs seem to default to when designing for the web. A competent artist/designer could make something much better. 
 
-A professional artist or designer can (and should) demand good professional money. AI tools are not a replacement for a good professional. But these tools can help bridge the gap for those of us that don't have the skills, or the money to pay for it. I won't call my self a designer but, with these tools, I can generate a reasonably attractive design.
+A professional artist or designer can (and should) demand good professional money. AI tools are not a replacement for a good professional. But these tools can help bridge the gap for those of us that don't have the skills, or the money to pay someone that has the skill. I won't call my self a designer but, with these tools, I can generate something that is good enough for me.
