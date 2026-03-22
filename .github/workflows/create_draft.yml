@@ -36,4 +36,4 @@ jobs:
           
           git add $FILENAME
           git commit -m "Create draft post: $TITLE"
-          git push origin HEAD:main
+          git push origin HEAD:master
